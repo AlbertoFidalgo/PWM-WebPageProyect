@@ -2,3 +2,5 @@ Pagina LittleCritics, una pagina web donde cada usuario es un critico profesiona
 
 Alberto Fidalgo Cabantac
 Oscar Martin Tacoronte
+Nauzet Déniz Perdomo
+
