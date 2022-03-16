@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>LittleCritics</title>
-  <script src="jquery-3.5.0.js"></script>
+  <script src="jquery-3.6.0.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <link href="styles.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
 </head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <div id="container">
 
@@ -23,53 +27,131 @@
         <input type="search" id="search" placeholder="Search..."/>
       </div>
 
-      <div id="categorias">
-        <input type="button" value="Musica" id="musica" class="botonHeader">
-        <input type="button" value="Series" id="series" class="botonHeader">
-        <input type="button" value="Peliculas" id="peliculas" class="botonHeader">
-        <input type="button" value="Podcasts" id="podcasts" class="botonHeader">
+      <div class="row">
+        <div class="btn-group" role="group">
+          <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="music-dropdown" data-bs-toggle="dropdown">
+            Música
+          </button>
+          <ul class="dropdown-menu " aria-labelledby="music-dropdown">
+            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
+            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
+            <li><a href="#contact" class="dropdown-item">Rap</a></li>
+            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
+            <li><a href="#contact" class="dropdown-item">Pop</a></li>
+            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
+            <li><a href="#contact" class="dropdown-item">Folk</a></li>
+            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+          </ul>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="film-dropdown" data-bs-toggle="dropdown">
+            Películas
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="film-dropdown">
+            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
+            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
+            <li><a href="#contact" class="dropdown-item">Rap</a></li>
+            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
+            <li><a href="#contact" class="dropdown-item">Pop</a></li>
+            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
+            <li><a href="#contact" class="dropdown-item">Folk</a></li>
+            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+          </ul>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="series-dropdown" data-bs-toggle="dropdown">
+            Series
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="series-dropdown">
+            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
+            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
+            <li><a href="#contact" class="dropdown-item">Rap</a></li>
+            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
+            <li><a href="#contact" class="dropdown-item">Pop</a></li>
+            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
+            <li><a href="#contact" class="dropdown-item">Folk</a></li>
+            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+          </ul>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
+            Podcasts
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
+            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
+            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
+            <li><a href="#contact" class="dropdown-item">Rap</a></li>
+            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
+            <li><a href="#contact" class="dropdown-item">Pop</a></li>
+            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
+            <li><a href="#contact" class="dropdown-item">Folk</a></li>
+            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+          </ul>
+        </div>
       </div>
     </div>
- 
 
-    <div id="container-1">
-      <div id="carrusel">
-        <img src="images/izquierda.png" id="flechIzq" height="50px" width="50px">
-        <img src="images/derecha.png" id="flechDer" height="50px" width="50px">
-      </div>
-      <div class="cajaLateral">
-        <div class="title">
-            <p style="text-align: center;">Lo más criticado</p>
+    <div class="container mt-5">
+      <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide col-9 h-100" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/musicaBanner.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/peliculasBanner.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/seriesBanner.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/podcastsBanner.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 1</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 2</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 3</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 4</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 5</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y nota de elemento 6</p>
+
+        <div class="col-auto ms-5">
+          <div class="title">
+              <p style="text-align: center;">Lo más criticado</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 1</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 2</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 3</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 4</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 5</p>
+          </div>
+          <div class="elementoCajaLateral">
+            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
+            <p class="inLine">Título y nota de elemento 6</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="container-2">
-      <div id="estDest">
+    <div class="container mt-5">
+      <div class="col-9">
         <div class="title">
           <p style="text-align: center;">Estrenos</p>
         </div>
@@ -133,7 +215,7 @@
         </div>
       </div>
 
-      <div class="cajaLateral">
+      <div class="col-auto">
         <div class="title">
             <p style="text-align: center;">Estrenos retrasados</p>
         </div>
@@ -165,6 +247,5 @@
 
     </div>
   </div>
-
 </body>
 </html>

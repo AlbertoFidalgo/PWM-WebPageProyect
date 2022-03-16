@@ -1,0 +1,39 @@
+/* responsive.css  */
+
+/* 1 em = 16 px */
+
+/* 1500 to 1920 pixels */
+@media screen and (min-width: 1537px) {
+    #container {
+        width: 120%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        width: 100%;
+    }
+
+    #header {
+        width: 100%;
+    }
+
+    .botonHeader {
+        width: 25%;
+    }
+
+    #barraBusqueda {
+        margin-left: 420px;
+    }
+
+    #botones {
+        margin-left: 530px;
+    }
+
+    #carrusel {
+        width: 100%;
+    }
+
+    
+
+}
