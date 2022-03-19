@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="header">
+    </div> <!--//header-->
+
+    <main id="iniciar-sesion-content">
+
+                <article id="sesion">
+
+                    <section class="user-login" id="user-login-form">
+
+                        <img class="user-img" src="images/user.png">
+
+                        <form id="login" action=".................">
+
+                            <div class="cointainer">
+                                <div class="row">
+
+                                    <div id="required-credentials">
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="submit-button">
+                                <input class="submit-button-form" id ="submit-login-form" type="submit" value="INICIAR SESIÓN"/>
+                            </div>
+
+                            <a class="pswd-forgotten" href="..........">
+                                ¿Has olvidado tu contraseña?
+                            </a>
+
+
+                        </form>
+
+                    </section>
+
+                    <section class="user-login" id="our-advantage">
+                        <h1>Nuestras ventajas: </h1>
+                        <ol id="#our-advantage-list">
+                            <li>Actualizamos nuestro contenido</li>
+                            <li>Recomendaciones personalizadas</li>
+                            <li>Accede a la opinión de nuestros visistantes</li>
+                            <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
+                        </ol>
+
+                        <a class="submit-button" id="goto-register" href="./registro.html">
+                            <button class="submit-button">IR A REGISTRARSE</button>
+                        </a>
+
+                    </section>
+
+
+
+
+                </article>
+
+    </main>
+
+
+</div>
+
+
+
+
+<script>
+    $(function(){
+        $('#header').load("./header.html");
+    });
+    $(function(){
+        $('#about-us').load("./aboutus.html");
+    });
+    $(function(){
+        $('#required-credentials').load("./credenciales.html");
+    });
+</script>
+
+</body>
+</html>

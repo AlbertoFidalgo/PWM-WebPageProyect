@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+
+<body>
+
+<div id="container">
+    <div id="header">
+    </div> <!--//header-->
+
+    <main id="register-content">
+        <article>
+            <section id="user-register">
+                <h1 id="register-title">
+                    ¡Bienvenido
+                    <br>
+                    ¿Deseas Darte de Alta?
+                </h1>
+                <form id="register" action=".................">
+
+                    <div class="cointainer">
+                        <div class="row">
+
+                            <div id="required-credentials">
+                            </div>
+
+                            <div class="field">
+                                <div class="form-field" for="email-form"> Correo</div>
+                                <input type="text" id="email-form"/>
+                            </div>
+
+                            <div class="field">
+                                <div class="form-field" for="birth-form"> * Nacimiento</div>
+                                <input type="text" id="birth-form"/>
+                            </div>
+
+                            <div class="field">
+                                <div class="form-field" for="nationality-form"> * Nacionalidad</div>
+                                <input type="text" id="nationality-form"/>
+                            </div>
+
+                            <div class="field">
+                                <div class="form-field" for="about-me-form"> * Sobre mí</div>
+                                <input type="text" id="about-me-form"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="submit-button" >
+                        <input class="submit-button-form" id ="submit-register-form" type="submit" value="DARSE DE ALTA"/>
+                    </div>
+
+                </form>
+            </section>
+
+            <section id="about-us">
+
+            </section>
+
+        </article> <!--//header-->
+    </main> <!--//header-->
+
+</div> <!--//container-->
+
+
+<script>
+    $(function(){
+        $('#header').load("./header.html");
+    });
+    $(function(){
+        $('#required-credentials').load("./credenciales.html");
+    });
+    $(function(){
+        $('#about-us').load("./aboutus.html");
+    });
+</script>
+
+</body>
+
+
+</html>
