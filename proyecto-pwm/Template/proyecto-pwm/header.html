@@ -1,21 +1,70 @@
+
+
 <div id="header">
-    <div id="lineaLogoBotones">
-        <img src="images/10542658cop.png" id="logo">
-        <div id="botones">
+    <div class="row">
+        <div class="col-6">
+            <img src="images/10542658cop.png" id="logo" alt="logo">
+        </div>
+        <div class="col-6 text-end mt-2 pe-4">
             <input type="button" value="Iniciar Sesion">
             <input type="button" value="Registrarse">
         </div>
     </div>
 
-    <div id="barraBusqueda">
-        <img src="images/searchIcon.png" id="busqueda">
-        <input type="search" id="search" placeholder="Search..."/>
-    </div>
-
-    <div id="categorias">
-        <input type="button" value="Musica" id="musica" class="botonHeader">
-        <input type="button" value="Series" id="series" class="botonHeader">
-        <input type="button" value="Peliculas" id="peliculas" class="botonHeader">
-        <input type="button" value="Podcasts" id="podcasts" class="botonHeader">
+    <div class="row mt-5">
+        <div class="btn-group" role="group">
+            <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="music-dropdown" data-bs-toggle="dropdown">
+                Música
+            </button>
+            <ul class="dropdown-menu " aria-labelledby="music-dropdown">
+                <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
+                <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
+                <li><a href="#contact" class="dropdown-item">Rap</a></li>
+                <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
+                <li><a href="#contact" class="dropdown-item">Pop</a></li>
+                <li><a href="#contact" class="dropdown-item">Jazz</a></li>
+                <li><a href="#contact" class="dropdown-item">Folk</a></li>
+                <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="film-dropdown" data-bs-toggle="dropdown">
+                Películas
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="film-dropdown">
+                <li><a href="#home" class="dropdown-item">Acción</a></li>
+                <li><a href="#about" class="dropdown-item">Aventura</a></li>
+                <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
+                <li><a href="#contact" class="dropdown-item">Comedia</a></li>
+                <li><a href="#contact" class="dropdown-item">Drama</a></li>
+                <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
+                <li><a href="#contact" class="dropdown-item">Musical</a></li>
+                <li><a href="#contact" class="dropdown-item">Terror</a>
+            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="series-dropdown" data-bs-toggle="dropdown">
+                Series
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="series-dropdown">
+                <li><a href="#home" class="dropdown-item">Acción</a></li>
+                <li><a href="#about" class="dropdown-item">Aventura</a></li>
+                <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
+                <li><a href="#contact" class="dropdown-item">Comedia</a></li>
+                <li><a href="#contact" class="dropdown-item">Drama</a></li>
+                <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
+                <li><a href="#contact" class="dropdown-item">Musical</a></li>
+                <li><a href="#contact" class="dropdown-item">Terror</a></li>
+            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
+                Podcasts
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
+                <li><a href="" class="dropdown-item">Noticias/Política</a></li>
+                <li><a href="#about" class="dropdown-item">Deporte/Ocio</a></li>
+                <li><a href="#contact" class="dropdown-item">Educativo</a></li>
+                <li><a href="#contact" class="dropdown-item">Salud/Estilo de vida</a></li>
+                <li><a href="#contact" class="dropdown-item">Tecnología</a></li>
+                <li><a href="#contact" class="dropdown-item">Arte</a></li>
+                <li><a href="#contact" class="dropdown-item">Juegos/Entretenimiento</a></li>
+                <li><a href="#contact" class="dropdown-item">Niños/Familia</a></li>
+            </ul>
+        </div>
     </div>
 </div>
