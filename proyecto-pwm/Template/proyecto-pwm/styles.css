@@ -151,3 +151,206 @@ body {
  	vertical-align:top; 
  	margin-top: 40px;
  }
+
+/*//registro.html//*/
+
+
+#register-content{
+	text-align: center;
+}
+
+#register-title{
+	font-size: 2em;
+	line-height: normal; /*//Anulo propiedad heredada//*/
+}
+
+.vertical-list text{
+	padding: 1rem 0.75rem;
+	margin-left: 0.5em;
+}
+
+.vertical-list{
+	list-style-type: none; /*Not number list*/
+	display: flow;
+	margin: 3em;
+}
+
+
+#register{
+	margin: 3em;
+}
+
+
+
+.field{
+	column-count: 2;
+	padding: 0.7em;
+	padding-bottom: 1em;
+}
+
+
+.cointainer{
+	display: inline-flex;
+	text-align: center;
+	align-items: center;
+	font-size: 1.4em;
+}
+
+.row {
+	display: inline-block;
+}
+
+
+section{
+	background: #DD6E56;
+	margin-left: 10em;
+	margin-right: 10em;
+
+}
+
+#about-us{
+	text-align: left;
+}
+
+#about-us-title{
+	font-size: 2em;
+	margin-top: 3em;
+	padding: 1.5em 0.8em 0.3em;
+}
+
+.offering-list{
+	list-style-position: inside;
+	list-style-type: disclosure-closed;
+	margin: 1.2em;
+	padding: 0.7em;
+}
+
+
+.offering-list li{
+	padding: 0.4em;
+	font-size: 1.5em;
+}
+
+
+
+/*//iniciarSesion.html//*/
+
+
+
+.message{
+	font-size: 1em;
+}
+
+.message h1{
+	font-size: 1em;
+	column-count: 1;
+}
+
+#iniciar-sesion-content{
+	margin-bottom: 30em;
+	position: relative;
+}
+
+
+#sesion{
+	list-style-type: none; /*Not number list*/
+
+	column-count: 2;
+	padding: 5em;
+
+	display: inline-flex;
+
+	font-size: 1em;
+
+	position: inherit;
+
+}
+
+.user-login{
+	margin: 2em;
+	padding: 2em;
+	position: relative;
+}
+
+
+.iniciar-sesion{
+	padding: 0.2em;
+	margin: 3em 3.5em 4em 5em;
+}
+
+#iniciar-sesion-content{
+	align-content: center;
+	margin-left: 15em;
+	margin-right: 15em;
+}
+
+
+/*//FORM AND BUTTON//*/
+
+
+#iniciar-sesion-form{
+}
+
+#user-login-form{
+}
+
+
+#user-login-form{
+	background: #d9d9d9;
+	text-align: center;
+	margin-top: 4em;
+	padding-top: 4em;
+}
+
+.user-login{
+	background: inherit;
+}
+
+#login{
+
+}
+
+.submit-button{
+	padding: 1em;
+	align-content: center;
+	text-align: center;
+	border-radius: 0.5em;
+	cursor: pointer;
+}
+
+.submit-button-form{
+	font-size: 1.2em;
+	margin: 1.5em;
+
+	cursor: pointer;
+	height: 2em;
+	width: 10em;
+	border-radius: 0.5em;
+}
+
+#submit-register-form{
+	font-size: 1.8em;
+	text-align: center;
+}
+
+a{
+	color: #326E9C;
+}
+
+#our-advantage{
+	font-size: 1.5em;
+}
+
+#our-advantage li{
+	padding: 0.7em;
+}
+
+img{
+	width: auto;
+	max-height: 100%;
+}
+
+.user-img{
+	height: 10em;
+	margin-bottom: 1em;
+}
