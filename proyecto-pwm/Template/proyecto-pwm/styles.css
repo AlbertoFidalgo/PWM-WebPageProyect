@@ -5,9 +5,7 @@ body {
 
 /*//BACKGROUND//*/
 #container {
-	margin: 0 auto;
-	border: 1px solid #666666;
-	width: 1538px;
+	width: 1920px;
 	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height:16px;
@@ -19,61 +17,15 @@ body {
 /*//HEADER//*/
 #header {
    background-image: url("images/landingPageBanner.png");
-   background-size: 1538px 230px;
-   border: 1px solid #000000;
-   width: 1538px;
+   background-size: 1920px 230px;
+   width: 1920px;
    height: 230px;
 }
 #logo{
 	margin-left: 20px;
-	margin-top: 0px;
+	margin-top: 20px;
 	width: 180px;
 	height: 120px;
-	float: left;
-}
-#botones {
-	margin-left: 1300px;
-	margin-top: 40px;
-}
-#barraBusqueda {
-	width: 300px;
-	height: 40px;
-	margin-top: 80px;
-	margin-left: 1185px;
-  	vertical-align: middle;
-  	white-space: nowrap;
-  	position: relative;
-  	background: #DD6E56;
-  	border-radius: 50px;
-}
-#barraBusqueda input#search{
-	width: 250px;
-	height: 40px;
-	background: #2C3949;
-	color: #000000;
-	border: none;
-	font-size: 10pt;
-	float: left;
-	padding-left: 45px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-}
-#busqueda {
-	width: 20px;
-	height: 20px;
-	margin-top: 10px;
-	margin-left: 10px;
-}
-#categorias {
-	margin-top: 20px;
-	font-size: 0;
-}
-.botonHeader {
-	width: 384px;
-	height: 29px;
-	margin-right: 0px;
-	font-size: 14px;
 }
 
 
@@ -82,9 +34,6 @@ body {
 	margin-top: 30px;
 	margin-left: 50px;
 	margin-right: 50px;
-}
-.cajaLateral {
-	margin-left: 1200px;
 }
 .elementoCajaLateral {
 	border: 1px solid;
@@ -102,8 +51,7 @@ body {
 	float: left;
 }
 .cajaCentral {
-	background-color: #2C3949; 
-	width: 920px;
+	background-color: #2C3949;
 }
 .elemento{
 	display: inline-block;
@@ -114,7 +62,7 @@ body {
 }
 .title {
 	height: 2em;
-	width: 238px;
+	width: 236px;
 	background: #DD6E56;
 }
 

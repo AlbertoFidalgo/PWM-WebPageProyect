@@ -12,22 +12,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <div id="container">
-
     <div id="header">
-      <div id="lineaLogoBotones">
-        <img src="images/10542658cop.png" id="logo">
-        <div id="botones">
+      <div class="row">
+        <div class="col-6">
+          <img src="images/10542658cop.png" id="logo" alt="logo">
+        </div>
+        <div class="col-6 text-end mt-2 pe-4">
           <input type="button" value="Iniciar Sesion">
           <input type="button" value="Registrarse">
         </div>
       </div>
 
-      <div id="barraBusqueda">
-        <img src="images/searchIcon.png" id="busqueda">
-        <input type="search" id="search" placeholder="Search..."/>
-      </div>
-
-      <div class="row">
+      <div class="row mt-5">
         <div class="btn-group" role="group">
           <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="music-dropdown" data-bs-toggle="dropdown">
             Música
@@ -46,53 +42,53 @@
             Películas
           </button>
           <ul class="dropdown-menu" aria-labelledby="film-dropdown">
-            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
-            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
-            <li><a href="#contact" class="dropdown-item">Rap</a></li>
-            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
-            <li><a href="#contact" class="dropdown-item">Pop</a></li>
-            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
-            <li><a href="#contact" class="dropdown-item">Folk</a></li>
-            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+            <li><a href="#home" class="dropdown-item">Acción</a></li>
+            <li><a href="#about" class="dropdown-item">Aventura</a></li>
+            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
+            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
+            <li><a href="#contact" class="dropdown-item">Drama</a></li>
+            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
+            <li><a href="#contact" class="dropdown-item">Musical</a></li>
+            <li><a href="#contact" class="dropdown-item">Terror</a>
           </ul>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="series-dropdown" data-bs-toggle="dropdown">
             Series
           </button>
           <ul class="dropdown-menu" aria-labelledby="series-dropdown">
-            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
-            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
-            <li><a href="#contact" class="dropdown-item">Rap</a></li>
-            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
-            <li><a href="#contact" class="dropdown-item">Pop</a></li>
-            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
-            <li><a href="#contact" class="dropdown-item">Folk</a></li>
-            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+            <li><a href="#home" class="dropdown-item">Acción</a></li>
+            <li><a href="#about" class="dropdown-item">Aventura</a></li>
+            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
+            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
+            <li><a href="#contact" class="dropdown-item">Drama</a></li>
+            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
+            <li><a href="#contact" class="dropdown-item">Musical</a></li>
+            <li><a href="#contact" class="dropdown-item">Terror</a></li>
           </ul>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
             Podcasts
           </button>
           <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
-            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
-            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
-            <li><a href="#contact" class="dropdown-item">Rap</a></li>
-            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
-            <li><a href="#contact" class="dropdown-item">Pop</a></li>
-            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
-            <li><a href="#contact" class="dropdown-item">Folk</a></li>
-            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
+            <li><a href="" class="dropdown-item">Noticias/Política</a></li>
+            <li><a href="#about" class="dropdown-item">Deporte/Ocio</a></li>
+            <li><a href="#contact" class="dropdown-item">Educativo</a></li>
+            <li><a href="#contact" class="dropdown-item">Salud/Estilo de vida</a></li>
+            <li><a href="#contact" class="dropdown-item">Tecnología</a></li>
+            <li><a href="#contact" class="dropdown-item">Arte</a></li>
+            <li><a href="#contact" class="dropdown-item">Juegos/Entretenimiento</a></li>
+            <li><a href="#contact" class="dropdown-item">Niños/Familia</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container-fluid mt-5 ms-lg-5">
       <div class="row">
-        <div id="carouselExampleIndicators" class="carousel slide col-9 h-100" data-bs-ride="carousel">
+        <div id="carousel" class="carousel slide align-self-center col-sm-12 col-lg-8 col-xl-8 col-xxl-9" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -108,143 +104,384 @@
               <img src="images/podcastsBanner.png" class="d-block w-100" alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
 
-        <div class="col-auto ms-5">
-          <div class="title">
+        <div class="d-none d-sm-block d-lg-none mt-5 pe-5 ps-5 text-center d-">
+          <div class="row" style="background-color: #DD6E56">
+            <p>Estrenos</p>
+          </div>
+          <div class="row" style="background-color: #2C3949">
+            <div class="col-6">
+              <p>Título del estreno 1</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6">
+              <p>Título del estreno 2</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6 mt-1 mb-2">
+              <p>Título del estreno 3</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6 mt-1 mb-2">
+              <p>Título del estreno 4</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-none d-sm-block d-lg-none mt-5 pe-5 ps-5" style="text-align: center;">
+          <div class="row" style="background-color: #DD6E56">
+            <p>Destacados</p>
+          </div>
+          <div class="row" style="background-color: #2C3949">
+            <div class="col-6">
+              <p>Título del estreno 1</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6">
+              <p>Título del estreno 2</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6 mt-1 mb-2">
+              <p>Título del estreno 3</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+            <div class="col-6 mt-1 mb-2">
+              <p>Título del estreno 4</p>
+              <img src="images/rectanguloEjemplo.jpg" height="110px" width="160px">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-none d-sm-block d-lg-none mt-5 pe-5 ps-5" style="text-align: center;">
+          <div class="row" style="background-color: #DD6E56">
+            <p>Lo más criticado</p>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 1</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 2</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 3</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 4</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 5</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 6</p>
+            </div>
+            <div class="col-4">
+              <p>Nota</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-none d-sm-block d-lg-none mt-5 pe-5 ps-5" style="text-align: center;">
+          <div class="row" style="background-color: #DD6E56">
+            <p>Estrenos retrasados</p>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 1</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 2</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 3</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 4</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 5</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-2" style="background-color: #2C3949; border: 1px solid;">
+            <div class="col-4">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-4">
+              <p>Título del elemento 6</p>
+            </div>
+            <div class="col-4">
+              <p>Fecha</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto mx-5 d-sm-none d-lg-block">
+          <div class="row" style="background-color: #DD6E56">
               <p style="text-align: center;">Lo más criticado</p>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 1</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 1</p>
+            </div>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 2</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 2</p>
+            </div>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 3</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 3</p>
+            </div>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 4</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 4</p>
+            </div>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 5</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 5</p>
+            </div>
           </div>
-          <div class="elementoCajaLateral">
-            <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-            <p class="inLine">Título y nota de elemento 6</p>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y nota de elemento 6</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container mt-5">
-      <div class="col-9">
-        <div class="title">
-          <p style="text-align: center;">Estrenos</p>
-        </div>
-        <div class="cajaCentral">
-          <div class="elemento">
-            <p>Título de elemento 1</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+    <div class="container-fluid mt-5 mx-5 d-sm-none d-lg-block">
+      <div class="row">
+        <div class="col-9 h-100">
+          <div class="row" style="background-color:  #DD6E56">
+            <p style="text-align: center;">Estrenos</p>
           </div>
-          <div class="elemento">
-            <p>Título de elemento 2</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+          <div class="row" style="background-color: #2C3949; text-align: center;">
+            <div class="col-2">
+              <p>Título de elemento 1</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 2</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 3</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 4</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 5</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 6</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
           </div>
-          <div class="elemento">
-            <p>Título de elemento 3</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 4</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 5</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 6</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-        </div>
 
 
 
-        <div class="title">
+          <div class="row mt-5" style="background-color:  #DD6E56">
             <p style="text-align: center;">Destacados</p>
+          </div>
+          <div class="row" style="background-color: #2C3949; text-align: center;">
+            <div class="col-2">
+              <p>Título de elemento 1</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 2</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 3</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 4</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 5</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+            <div class="col-2">
+              <p>Título de elemento 6</p>
+              <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
+            </div>
+          </div>
         </div>
-        <div class="cajaCentral">
-          <div class="elemento">
-            <p>Título de elemento 1</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 2</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 3</p> 
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 4</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 5</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-          <div class="elemento">
-            <p>Título de elemento 6</p>
-            <p><img src="images/rectanguloEjemplo.jpg" height="80px" width="50px"></p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-auto">
-        <div class="title">
+        <div class="col-auto ms-5">
+          <div class="row" style="background-color: #DD6E56">
             <p style="text-align: center;">Estrenos retrasados</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 1</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 2</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 3</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 4</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 5</p>
-        </div>
-        <div class="elementoCajaLateral">
-          <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px" class="inLine">
-          <p class="inLine">Título y fecha de elemento 6</p>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 1</p>
+            </div>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 2</p>
+            </div>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 3</p>
+            </div>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 4</p>
+            </div>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 5</p>
+            </div>
+          </div>
+          <div class="row" style="background-color: #2C3949; border: 1px solid">
+            <div class="col-5">
+              <img src="images/rectanguloEjemplo.jpg" height="70px" width="50px">
+            </div>
+            <div class="col-5">
+              <p>Título y fecha de elemento 6</p>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </body>
