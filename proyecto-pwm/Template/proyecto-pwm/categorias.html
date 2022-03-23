@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>LittleCritics</title>
-  <script src="jquery-3.5.0.js"></script>
+  <script src="jquery-3.6.0.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <link href="styles.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <body>
   <div id="container">
 
@@ -125,61 +127,33 @@
           <div class="row" style="background-color: #DD6E56">
             <h2>Tipo de contenido</h2>
           </div>
-          <div class="row">
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 1</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 2</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 3</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 4</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 5</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 6</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 7</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 8</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 9</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 10</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 11</p>
-            </div>
-            <div class="col-3">
-              <p><img src="images/rectanguloEjemplo.jpg" height="170px" width="140px"></p>
-              <p class="elementoText">Título de elemento 12</p>
-            </div>
+
+          <div class="row" id="pelis">
+
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
 
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200){
+        var json = JSON.parse(this.responseText);
+        json.forEach(movie => {
+          const template = (image, title) => `<img src="${image}" style="max-width:100px" height="170px"><p class="elementoText">${title}</p>`;
+          var child = document.createElement('div');
+          child.className = "col-3";
+          child.innerHTML = template(movie.Images[0], movie.Title);
+          document.getElementById("pelis").appendChild(child);
+        })
+      }
+    };
 
+    xmlhttp.open("GET", "data/movies.json", true);
+    xmlhttp.send();
+  </script>
 </body>
+
 </html>
