@@ -160,6 +160,8 @@ body {
 }
 
 #register-title{
+	margin-top: 2em;
+	padding: 2em;
 	font-size: 2em;
 	line-height: normal; /*//Anulo propiedad heredada//*/
 }
@@ -353,4 +355,20 @@ img{
 .user-img{
 	height: 10em;
 	margin-bottom: 1em;
+}
+
+#warning-msg{
+	color: red;
+}
+
+.row input {
+	width: 20em;
+	height: 1.8em;
+}
+.row{
+	line-height: normal;
+}
+#password-description{
+	line-height: 1.2em;
+	word-spacing: 0.4em;
 }

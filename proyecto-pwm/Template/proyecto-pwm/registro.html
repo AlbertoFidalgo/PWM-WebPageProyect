@@ -8,6 +8,74 @@
     <link href="styles.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
+
+
+    <script>
+
+        var form;
+
+        function initiate(){
+
+            form = document.querySelector("form[id='register']");
+            form.addEventListener("input", checkval);
+
+            var button = document.getElementById("submit-register-form");
+            button.addEventListener("click", function () {
+                var elemName = document.getElementById("name");
+                var elemPswd = document.getElementById("pswd");
+                var validation = form.checkValidity();
+
+                if(validation){
+                    form.submit();
+                }else if(elemName.validity.valueMissing || elemPswd.validity.valueMissing){
+                    alert('Por favor, asegúrese de haber introducido sus credenciales correctamente');
+                }
+            });
+
+
+            $("input[class='form-field']").change(function (){
+                var pwd = document.getElementById('password');
+                if (pwd.validity.patternMismatch){
+                    document.getElementById("password-description").innerText =  '\nLa contraseña debe contener: \n\n' +
+                        '* Al menos una maýuscula\n' +
+                        '* Al menos una minúscula\n' +
+                        '* Al menos un número\n' +
+                        '* Debe tener un tamaño entre 4 y 16 caracteres';
+                }else{
+                    document.getElementById("password-description").innerText =  '';
+                }
+
+            });
+
+        }
+
+        function checkval(e) {
+            var inputs = document.querySelectorAll('input[class=form-field]');
+            var str = "";
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].checkValidity() === false) {
+                    str += inputs[i].getAttribute("id") + ", ";
+                }
+            }
+            str = str.substring(0, str.length - 2);
+            document.getElementById("warning-msg").innerText = "Por favor, revise que el campo: {" + str + "} ha sido rellenado correctamente";
+            if (form.checkValidity() === true) {
+                document.getElementById("warning-msg").innerText = "";
+            }
+        }
+        addEventListener("load", initiate);
+
+        $(function(){
+            $('#header').load("./header.html");
+        });
+        $(function(){
+            $('#required-credentials').load("./credenciales.html");
+        });
+        $(function(){
+            $('#about-us').load("./aboutus.html");
+        });
+    </script>
+
 </head>
 
 <body>
@@ -24,53 +92,62 @@
                     <br>
                     ¿Deseas Darte de Alta?
                 </h1>
-                <form id="register" action=".................">
+                <form id="register" method="get" action="">
 
                     <div class="cointainer">
                         <div class="row">
 
                             <div class="field">
-                                <div class="form-field" for="name-form"> Nombre</div>
-                                <input type="text" id="name-form"/>
+                                <div class="form-field" for="name"> Nombre</div>
+                                <input
+                                        class="form-field" type="text" id="name" required value=""
+                                        maxlength="24"
+                                />
                             </div>
 
                             <div class="field">
-                                <div class="form-field" for="pswd-form"> Contraseña</div>
-                                <input type="text" id="pswd-form"/>
+                                <div class="form-field" for="pswd"> Contraseña</div>
+                                <input
+                                        class="form-field" type="password" id="password" required value=""
+                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
+                                />
                             </div>
 
                             <div class="field">
-                                <div class="form-field" for="email-form"> Correo</div>
-                                <input type="text" id="email-form"/>
+                                <div class="form-field" for="email"> Correo</div>
+                                <input class="form-field" type="email" id="email" required value=""/>
                             </div>
 
                             <div class="field">
-                                <div class="form-field" for="birth-form"> * Nacimiento</div>
-                                <input type="text" id="birth-form"/>
+                                <div class="form-field" for="birth"> * Nacimiento</div>
+                                <input class="form-field" type="date" id="birth"/>
                             </div>
 
                             <div class="field">
                                 <div class="form-field" for="nationality-form"> * Nacionalidad</div>
-                                <input type="text" id="nationality-form"/>
+                                <input class="form-field" type="text" id="nationality"/>
                             </div>
 
                             <div class="field">
-                                <div class="form-field" for="about-me-form"> * Sobre mí</div>
-                                <input type="text" id="about-me-form"/>
+                                <div class="form-field" for="about me form"> * Sobre mí</div>
+                                <input class="form-field" type="text" id="about me form"/>
                             </div>
+
+                            <label id="warning-msg"></label>
+
+                            <label id="password-description"></label>
 
                         </div>
                     </div>
 
                     <div class="submit-button" >
-                        <input class="submit-button-form" id ="submit-register-form" type="submit" value="DARSE DE ALTA"/>
+                        <input class="submit-button-form" id ="submit-register-form" type="button" value="DARSE DE ALTA"/>
                     </div>
 
                 </form>
             </section>
 
             <section id="about-us">
-
             </section>
 
         </article> <!--//header-->
@@ -78,18 +155,6 @@
 
 </div> <!--//container-->
 
-
-<script>
-    $(function(){
-        $('#header').load("./header.html");
-    });
-    $(function(){
-        $('#required-credentials').load("./credenciales.html");
-    });
-    $(function(){
-        $('#about-us').load("./aboutus.html");
-    });
-</script>
 
 </body>
 

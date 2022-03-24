@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6327ec9a-5e86-4ecb-8c50-83f289460240" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/proyecto-pwm/credenciales.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/proyecto-pwm/iniciarSesion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/proyecto-pwm/iniciarSesion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/proyecto-pwm/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/proyecto-pwm/registro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/proyecto-pwm/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Template/proyecto-pwm/styles.css" afterDir="false" />
@@ -29,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -50,7 +49,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647854870407</updated>
-      <workItem from="1647854871540" duration="3026000" />
+      <workItem from="1647854871540" duration="3528000" />
+      <workItem from="1648032005316" duration="15000" />
+      <workItem from="1648032022804" duration="7000" />
     </task>
     <servers />
   </component>

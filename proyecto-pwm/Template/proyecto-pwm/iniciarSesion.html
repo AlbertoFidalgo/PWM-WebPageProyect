@@ -8,6 +8,7 @@
     <link href="styles.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
+
 </head>
 <body>
 
@@ -24,19 +25,19 @@
 
                         <img class="user-img" src="images/user.png" height="200px" width="200px" >
 
-                        <form id="login" action=".................">
+                        <form id="login" method="get" action="">
 
                             <div class="cointainer">
                                 <div class="row">
 
                                     <div class="field">
                                         <div class="form-field" for="name-form"> Nombre</div>
-                                        <input type="text" id="name-form"/>
+                                        <input type="text" id="name-form" required value=""/>
                                     </div>
 
                                     <div class="field">
                                         <div class="form-field" for="pswd-form"> Contraseña</div>
-                                        <input type="text" id="pswd-form"/>
+                                        <input type="text" id="pswd-form" required value=""/>
                                     </div>
 
                                 </div>
@@ -47,10 +48,9 @@
                                 <input class="submit-button-form" id ="submit-login-form" type="submit" value="INICIAR SESIÓN"/>
                             </div>
 
-                            <a class="pswd-forgotten" href="..........">
+                            <a class="pswd-forgotten" href="">
                                 ¿Has olvidado tu contraseña?
                             </a>
-
 
                         </form>
 
@@ -64,15 +64,10 @@
                             <li>Accede a la opinión de nuestros visistantes</li>
                             <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
                         </ol>
-
                         <a class="submit-button" id="goto-register" href="./registro.html">
                             <button class="submit-button">IR A REGISTRARSE</button>
                         </a>
-
                     </section>
-
-
-
 
                 </article>
 
@@ -82,8 +77,7 @@
 </div>
 
 
-
-
+</body>
 <script>
     $(function(){
         $('#header').load("./header.html");
@@ -91,10 +85,5 @@
     $(function(){
         $('#about-us').load("./aboutus.html");
     });
-    $(function(){
-        $('#required-credentials').load("./credenciales.html");
-    });
 </script>
-
-</body>
 </html>
