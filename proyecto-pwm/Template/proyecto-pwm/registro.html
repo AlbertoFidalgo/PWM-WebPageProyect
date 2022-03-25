@@ -17,12 +17,32 @@
         function initiate(){
 
             form = document.querySelector("form[id='register']");
-            form.addEventListener("input", checkval);
-
+            var pwd = document.getElementById('password');
+            var conPwd = document.getElementById('confirm password');
             var button = document.getElementById("submit-register-form");
+            var inPwd = document.querySelectorAll('input[type=password]');
+
+            var checkPasswordValidity = function(){
+
+                if (pwd.value !== conPwd.value) {
+                    document.getElementById("password-must-match").innerText = 'Las contraseñas deben coincidir!';
+                } else {
+                    document.getElementById("password-must-match").innerText = '';
+                }
+
+            };
+
+
+
+            for (var i = 0; i < inPwd.length; i++) {
+                inPwd[i].addEventListener("keyup", checkPasswordValidity);
+            }
+
+            form.addEventListener('input' , checker, true);
+
             button.addEventListener("click", function () {
                 var elemName = document.getElementById("name");
-                var elemPswd = document.getElementById("pswd");
+                var elemPswd = document.getElementById("password");
                 var validation = form.checkValidity();
 
                 if(validation){
@@ -45,11 +65,13 @@
                     document.getElementById("password-description").innerText =  '';
                 }
 
+
             });
+
 
         }
 
-        function checkval(e) {
+        function checker() {
             var inputs = document.querySelectorAll('input[class=form-field]');
             var str = "";
             for (var i = 0; i < inputs.length; i++) {
@@ -62,14 +84,12 @@
             if (form.checkValidity() === true) {
                 document.getElementById("warning-msg").innerText = "";
             }
+
         }
         addEventListener("load", initiate);
 
         $(function(){
             $('#header').load("./header.html");
-        });
-        $(function(){
-            $('#required-credentials').load("./credenciales.html");
         });
         $(function(){
             $('#about-us').load("./aboutus.html");
@@ -114,6 +134,16 @@
                             </div>
 
                             <div class="field">
+                                <div class="form-field" for="confirm pswd"> Confirmar ontraseña</div>
+                                <input
+                                        class="form-field" type="password" id="confirm password"
+                                />
+                            </div>
+
+
+                            <label id="password-must-match"></label>
+
+                            <div class="field">
                                 <div class="form-field" for="email"> Correo</div>
                                 <input class="form-field" type="email" id="email" required value=""/>
                             </div>
@@ -134,7 +164,6 @@
                             </div>
 
                             <label id="warning-msg"></label>
-
                             <label id="password-description"></label>
 
                         </div>

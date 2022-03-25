@@ -368,6 +368,13 @@ img{
 .row{
 	line-height: normal;
 }
+
+
+#password-must-match{
+	color: red;
+	text-align: center;
+}
+
 #password-description{
 	line-height: 1.2em;
 	word-spacing: 0.4em;
