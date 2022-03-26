@@ -20,26 +20,9 @@
       <div class="row">
         <div class="col-lg-2 d-none d-sm-none d-lg-block pe-5">
           <div class="row bg1 borderBlack">
-            <p>Tipo de contenido</p>
+            <p>Filtrado</p>
           </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género 1</a></p>
-          </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género 2</a></p>
-          </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género 3</a></p>
-          </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género 4</a></p>
-          </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género 5</a></p>
-          </div>
-          <div class="row bg2 borderBlack">
-            <p><a href="#" class="text-decoration-none text-black">Género ...</a></p>
-          </div>
+          <div id="genrefilter"></div>
           <p></p>
           <div class="row bg2 borderBlack">
             <p><a href="#" class="text-decoration-none text-black">Mejor Votados</a></p>
@@ -84,7 +67,7 @@
               </button>
             </div>
             <div class="col-11 col-lg-12">
-              <h2>Tipo de contenido</h2>
+              <h2>Peliculas</h2>
             </div>
             <div class="row" id="films"></div>
           </div>
@@ -102,15 +85,57 @@
           const template = (image, title) => `<img src="${image}" class="img-fluid" id="img-cat"><p class="bg1">${title}</p>`;
           var child = document.createElement('div');
           child.className = "col-6 col-md-4 col-lg-3 ps-5";
-          child.innerHTML = template(movie.Images[0], movie.Title);
+          child.innerHTML = template(movie.Poster, movie.Title);
           document.getElementById("films").appendChild(child);
         })
       }
     };
 
-    xmlhttp.open("GET", "data/movies.json", true);
+    xmlhttp.open("GET", "data/movies/movies.json", true);
     xmlhttp.send();
   </script>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200){
+        var json = JSON.parse(this.responseText);
+        json.Genres.forEach(genre => {
+          const template = (genero) => `<p><a href="#" class="text-decoration-none text-black">${genero}</a></p>`;
+          var child = document.createElement('div');
+          child.className = "row bg2 borderBlack";
+          child.innerHTML = template(genre);
+          child.onclick = function(){
+            document.getElementById("films").innerHTML = "";
+
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200){
+                var json = JSON.parse(this.responseText);
+                json.forEach(movie => {
+                  if(movie.Genre.includes(genre)) {
+                  const template = (image, title) => `<img src="${image}" class="img-fluid" id="img-cat"><p class="bg1">${title}</p>`;
+                  var child = document.createElement('div');
+                  child.className = "col-6 col-md-4 col-lg-3 ps-5";
+                  child.innerHTML = template(movie.Poster, movie.Title);
+                  document.getElementById("films").appendChild(child);}
+                })
+              }
+            };
+
+            xmlhttp.open("GET", "data/movies/movies.json", true);
+            xmlhttp.send();
+          };
+          document.getElementById("genrefilter").appendChild(child);
+        })
+      }
+    };
+
+    xmlhttp.open("GET", "data/movies/genres.json", true);
+    xmlhttp.send();
+  </script>
+
   <script>
     $(function(){
       $('#header').load("./header.html");
