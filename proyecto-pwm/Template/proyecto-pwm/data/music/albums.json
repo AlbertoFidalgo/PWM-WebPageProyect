@@ -1,0 +1,8 @@
+[
+  {"Title":"Nevermind","Genre": "Rock, Pop","Artist": "Nirvana","Poster": "https://m.media-amazon.com/images/I/411+BTGr4OL._AC_.jpg"},
+  {"Title":"Back in Black","Genre": "Heavy Metal, Rock","Artist": "AC/DC","Poster": "https://m.media-amazon.com/images/I/51Q7IUqeLxL._AC_SL1001_.jpg"},
+  {"Title":"OK Computer","Genre": "Indie, Alternative","Artist": "Radiohead","Poster": "https://m.media-amazon.com/images/I/51XNw+m7CZL._AC_.jpg"},
+  {"Title":"Ziggy Stardust","Genre": "Indie, Pop","Artist": "David Bowie","Poster": "https://m.media-amazon.com/images/I/61S-uqg6vwS._AC_.jpg"},
+  {"Title":"Discovery","Genre": "Electronic, Dance","Artist": "Daft Punk","Poster": "https://m.media-amazon.com/images/I/81G3AiMU+pL._SL1500_.jpg"},
+  {"Title":"The Wall","Genre": "Indie, Rock","Artist": "Pink Floyd","Poster": "https://m.media-amazon.com/images/I/41y+bYI2q8S._AC_.jpg"}
+]
