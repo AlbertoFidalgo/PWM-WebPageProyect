@@ -3,135 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <title>LittleCritics</title>
-  <script src="jquery-3.5.0.js"></script>
+  <script src="jquery-3.6.0.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <link href="styles.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
+  <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 2048px)">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <div id="container">
     <div id="header">
-      <div class="row">
-        <div class="col-6">
-          <img src="images/10542658cop.png" id="logo" alt="logo">
-        </div>
-        <div class="col-6 text-end mt-2 pe-4">
-          <input type="button" value="Iniciar Sesion">
-          <input type="button" value="Registrarse">
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="btn-group" role="group">
-          <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="music-dropdown" data-bs-toggle="dropdown">
-            Música
-          </button>
-          <ul class="dropdown-menu " aria-labelledby="music-dropdown">
-            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
-            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
-            <li><a href="#contact" class="dropdown-item">Rap</a></li>
-            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
-            <li><a href="#contact" class="dropdown-item">Pop</a></li>
-            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
-            <li><a href="#contact" class="dropdown-item">Folk</a></li>
-            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="film-dropdown" data-bs-toggle="dropdown">
-            Películas
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="film-dropdown">
-            <li><a href="#home" class="dropdown-item">Acción</a></li>
-            <li><a href="#about" class="dropdown-item">Aventura</a></li>
-            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
-            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
-            <li><a href="#contact" class="dropdown-item">Drama</a></li>
-            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
-            <li><a href="#contact" class="dropdown-item">Musical</a></li>
-            <li><a href="#contact" class="dropdown-item">Terror</a>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="series-dropdown" data-bs-toggle="dropdown">
-            Series
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="series-dropdown">
-            <li><a href="#home" class="dropdown-item">Acción</a></li>
-            <li><a href="#about" class="dropdown-item">Aventura</a></li>
-            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
-            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
-            <li><a href="#contact" class="dropdown-item">Drama</a></li>
-            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
-            <li><a href="#contact" class="dropdown-item">Musical</a></li>
-            <li><a href="#contact" class="dropdown-item">Terror</a></li>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
-            Podcasts
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
-            <li><a href="" class="dropdown-item">Noticias/Política</a></li>
-            <li><a href="#about" class="dropdown-item">Deporte/Ocio</a></li>
-            <li><a href="#contact" class="dropdown-item">Educativo</a></li>
-            <li><a href="#contact" class="dropdown-item">Salud/Estilo de vida</a></li>
-            <li><a href="#contact" class="dropdown-item">Tecnología</a></li>
-            <li><a href="#contact" class="dropdown-item">Arte</a></li>
-            <li><a href="#contact" class="dropdown-item">Juegos/Entretenimiento</a></li>
-            <li><a href="#contact" class="dropdown-item">Niños/Familia</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
 
 
-    <div id="container-4">
-      <div id="container-5">
-        <div class="inLine">
-          <img src="images/user.png" height="300px" width="300px">
+    <div class="container-fluid ps-5 pe-5">
+      <div class="row pt-5">
+        <div class="col-3 col-xxl-2">
+          <img src="images/rectanguloEjemplo.jpg" id="usuarioImg" class="img-fluid rounded-circle">
         </div>
-        <div id="info">
-          <p class="text">Nombre: nombre del usuario</p>
-          <p class="text">Correo: correo del usuario</p>
-          <p class="text">Fecha de nacimiento: fecha de nacimiento del usuario</p>
-          <p class="text">Nacionalidad: nacionalidad del usuario</p>
-          <p class="text">Sobre mí: pequeña descripción del usuario sobre sus gustos</p>
+        <div class="col-9 col-xxl-10 bg1">
+          <div class="row pt-2">
+            <div class="col-10 col-md-11">
+              <p><u>Nombre: nombre del usuario</u></p>
+              <p><u>Correo: correo del usuario</u></p>
+              <p><u>Fecha de nacimiento: fecha de nacimiento del usuario</u></p>
+              <p><u>Nacionalidad: nacionalidad del usuario</u></p>
+              <p><u>Sobre mí: pequeña descripción del usuario sobre sus gustos</u></p>
+            </div>
+            <div class="col-2 col-md-1">
+              <img src="images/configIcon.png" class="img-fluid">
+            </div>
+          </div>
         </div>
       </div>
-      <h2 class="title2">Actividad reciente en las últimas 72 horas</h2>
-      <div>
-        <div style="background-color: #DD6E56;">
+
+      <div class="row mt-3 bg1 text-center">
+        <h2>Actividad reciente en las últimas 72 horas</h2>
+      </div>
+
+      <div class="row mt-3 bg1">
+        <div class="row pt-2">
           <p>Usuario ha realizado una acción en un elemento</p>
-          <img src="images/rectanguloEjemplo.jpg" height="100px" width="100px" style="display: inline-block;">
-          <div style="display: inline-block; vertical-align: top;">
+        </div>
+        <div class="row">
+          <div class="col-2 pb-2">
+            <img src="images/rectanguloEjemplo.jpg" class="img-fluid" style="min-height: 70px; max-height: 200px; min-width: 30px">
+          </div>
+          <div class="col-8">
             <p>Título del elemento</p>
             <p>Descripción del elemento</p>
           </div>
-          <div style="display: inline-block; vertical-align: top; margin-left: 800px;">
+          <div class="col-2">
             <p>Fecha de cuando se realizo la acción</p>
           </div>
         </div>
-        <div style="background-color: #DD6E56;">
+      </div>
+
+      <div class="row mt-3 bg1">
+        <div class="row pt-2">
           <p>Usuario ha realizado una acción en un elemento</p>
-          <img src="images/rectanguloEjemplo.jpg" height="100px" width="100px" style="display: inline-block;">
-            <div style="display: inline-block; vertical-align: top;">
-              <p>Título del elemento</p>
-              <p>Descripción del elemento</p>
-            </div>
-            <div style="display: inline-block; vertical-align: top; margin-left: 800px;">
-              <p>Fecha de cuando se realizo la acción</p>
-            </div>
         </div>
-        <div style="background-color: #DD6E56;">
-          <p>Usuario ha realizado una acción en un elemento</p>
-          <img src="images/rectanguloEjemplo.jpg" height="100px" width="100px" style="display: inline-block;">
-            <div style="display: inline-block; vertical-align: top;">
-              <p>Título del elemento</p>
-              <p>Descripción del elemento</p>
-            </div>
-            <div style="display: inline-block; vertical-align: top; margin-left: 800px;">
-              <p>Fecha de cuando se realizo la acción</p>
-            </div>
+        <div class="row">
+          <div class="col-1 pb-2">
+            <img src="images/rectanguloEjemplo.jpg" class="img-fluid">
+          </div>
+          <div class="col-9">
+            <p>Título del elemento</p>
+            <p>Descripción del elemento</p>
+          </div>
+          <div class="col-2">
+            <p>Fecha de cuando se realizo la acción</p>
+          </div>
         </div>
       </div>
+
+      <div class="row mt-3 bg1">
+        <div class="row pt-2">
+          <p>Usuario ha realizado una acción en un elemento</p>
+        </div>
+        <div class="row">
+          <div class="col-1 pb-2">
+            <img src="images/rectanguloEjemplo.jpg" class="img-fluid">
+          </div>
+          <div class="col-9">
+            <p>Título del elemento</p>
+            <p>Descripción del elemento</p>
+          </div>
+          <div class="col-2">
+            <p>Fecha de cuando se realizo la acción</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  <script>
+    $(function(){
+      $('#header').load("./header.html");
+    });
+  </script>
 </body>
 </html>

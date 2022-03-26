@@ -3,123 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>LittleCritics</title>
-  <script src="jquery-3.5.0.js"></script>
+  <script src="jquery-3.6.0.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <link href="styles.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
+  <link href="responsive.css" rel="stylesheet" media="screen and (max-width: 2048px)">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <div id="container">
     <div id="header">
-      <div class="row">
-        <div class="col-6">
-          <img src="images/10542658cop.png" id="logo" alt="logo">
-        </div>
-        <div class="col-6 text-end mt-2 pe-4">
-          <input type="button" value="Iniciar Sesion">
-          <input type="button" value="Registrarse">
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="btn-group" role="group">
-          <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="music-dropdown" data-bs-toggle="dropdown">
-            Música
-          </button>
-          <ul class="dropdown-menu " aria-labelledby="music-dropdown">
-            <li><a href="#home" class="dropdown-item">Rock/Metal</a></li>
-            <li><a href="#about" class="dropdown-item">Reggaeton</a></li>
-            <li><a href="#contact" class="dropdown-item">Rap</a></li>
-            <li><a href="#contact" class="dropdown-item">Electrónica</a></li>
-            <li><a href="#contact" class="dropdown-item">Pop</a></li>
-            <li><a href="#contact" class="dropdown-item">Jazz</a></li>
-            <li><a href="#contact" class="dropdown-item">Folk</a></li>
-            <li><a href="#contact" class="dropdown-item">Música Clásica</a></li>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="film-dropdown" data-bs-toggle="dropdown">
-            Películas
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="film-dropdown">
-            <li><a href="#home" class="dropdown-item">Acción</a></li>
-            <li><a href="#about" class="dropdown-item">Aventura</a></li>
-            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
-            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
-            <li><a href="#contact" class="dropdown-item">Drama</a></li>
-            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
-            <li><a href="#contact" class="dropdown-item">Musical</a></li>
-            <li><a href="#contact" class="dropdown-item">Terror</a>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="series-dropdown" data-bs-toggle="dropdown">
-            Series
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="series-dropdown">
-            <li><a href="#home" class="dropdown-item">Acción</a></li>
-            <li><a href="#about" class="dropdown-item">Aventura</a></li>
-            <li><a href="#contact" class="dropdown-item">Ciencia Ficción</a></li>
-            <li><a href="#contact" class="dropdown-item">Comedia</a></li>
-            <li><a href="#contact" class="dropdown-item">Drama</a></li>
-            <li><a href="#contact" class="dropdown-item">Fantasía</a></li>
-            <li><a href="#contact" class="dropdown-item">Musical</a></li>
-            <li><a href="#contact" class="dropdown-item">Terror</a></li>
-          </ul>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
-            Podcasts
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
-            <li><a href="" class="dropdown-item">Noticias/Política</a></li>
-            <li><a href="#about" class="dropdown-item">Deporte/Ocio</a></li>
-            <li><a href="#contact" class="dropdown-item">Educativo</a></li>
-            <li><a href="#contact" class="dropdown-item">Salud/Estilo de vida</a></li>
-            <li><a href="#contact" class="dropdown-item">Tecnología</a></li>
-            <li><a href="#contact" class="dropdown-item">Arte</a></li>
-            <li><a href="#contact" class="dropdown-item">Juegos/Entretenimiento</a></li>
-            <li><a href="#contact" class="dropdown-item">Niños/Familia</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
 
-    <div id="container-4">
-      <div id="container-5">
-        <div style="display: inline-block;">
-          <img src="images/rectanguloEjemplo.jpg" width="300px" height="400px">
+    <div class="container-fluid ps-5 pe-5">
+      <div class="row pt-5">
+        <div class="col-2">
+          <img src="images/rectanguloEjemplo.jpg" class="img-fluid">
         </div>
-        <div id="info">
-          <p>Título/Nombre: ...</p>
+        <div class="col-10 bg1">
+          <p class="mt-2">Título/Nombre: ...</p>
           <p>Año: ...</p>
           <p>Género: ...</p>
           <p>Duración: ...</p>
           <p>Valoración de la comunidad: ...</p>
-          <p>Contenido/Descripción/Argumento/Sinopsis del elemento:</p>
+          <p class="d-none d-lg-block">Contenido/Descripción/Argumento/Sinopsis del elemento:</p>
           <p>...</p>
         </div>
       </div>
 
-      <h2 class="title2">Reviews</h2>
-      <div id="container-6">
-        <div style="display: inline-block; width: 140px;" class="title2">
-          <p>Dinos tu opinión sobre</p>
-          <p>título del elemento:</p>
+      <div class="row mt-3 d-lg-none bg1">
+        <p>Contenido/Descripción/Argumento/Sinopsis del elemento:</p>
+      </div>
+
+      <div class="row mt-3">
+        <h2 class="bg1 text-center">Reviews</h2>
+      </div>
+
+      <div class="row mt-2 bg1">
+        <div class="col-12 col-lg-2 pt-2">
+          <p>Dinos tu opinión sobre títuto del elemento:</p>
         </div>
-        <div style="display: inline-block;">
-          <textarea style="height: 70px; width: 1100px; margin-left: 20px; vertical-align:-18px;">Escribe aquí tu opinión...</textarea>
-          <input type="button" value="Enviar" style="vertical-align: top;">
+        <div class="col-10 col-lg-8 pt-2">
+          <textarea class="col-12">Escribe aquí tu opinión...</textarea>
         </div>
-        <div>
-          <div style="display:inline-block; margin-top: 40px; width: 140px" class="title2">
-            <img src="images/user.png" height="80px" width="80px">
-            <p>Nombre del perfil</p>
-            <p>Fecha de la review </p>
-            <input type="button" value="Ver perfil">
-          </div>
-          <div class="review">
-            <p>Review de un usuario...</p>
-          </div>
+        <div class="col-2 col-lg-2 pt-4">
+          <input type="button" value="Enviar">
+        </div>
+      </div>
+      <div class="row mt-3 bg1">
+        <div class="col-1 pt-2 pb-2 text-center">
+          <img src="images/user.png" class="img-fluid">
+          <p>Nombre del perfil</p>
+          <p>Fecha de la review </p>
+          <input type="button" value="Ver perfil">
+        </div>
+        <div class="col-11 pt-2">
+          <p>Usuario ha comentado:</p>
+          <p>_________________________________________</p>
+          <p>Comentario...</p>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    $(function(){
+      $('#header').load("./header.html");
+    });
+  </script>
 </body>
 </html>
