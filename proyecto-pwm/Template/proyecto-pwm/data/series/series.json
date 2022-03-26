@@ -1,0 +1,9 @@
+[
+  {"Title":"Breaking Bad","Genre": "Drama, Suspense","Poster": "https://m.media-amazon.com/images/I/71r7QMRRUPL._AC_SL1500_.jpg"},
+  {"Title":"Sopranos","Genre": "Drama, Crime","Poster": "https://m.media-amazon.com/images/I/61NJCKq8vEL._AC_SL1500_.jpg"},
+  {"Title":"Aqui no hay quien Viva","Genre": "Comedy","Poster": "https://m.media-amazon.com/images/I/71Q-2b0-aAL._AC_UL320_.jpg"},
+  {"Title":"Perdidos","Genre": "Drama, Suspense","Poster": "https://m.media-amazon.com/images/I/317I44JE+JL._AC_UL320_.jpg"},
+  {"Title":"Twin Peaks","Genre": "Drama, Suspense, Horror, Crime","Poster": "https://m.media-amazon.com/images/I/A14VzGjP2xL._AC_UL320_.jpg"},
+  {"Title":"Futurama","Genre": "Comedy, Animated, Science-Fiction","Poster": "https://m.media-amazon.com/images/I/71zILi8UpcL._AC_UL320_.jpg"},
+  {"Title":"Juego de Tronos","Genre": "Drama, Adventure, Suspense","Poster": "https://m.media-amazon.com/images/I/61+5mMtkPbL._AC_UL320_.jpg"}
+]

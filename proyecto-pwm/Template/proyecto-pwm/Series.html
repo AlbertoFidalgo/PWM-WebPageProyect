@@ -71,7 +71,7 @@
                         </button>
                     </div>
                     <div class="col-11 col-lg-12">
-                        <h2>Peliculas</h2>
+                        <h2>Series</h2>
                     </div>
                     <div class="row" id="films"></div>
                 </div>
@@ -95,7 +95,7 @@
         }
     };
 
-    xmlhttp.open("GET", "data/movies/movies.json", true);
+    xmlhttp.open("GET", "data/series/series.json", true);
     xmlhttp.send();
 </script>
 <script>
@@ -128,7 +128,7 @@
                         }
                     };
 
-                    xmlhttp.open("GET", "data/movies/movies.json", true);
+                    xmlhttp.open("GET", "data/series/series.json", true);
                     xmlhttp.send();
                 };
                 document.getElementById("genrefilter").appendChild(child);
@@ -136,7 +136,7 @@
         }
     };
 
-    xmlhttp.open("GET", "data/movies/genres.json", true);
+    xmlhttp.open("GET", "data/series/genres.json", true);
     xmlhttp.send();
 </script>
 
