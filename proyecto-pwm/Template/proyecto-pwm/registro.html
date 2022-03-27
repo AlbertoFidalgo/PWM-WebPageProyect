@@ -104,63 +104,63 @@
     <div id="header">
     </div> <!--//header-->
 
-    <main id="register-content">
+    <main class="container-fluid">
         <article>
-            <section id="user-register">
+            <section id="user-register" class="text-center">
                 <h1 id="register-title">
-                    ¡Bienvenido
+                    ¡Bienvenido!
                     <br>
                     ¿Deseas Darte de Alta?
                 </h1>
                 <form id="register" method="get" action="">
 
-                    <div class="cointainer">
+                    <div class="container">
                         <div class="row">
 
-                            <div class="field">
-                                <div class="form-field" for="name"> Nombre</div>
+                            <div class="row">
+                                <div class="form-field col-lg-5" for="name"> Nombre</div>
                                 <input
-                                        class="form-field" type="text" id="name" required value=""
+                                        class="form-field col-lg-7" type="text" id="name" required value=""
                                         maxlength="24"
                                 />
                             </div>
 
-                            <div class="field">
-                                <div class="form-field" for="pswd"> Contraseña</div>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="pswd"> Contraseña</div>
                                 <input
-                                        class="form-field" type="password" id="password" required value=""
+                                        class="form-field col-lg-7" type="password" id="password" required value=""
                                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
                                 />
                             </div>
 
-                            <div class="field">
-                                <div class="form-field" for="confirm pswd"> Confirmar ontraseña</div>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="confirm pswd"> Confirmar contraseña</div>
                                 <input
-                                        class="form-field" type="password" id="confirm password"
+                                        class="form-field col-lg-7" type="password" id="confirm password"
                                 />
                             </div>
 
 
                             <label id="password-must-match"></label>
 
-                            <div class="field">
-                                <div class="form-field" for="email"> Correo</div>
-                                <input class="form-field" type="email" id="email" required value=""/>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="email"> Correo</div>
+                                <input class="form-field col-lg-7" type="email" id="email" required value=""/>
                             </div>
 
-                            <div class="field">
-                                <div class="form-field" for="birth"> * Nacimiento</div>
-                                <input class="form-field" type="date" id="birth"/>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="birth"> * Nacimiento</div>
+                                <input class="form-field col-lg-7" type="date" id="birth"/>
                             </div>
 
-                            <div class="field">
-                                <div class="form-field" for="nationality-form"> * Nacionalidad</div>
-                                <input class="form-field" type="text" id="nationality"/>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="nationality-form"> * Nacionalidad</div>
+                                <input class="form-field col-lg-7" type="text" id="nationality"/>
                             </div>
 
-                            <div class="field">
-                                <div class="form-field" for="about me form"> * Sobre mí</div>
-                                <input class="form-field" type="text" id="about me form"/>
+                            <div class="row pt-3">
+                                <div class="form-field col-lg-5" for="about me form"> * Sobre mí</div>
+                                <input class="form-field col-lg-7" type="text" id="about me form"/>
                             </div>
 
                             <label id="warning-msg"></label>
@@ -169,8 +169,8 @@
                         </div>
                     </div>
 
-                    <div class="submit-button" >
-                        <input class="submit-button-form" id ="submit-register-form" type="button" value="DARSE DE ALTA"/>
+                    <div class="row justify-content-center pt-5">
+                        <input class="submit-button-form col-4" id ="submit-register-form" type="button" value="DARSE DE ALTA"/>
                     </div>
 
                 </form>

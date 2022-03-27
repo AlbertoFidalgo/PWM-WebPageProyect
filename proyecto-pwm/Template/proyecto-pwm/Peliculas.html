@@ -12,7 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <div id="container">
-
     <div id="header">
     </div>
 
@@ -44,12 +43,7 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <a href="#" class="bg2 borderBlack">Género 1</a>
-            <a href="#" class="bg2 borderBlack">Género 2</a>
-            <a href="#" class="bg2 borderBlack">Género 3</a>
-            <a href="#" class="bg2 borderBlack">Género 4</a>
-            <a href="#" class="bg2 borderBlack">Género 5</a>
-            <a href="#" class="bg2 borderBlack">Género ...</a>
+            <div id="genrefilter1"></div>
             <p></p>
             <a href="#" class="bg2 borderBlack">Mejor Votados</a>
             <a href="#" class="bg2 borderBlack">Estrenos</a>
@@ -77,7 +71,6 @@
   </div>
   <script>
     var xmlhttp = new XMLHttpRequest();
-
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200){
         var json = JSON.parse(this.responseText);
@@ -90,13 +83,11 @@
         })
       }
     };
-
     xmlhttp.open("GET", "data/movies/movies.json", true);
     xmlhttp.send();
   </script>
   <script>
     var xmlhttp = new XMLHttpRequest();
-
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200){
         var json = JSON.parse(this.responseText);
@@ -107,9 +98,7 @@
           child.innerHTML = template(genre);
           child.onclick = function(){
             document.getElementById("films").innerHTML = "";
-
             var xmlhttp = new XMLHttpRequest();
-
             xmlhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200){
                 var json = JSON.parse(this.responseText);
@@ -123,7 +112,6 @@
                 })
               }
             };
-
             xmlhttp.open("GET", "data/movies/movies.json", true);
             xmlhttp.send();
           };
@@ -131,7 +119,43 @@
         })
       }
     };
+    xmlhttp.open("GET", "data/movies/genres.json", true);
+    xmlhttp.send();
+  </script>
 
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200){
+        var json = JSON.parse(this.responseText);
+        json.Genres.forEach(genre => {
+          const template = (genero) => `<p><a href="#" class="text-decoration-none text-black">${genero}</a></p>`;
+          var child = document.createElement('div');
+          child.className = "row bg2 borderBlack";
+          child.innerHTML = template(genre);
+          child.onclick = function(){
+            document.getElementById("films").innerHTML = "";
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200){
+                var json = JSON.parse(this.responseText);
+                json.forEach(movie => {
+                  if(movie.Genre.includes(genre)) {
+                    const template = (image, title) => `<img src="${image}" class="img-fluid" id="img-cat"><p class="bg1">${title}</p>`;
+                    var child = document.createElement('div');
+                    child.className = "col-6 col-md-4 col-lg-3 ps-5";
+                    child.innerHTML = template(movie.Poster, movie.Title);
+                    document.getElementById("films").appendChild(child);}
+                })
+              }
+            };
+            xmlhttp.open("GET", "data/movies/movies.json", true);
+            xmlhttp.send();
+          };
+          document.getElementById("genrefilter1").appendChild(child);
+        })
+      }
+    };
     xmlhttp.open("GET", "data/movies/genres.json", true);
     xmlhttp.send();
   </script>
@@ -141,6 +165,5 @@
       $('#header').load("./header.html");
     });
   </script>
-
 </body>
 </html>

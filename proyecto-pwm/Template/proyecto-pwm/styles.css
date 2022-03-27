@@ -27,19 +27,20 @@ body {
 	width: 180px;
 	height: 120px;
 }
-
 .bg1 {
 	background-color: #DD6E56;
 }
-
 .bg2 {
 	background-color: #2C3949;
 }
-
 .borderBlack {
 	border: 1px solid;
 }
-
+.imgLimits {
+	min-height: 70px;
+	max-height: 200px;
+	min-width: 30px;
+}
 #img-cat {
 	height:200px;
 	width: 250px;
@@ -55,7 +56,6 @@ body {
 	display: block;
 	transition: 0.3s;
 }
-
 .filtro {
 	height: 2em;
 	width: 180px;

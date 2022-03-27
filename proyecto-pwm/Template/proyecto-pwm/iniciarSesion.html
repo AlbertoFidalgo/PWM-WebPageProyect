@@ -16,28 +16,26 @@
 
     <div id="header">
     </div> <!--//header-->
+    <main class="container-fluid">
 
-    <main id="iniciar-sesion-content">
+                <article class="row">
 
-                <article id="sesion">
-
-                    <section class="user-login" id="user-login-form">
+                    <section class="user-login col-11 col-lg-6" id="user-login-form">
 
                         <img class="user-img" src="images/user.png" height="200px" width="200px" >
 
                         <form id="login" method="get" action="">
 
-                            <div class="cointainer">
+                            <div class="container">
                                 <div class="row">
-
-                                    <div class="field">
-                                        <div class="form-field" for="name-form"> Nombre</div>
-                                        <input type="text" id="name-form" required value=""/>
+                                    <div class="row">
+                                        <div class="form-field col-5" for="name-form"> Nombre</div>
+                                        <input type="text" class="col-7" id="name-form" required value=""/>
                                     </div>
 
-                                    <div class="field">
-                                        <div class="form-field" for="pswd-form"> Contraseña</div>
-                                        <input type="text" id="pswd-form" required value=""/>
+                                    <div class="row pt-4">
+                                        <div class="form-field col-5" for="pswd-form"> Contraseña</div>
+                                        <input type="text" id="pswd-form"  class="col-7" required value=""/>
                                     </div>
 
                                 </div>
@@ -56,7 +54,7 @@
 
                     </section>
 
-                    <section class="user-login" id="our-advantage">
+                    <div class="col-11 col-lg-5 mt-5 mb-4 bg1 text-center ms-4" id="our-advantage">
                         <h1>Nuestras ventajas: </h1>
                         <ol id="#our-advantage-list">
                             <li>Actualizamos nuestro contenido</li>
@@ -67,7 +65,7 @@
                         <a class="submit-button" id="goto-register" href="./registro.html">
                             <button class="submit-button">IR A REGISTRARSE</button>
                         </a>
-                    </section>
+                    </div>
 
                 </article>
 
