@@ -1,0 +1,22 @@
+#header {
+  background-image: url("src/assets/landingPageBanner.png");
+  background-size: 100%;
+}
+#logo{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 180px;
+  height: 120px;
+}
+@media screen and (min-width: 2048px) {
+  #header {
+    width: 2048px;
+    background-size: 2048px;
+  }
+}
+
+@media (min-width:0px) and (max-width: 1920px) {
+  #header {
+    width: 100%;
+  }
+}
