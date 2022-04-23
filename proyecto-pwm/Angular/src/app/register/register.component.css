@@ -1,77 +1,65 @@
-#register-content{
-  text-align: center;
-}
-
-#register-title{
-  margin-top: 2em;
-  padding: 2em;
-  font-size: 2em;
-  line-height: normal; /*//Anulo propiedad heredada//*/
-}
-
-.vertical-list text{
-  padding: 1rem 0.75rem;
-  margin-left: 0.5em;
-}
-
-.vertical-list{
-  list-style-type: none; /*Not number list*/
-  display: flow;
-  margin: 3em;
-}
 
 
-#register{
-  margin: 3em;
-}
-
-
-
-.field{
-  column-count: 2;
-  padding: 0.7em;
-  padding-bottom: 1em;
-}
-
-
-.cointainer{
+.container{
   display: inline-flex;
   text-align: center;
   align-items: center;
   font-size: 1.4em;
 }
 
-.row {
-  display: inline-block;
+
+#register-title{
+  padding-top: 2em;
+  padding-bottom: 0.7em;
 }
 
 
-section{
-  background: #DD6E56;
-  margin-left: 10em;
-  margin-right: 10em;
 
+.submit-button{
+  padding: 1em;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.submit-button-form{
+  font-size: 1.2em;
+  margin: 1.5em;
+
+  cursor: pointer;
+  height: 2em;
+  width: 10em;
+  border-radius: 0.5em;
+}
+
+#submit-register-form{
+  font-size: 1.8em;
+  text-align: center;
+}
+
+
+.row input {
+  height: 1.8em;
+  line-height: normal;
 }
 
 #about-us{
-  text-align: left;
+  text-align: center;
+  font-size: 1.8em;
+  line-height: normal;
+  padding: 0.2em;
 }
 
 #about-us-title{
-  font-size: 2em;
-  margin-top: 3em;
-  padding: 1.5em 0.8em 0.3em;
+  padding: 0.5em;
 }
 
-.offering-list{
-  list-style-position: inside;
-  list-style-type: disclosure-closed;
-  margin: 1.2em;
-  padding: 0.7em;
+#about-us li{
+  padding: 0.2em;
 }
 
 
-.offering-list li{
-  padding: 0.4em;
-  font-size: 1.5em;
+div{
+  padding: 0.5em;
 }

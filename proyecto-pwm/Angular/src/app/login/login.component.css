@@ -1,7 +1,4 @@
 
-li {
-  list-style-type: none; /*Not number list*/
-}
 
 .container{
   display: inline-flex;
@@ -104,13 +101,3 @@ img{
   line-height: normal;
 }
 
-
-#password-must-match{
-  color: red;
-  text-align: center;
-}
-
-#password-description{
-  line-height: 1.2em;
-  word-spacing: 0.4em;
-}

@@ -4,93 +4,12 @@
   <meta charset="UTF-8">
   <title>LittleCritics</title>
   <link href="/assets/responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
-  <!--
-    <script>
 
-      var form;
-
-      function initiate(){
-        form = document.querySelector("form[id='register']");
-        var pwd = document.getElementById('password');
-        var conPwd = document.getElementById('confirm password');
-        var button = document.getElementById("submit-register-form");
-        var inPwd = document.querySelectorAll('input[type=password]');
-
-        var checkPasswordValidity = function(){
-
-          if (pwd.value !== conPwd.value) {
-            document.getElementById("password-must-match").innerText = 'Las contraseñas deben coincidir!';
-          } else {
-            document.getElementById("password-must-match").innerText = '';
-          }
-
-        };
-
-
-
-        for (var i = 0; i < inPwd.length; i++) {
-          inPwd[i].addEventListener("keyup", checkPasswordValidity);
-        }
-
-        form.addEventListener('input' , checker, true);
-
-        button.addEventListener("click", function () {
-          var elemName = document.getElementById("name");
-          var elemPswd = document.getElementById("password");
-          var validation = form.checkValidity();
-
-          if(validation){
-            form.submit();
-          }else if(elemName.validity.valueMissing || elemPswd.validity.valueMissing){
-            alert('Por favor, asegúrese de haber introducido sus credenciales correctamente');
-          }
-        });
-
-
-        $("input[class='form-field']").change(function (){
-          var pwd = document.getElementById('password');
-          if (pwd.validity.patternMismatch){
-            document.getElementById("password-description").innerText =  '\nLa contraseña debe contener: \n\n' +
-              '* Al menos una maýuscula\n' +
-              '* Al menos una minúscula\n' +
-              '* Al menos un número\n' +
-              '* Debe tener un tamaño entre 4 y 16 caracteres';
-          }else{
-            document.getElementById("password-description").innerText =  '';
-          }
-
-
-        });
-
-
-      }
-
-      function checker() {
-        var inputs = document.querySelectorAll('input[class=form-field]');
-        var str = "";
-        for (var i = 0; i < inputs.length; i++) {
-          if (inputs[i].checkValidity() === false) {
-            str += inputs[i].getAttribute("id") + ", ";
-          }
-        }
-        str = str.substring(0, str.length - 2);
-        document.getElementById("warning-msg").innerText = "Por favor, revise que el campo: {" + str + "} ha sido rellenado correctamente";
-        if (form.checkValidity() === true) {
-          document.getElementById("warning-msg").innerText = "";
-        }
-
-      }
-      addEventListener("load", initiate);
-
-    </script>
-    -->
 </head>
 
 <body>
 
 <div id="container">
-  <div id="header">
-  </div> <!--//header-->
 
   <main class="container-fluid">
     <article>
@@ -106,65 +25,78 @@
             <div class="row">
 
               <div class="row">
-                <div class="form-field col-lg-5" for="name"> Nombre</div>
+                <div class="form-field col-6 text-end" for="name"> Nombre</div>
                 <input
-                  class="form-field col-lg-7" type="text" id="name" required value=""
+                  class="form-field col-5" type="text" id="name" required value=""
+                  placeholder="(Requerido) Introduzca nombre"
                   maxlength="24"
                 />
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="pswd"> Contraseña</div>
+                <div class="form-field col-6 text-end" for="pswd"> Contraseña</div>
                 <input
-                  class="form-field col-lg-7" type="password" id="password" required value=""
+                  class="form-field col-5" type="password" id="password" required value=""
+                  placeholder="(Requerido) Introduzca contraseña"
                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
                 />
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="confirm pswd"> Confirmar contraseña</div>
+                <div class="form-field col-6 text-end" for="confirm pswd"> Confirmar contraseña</div>
                 <input
-                  class="form-field col-lg-7" type="password" id="confirm password"
+                  placeholder="(Requerido) Confirme contraseña"
+                  class="form-field col-5" type="password" id="confirm password"
                 />
               </div>
 
 
-              <label id="password-must-match"></label>
-
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="email"> Correo</div>
-                <input class="form-field col-lg-7" type="email" id="email" required value=""/>
+                <div class="form-field col-6 text-end" for="email"> Correo</div>
+                <input
+                  placeholder="(Requerido) Introduzca correo"
+                  class="form-field col-5" type="email" id="email" required value=""/>
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="birth"> * Nacimiento</div>
-                <input class="form-field col-lg-7" type="date" id="birth"/>
+                <div class="form-field col-6 text-end" for="birth"> * Nacimiento</div>
+                <input class="form-field col-5" type="date" id="birth"/>
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="nationality-form"> * Nacionalidad</div>
-                <input class="form-field col-lg-7" type="text" id="nationality"/>
+                <div class="form-field col-6 text-end" for="nationality-form"> * Nacionalidad</div>
+                <input
+                  placeholder="Mi nacionalidad..."
+                  class="form-field col-5" type="text" id="nationality"/>
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-lg-5" for="about me form"> * Sobre mí</div>
-                <input class="form-field col-lg-7" type="text" id="about me form"/>
+                <div class="form-field col-6 text-end " for="about me form"> * Sobre mí</div>
+                <input
+                  placeholder="Sobre mí..."
+                  class="form-field col-5" type="text" id="about me form"/>
               </div>
-
-              <label id="warning-msg"></label>
-              <label id="password-description"></label>
 
             </div>
           </div>
 
-          <div class="row justify-content-center pt-5">
+          <div class="row justify-content-center pt-3">
             <input class="submit-button-form col-4" id ="submit-register-form" type="button" value="DARSE DE ALTA"/>
+            <!--TODO hacer la validación en firebase-->
           </div>
 
         </form>
       </section>
 
       <section id="about-us">
+        <h1 id="about-us-title" class="display-3">¿Qué te podemos ofrecer?</h1>
+        <ol class="offering-list">
+          <li>Puntúa tus elementos multimedias favoritos</li>
+          <li>Déjanos tu opinión</li>
+          <li>Accede a la información más relevantes de tus pelis favoritas</li>
+          <li>Accede a una comunidad que comparte tus gustos</li>
+          <li>Crea tu propia lista de elementos multimedia</li>
+        </ol>
       </section>
 
     </article> <!--//header-->
