@@ -274,12 +274,16 @@ img{
 	color: red;
 }
 
+
 .row input {
 	/*width: 20em; Cambia el ancho de todos los botones, por lo que hace que algunos botones queden mal*/
 	height: 1.8em;
 }
+
+
 .row{
 	line-height: normal;
+	list-style-type: none; /*Not number list*/
 }
 
 

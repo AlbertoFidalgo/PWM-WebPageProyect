@@ -1,0 +1,116 @@
+
+li {
+  list-style-type: none; /*Not number list*/
+}
+
+.container{
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  font-size: 1.4em;
+  background: red;
+}
+
+
+.user-login{
+  margin: 2em;
+  padding: 2em;
+  position: relative;
+}
+
+
+.iniciar-sesion{
+  padding: 0.2em;
+  margin: 3em 3.5em 4em 5em;
+}
+
+#iniciar-sesion-content{
+  align-content: center;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+#our-advantage{
+  background: inherit;
+}
+
+
+
+#user-login-form{
+  background: #d9d9d9;
+  text-align: center;
+  margin-top: 1em;
+  padding-top: 4em;
+}
+
+.user-login{
+  background: inherit;
+}
+
+
+.submit-button{
+  padding: 1em;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.submit-button-form{
+  font-size: 1.2em;
+  margin: 1.5em;
+
+  cursor: pointer;
+  height: 2em;
+  width: 10em;
+  border-radius: 0.5em;
+}
+
+#submit-register-form{
+  font-size: 1.8em;
+  text-align: center;
+}
+
+a{
+  color: #326E9C;
+}
+
+#our-advantage{
+  font-size: 1.5em;
+}
+
+#our-advantage li{
+  padding: 0.7em;
+}
+
+img{
+  width: auto;
+  max-height: 100%;
+}
+
+.user-img{
+  height: 10em;
+  margin-bottom: 1em;
+}
+
+#warning-msg{
+  color: red;
+}
+
+.row input {
+  height: 1.8em;
+}
+.row{
+  line-height: normal;
+}
+
+
+#password-must-match{
+  color: red;
+  text-align: center;
+}
+
+#password-description{
+  line-height: 1.2em;
+  word-spacing: 0.4em;
+}
