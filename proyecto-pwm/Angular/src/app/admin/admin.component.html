@@ -12,74 +12,72 @@
     </head>
   <body>
 
-  <div id="container">
+  <div id="container" >
 
-    <main class="container-fluid">
+    <main class="container">
 
-      <article class="row" >
+      <article class="container col-12 text-center" >
 
-        <section class="admin col-11 col-lg-6" id="admin-form">
-
+        <section class="admin admin col-lg-12 col-md-12 col-sm-12" id="admin-form">
+          <!--                <section class="admin col-lg-7 col-md-9 col-sm-12" id="admin-form">  -->
 
           <form id="admin" method="get" action="">
 
             <div class="container">
               <div class="row">
-                <div class="row">
+                <div class="row pt-2">
                   <input
-                    type="text" class="col-7" id="name-form" required="required" placeholder="Nombre"
+                    type="text" class="col-lg-7 col-md-10 col-sm-10" id="name-form" required="required" placeholder="Nombre"
                   />
                 </div>
 
                 <div class="row pt-2">
                   <input
-                    type="text" id="description-form"  class="col-7" required="required" placeholder="Descripción"
+                    type="text" id="description-form"  class="col-lg-7 col-md-10 col-sm-10" required="required" placeholder="Descripción"
                   />
                 </div>
 
                 <div class="row pt-2">
 
-                  <select name="category" class="select-category">
-                    <!-- TODO eliminar cuando esté la carga dinámica para categoría -->
+                  <select name="category" class="select-category col-lg-7 col-md-10 col-sm-10">
+                    <!-- TODO carga dinámica para categoría -->
                     <option disabled  selected>Selecciona una categoría</option>
                     <option value="item 1">Item 1</option>
                     <option value="item 2">Item 2</option>
                     <option value="item 3">Item 3</option>
                   </select>
 
-                  <figure>
-                    <!--<img class="category-img" src="images/... .png" height="...px" width="...px" >-->
-                  </figure>
 
 
                 </div>
 
                 <div class="row pt-2">
 
+                  <form action="..." method="get">
+                    <label for="genres">Añadir género(s) relacionados con el elemento multimedia: </label>
+                    <input list="genres">
+                    <datalist id="genres">
+                      <!-- TODO carga dinámica para género -->
+                      <option value="Género 1">
+                      <option value="Género 2">
+                      <option value="Género 3">
+                    </datalist>
+                    <input type="button" class="mb-1 mt-3" value="Añadir">
+                  </form>
 
-                  <p>
-                  <figure><!--<img class="add-img" src="images/... .png" height="...px" width="...px" >--></figure>
-                  <label>Añadir género</label>
 
-                  <iframe >
-                    <h1>
-                      fa
-                    </h1>
-                    <h1>
-                      fa
-                    </h1>
-                    <h1>
-                      fa
-                    </h1>
-                  </iframe>
+                  <textarea id="w3review" class="col-lg-7 col-md-10 col-sm-10" >
+
+                  </textarea>
+
 
                 </div>
-
-                <div class="row pt-2">
-                  <!--Comprobar JQuery es tipo imagen-->
-
-                  <input type='file' id="getFile">
-
+                <div class="get-file row pt-2">
+                  <!-- TODO Comprobar ts es tipo imagen-->
+                  <label >Añadir portada para el elemento multimedia: </label>
+                  <div class="mb-3 pt-1">
+                    <input type="file"  id="get-file-input" name="filename">
+                  </div>
                 </div>
 
               </div>
@@ -87,6 +85,7 @@
 
 
             <div class="submit-button">
+              <!-- TODO Validación formularios firebase-->
               <input
                 class="submit-button-form" id ="submit-admin-form" type="submit" value="CREAR ELEMENTO"
               />

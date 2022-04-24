@@ -66,10 +66,9 @@ body {
 
 
 
-input {
+input, select {
   border-radius: 0.6em;
 }
-
 
 li {
   list-style-type: none; /*Not number list*/
