@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+import { User } from 'src/app/models/user.model';
+import {UserService} from "../../services/user.service";
+
+
 @Component({
   selector: 'login-root',
   templateUrl: './login.component.html',
@@ -7,12 +11,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+
   name: string;
   password: string;
 
-  constructor() {
+  user: User = new User();
+  dataSubmitted = false;
 
+  constructor(private userService: UserService) {
   }
+
 
   login(){
     console.log(this.name);

@@ -1,0 +1,31 @@
+
+<div class="list row">
+
+  <div class="col-md-6">
+    <h4>User List</h4>
+
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let user of users; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveUser(user, i)"
+      >
+            Nombre: {{ user.name }} Email: {{ user.email }} contraseña: {{ user.password }}
+
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="col-md-6">
+    <div *ngIf="currentUser">
+
+      <app-user-details
+        (refreshList)="refreshList()"
+        [user]="currentUser" >
+      </app-user-details>
+
+¡    </div>
+
+  </div>
+</div>
