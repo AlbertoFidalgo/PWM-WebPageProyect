@@ -38,7 +38,7 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseDB),
     AngularFireDatabaseModule
   ],
 
