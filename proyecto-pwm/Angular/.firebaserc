@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "elementos-multimedia": {
+      "hosting": {
+        "AngularWebProject": [
+          "elementos-multimedia"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "elementos-multimedia"
+  }
+}

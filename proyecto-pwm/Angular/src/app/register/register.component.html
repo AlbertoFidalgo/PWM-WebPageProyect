@@ -30,6 +30,8 @@
                   class="form-field col-5" type="text" id="name" required value=""
                   placeholder="(Requerido) Introduzca nombre"
                   maxlength="24"
+                  [(ngModel)]="name"
+                  [ngModelOptions]="{standalone: true}"
                 />
               </div>
 
@@ -39,6 +41,8 @@
                   class="form-field col-5" type="password" id="password" required value=""
                   placeholder="(Requerido) Introduzca contraseña"
                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
+                  [(ngModel)]="password"
+                  [ngModelOptions]="{standalone: true}"
                 />
               </div>
 
@@ -55,33 +59,50 @@
                 <div class="form-field col-6 text-end" for="email"> Correo</div>
                 <input
                   placeholder="(Requerido) Introduzca correo"
-                  class="form-field col-5" type="email" id="email" required value=""/>
+                  class="form-field col-5" type="email" id="email" required value=""
+                  [(ngModel)]="email"
+                  [ngModelOptions]="{standalone: true}"
+                />
               </div>
 
               <div class="row pt-3">
                 <div class="form-field col-6 text-end" for="birth"> * Nacimiento</div>
-                <input class="form-field col-5" type="date" id="birth"/>
+                <input
+                  class="form-field col-5" type="date" id="birth"
+                  [(ngModel)]="birth"
+                  [ngModelOptions]="{standalone: true}"
+                />
               </div>
 
               <div class="row pt-3">
                 <div class="form-field col-6 text-end" for="nationality-form"> * Nacionalidad</div>
                 <input
                   placeholder="Mi nacionalidad..."
-                  class="form-field col-5" type="text" id="nationality"/>
+                  class="form-field col-5" type="text" id="nationality"
+                  [(ngModel)]="nationality"
+                  [ngModelOptions]="{standalone: true}"
+                />
+
               </div>
 
               <div class="row pt-3">
                 <div class="form-field col-6 text-end " for="about me form"> * Sobre mí</div>
                 <input
                   placeholder="Sobre mí..."
-                  class="form-field col-5" type="text" id="about me form"/>
+                  class="form-field col-5" type="text" id="about me form"
+                  [(ngModel)]="description"
+                  [ngModelOptions]="{standalone: true}"
+                />
+
               </div>
 
             </div>
           </div>
 
           <div class="row justify-content-center pt-3">
-            <input class="submit-button-form col-4" id ="submit-register-form" type="button" value="DARSE DE ALTA"/>
+            <input class="submit-button-form col-4" id ="submit-register-form" type="button" value="DARSE DE ALTA"
+                   (click)="register()"
+            />
             <!--TODO hacer la validación en firebase-->
           </div>
 

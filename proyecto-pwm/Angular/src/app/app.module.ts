@@ -10,6 +10,16 @@ import { SideBoxComponent } from './side-box/side-box.component';
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {AdminComponent} from "./admin/admin.component";
+import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
+import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+
+import {environment} from "../environments/environment";
+
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
+
+
 
 @NgModule({
   declarations: [
@@ -19,14 +29,19 @@ import {AdminComponent} from "./admin/admin.component";
     LoginComponent,
     RegisterComponent,
     AdminComponent,
-    SideBoxComponent
+    SideBoxComponent,
+    AddTutorialComponent,
+    TutorialDetailsComponent,
+    TutorialsListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

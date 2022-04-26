@@ -26,7 +26,6 @@
               "src/favicon.ico",
               "src/assets"
             ],
-
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -36,7 +35,6 @@
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
-
           },
           "configurations": {
             "production": {
@@ -104,6 +102,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "AngularWebProject:build:production",
+            "firebaseProject": "elementos-multimedia",
+            "firebaseHostingSite": "elementos-multimedia"
           }
         }
       }
