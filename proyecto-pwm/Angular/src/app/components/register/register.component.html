@@ -12,92 +12,106 @@
           ¡ Felicidades ! ¡ Usuario registrado correctamente !
         </h1>
 
-        <form *ngIf="!dataSubmitted" id="register" method="get" action="">
+        <form *ngIf="!dataSubmitted" id="register" [formGroup]="form" (ngSubmit)="onSubmit()">
 
           <div class="container">
             <div class="row">
 
-              <div class="row">
-                <div class="form-field col-6 text-end" for="name"> Nombre</div>
-
-                <input
-                  class="form-field col-5" type="text" id="name" value=""
-                  placeholder="(Requerido) Introduzca nombre"
-                  maxlength="24"
-                  [(ngModel)]="user.name"
-                  [ngModelOptions]="{standalone: true}"
-                />
+              <div class="row pt-3">
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="name"> Nombre</label>
+                  <input
+                    class="form-field form-control col-5" type="text" id="name"
+                    placeholder="(Requerido) Introduzca nombre"
+                    maxlength="24"
+                    formControlName="name"
+                  />
+                </div>
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-6 text-end" for="pswd"> Contraseña</div>
-                <input
-                  class="form-field col-5" type="password" id="password" required value=""
-                  placeholder="(Requerido) Introduzca contraseña"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
-                  [(ngModel)]="user.password"
-                  [ngModelOptions]="{standalone: true}"
-                />
-              </div>
 
-              <div class="row pt-3">
-                <div class="form-field col-6 text-end" for="confirm pswd"> Confirmar contraseña</div>
-                <input
-                  placeholder="(Requerido) Confirme contraseña"
-                  class="form-field col-5" type="password" id="confirm password"
-                />
-              </div>
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="password"> Contraseña</label>
+                  <input
+                    class="form-field col-5" type="password" id="password" required value=""
+                    placeholder="(Requerido) Introduzca contraseña"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
+                    [(ngModel)]="user.password"
+                    [ngModelOptions]="{standalone: true}" />
+                </div>
 
-
-              <div class="row pt-3">
-                <div class="form-field col-6 text-end" for="email"> Correo</div>
-                <input
-                  placeholder="(Requerido) Introduzca correo"
-                  class="form-field col-5" type="email" id="email" required value=""
-                  [(ngModel)]="user.email"
-                  [ngModelOptions]="{standalone: true}"
-                />
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-field col-6 text-end" for="birth"> * Nacimiento</div>
-                <input
-                  class="form-field col-5" type="date" id="birth"
-                  [(ngModel)]="user.birth"
-                  [ngModelOptions]="{standalone: true}"
-                />
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-field col-6 text-end" for="nationality-form"> * Nacionalidad</div>
-                <input
-                  placeholder="Mi nacionalidad..."
-                  class="form-field col-5" type="text" id="nationality"
-                  [(ngModel)]="user.nationality"
-                  [ngModelOptions]="{standalone: true}"
-                />
 
               </div>
 
               <div class="row pt-3">
-                <div class="form-field col-6 text-end " for="about me form"> * Sobre mí</div>
-                <input
-                  placeholder="Sobre mí..."
-                  class="form-field col-5" type="text" id="about me form"
-                  [(ngModel)]="user.description"
-                  [ngModelOptions]="{standalone: true}"
-                />
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="confirm pswd"> Confirmar contraseña</label>
+                  <input
+                    placeholder="(Requerido) Confirme contraseña"
+                    class="form-field col-5" type="password" id="confirm pswd"
+                  />
+                </div>
+              </div>
 
+
+              <div class="row pt-3">
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="email"> Correo</label>
+                  <input
+                    placeholder="(Requerido) Introduzca correo"
+                    class="form-field col-5" type="email" id="email" required value=""
+                    [(ngModel)]="user.email"
+                    [ngModelOptions]="{standalone: true}"
+                  />
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="birth"> * Nacimiento</label>
+                  <input
+                    class="form-field col-5" type="date" id="birth"
+                    [(ngModel)]="user.birth"
+                    [ngModelOptions]="{standalone: true}"
+                  />
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="form-group">
+                  <label class="form-field col-4 text-end" for="nationality"> * Nacionalidad</label>
+                  <input
+                    placeholder="Mi nacionalidad..."
+                    class="form-field col-5" type="text" id="nationality"
+                    [(ngModel)]="user.nationality"
+                    [ngModelOptions]="{standalone: true}"
+                  />
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="form-group">
+                  <label class="form-field col-4 text-end " for="about me form"> * Sobre mí</label>
+                  <input
+                    placeholder="Sobre mí..."
+                    class="form-field col-5" type="text" id="about me form"
+                    [(ngModel)]="user.description"
+                    [ngModelOptions]="{standalone: true}"
+                  />
+                </div>
               </div>
 
             </div>
           </div>
 
           <div class="row justify-content-center pt-3">
-            <input *ngIf="!dataSubmitted" class="submit-button-form col-4" id ="submit-register-form"
-                   type="button" value="DARSE DE ALTA"
-                   (click)="createUser()"
-            />
+            <div class="form-group">
+              <input *ngIf="!dataSubmitted" class="submit-button-form col-4" id ="submit-register-form"
+                     type="button" value="DARSE DE ALTA"
+                     (click)="onSubmit()"
+              />
+            </div>
 
 
 
