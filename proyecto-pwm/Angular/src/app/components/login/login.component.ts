@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import { User } from 'src/app/models/user.model';
 import {UserService} from "../../services/user.service";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 
 @Component({
@@ -9,23 +10,37 @@ import {UserService} from "../../services/user.service";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
 
-
-  name: string;
-  password: string;
+export class LoginComponent implements OnInit {
 
   user: User = new User();
   dataSubmitted = false;
 
-  constructor(private userService: UserService) {
+  form: FormGroup;
+
+  get usernameControl() {
+    return this.form.get('username') as FormControl;
+  }
+  get passwordControl() {
+    return this.form.get('password') as FormControl;
   }
 
 
-  login(){
-    console.log(this.name);
-    console.log(this.password);
+  constructor(private userService: UserService, private fb: FormBuilder) {
   }
+
+  ngOnInit(): void {
+    this.generateForm();
+  }
+
+  generateForm():void{
+    this.form = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
+  }
+
+
 
 
 }

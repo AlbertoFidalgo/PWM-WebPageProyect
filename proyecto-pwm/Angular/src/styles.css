@@ -116,3 +116,6 @@ input, select {
 li {
   list-style-type: none; /*Not number list*/
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

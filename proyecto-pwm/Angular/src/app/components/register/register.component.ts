@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {User} from "../../models/user.model";
 import {UserService} from "../../services/user.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'register-root',
@@ -12,13 +13,15 @@ export class RegisterComponent {
   user: User = new User();
   dataSubmitted = false;
 
-  constructor(private userService: UserService) {
 
+  constructor(private userService: UserService) {
   }
+
+
 
   createUser():void{
     this.userService.create(this.user).then(() => {
-      console.log('Created new item successfully!');
+      console.log('Created new user successfully!');
       this.dataSubmitted = true;
     });
 

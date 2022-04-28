@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>LittleCritics</title>
-  <link href="/src/assets/responsive.css" rel="stylesheet" media="screen and (max-width: 1920px)">
-
-</head>
-
-<body>
 
 <div id="container">
 
   <main class="container-fluid">
     <article>
       <section id="user-register" class="text-center">
-        <h1 id="register-title">
-          ¡Bienvenido!
-          <br>
-          ¿Deseas Darte de Alta?
+        <h1 class="register-title" *ngIf="!dataSubmitted">
+          ¡Bienvenido!<br>¿Deseas Darte de Alta?
         </h1>
+
+        <h1 class="register-title" *ngIf="dataSubmitted">
+          ¡ Felicidades ! ¡ Usuario registrado correctamente !
+        </h1>
+
         <form *ngIf="!dataSubmitted" id="register" method="get" action="">
 
           <div class="container">
@@ -26,8 +19,9 @@
 
               <div class="row">
                 <div class="form-field col-6 text-end" for="name"> Nombre</div>
+
                 <input
-                  class="form-field col-5" type="text" id="name" required value=""
+                  class="form-field col-5" type="text" id="name" value=""
                   placeholder="(Requerido) Introduzca nombre"
                   maxlength="24"
                   [(ngModel)]="user.name"
@@ -100,17 +94,11 @@
           </div>
 
           <div class="row justify-content-center pt-3">
-            <input *ngIf="!dataSubmitted" class="submit-button-form col-4" id ="submit-register-form" type="button" value="DARSE DE ALTA"
+            <input *ngIf="!dataSubmitted" class="submit-button-form col-4" id ="submit-register-form"
+                   type="button" value="DARSE DE ALTA"
                    (click)="createUser()"
             />
 
-            <label *ngIf="dataSubmitted" class="submit-button-form col-4">
-                    Felicidades ! Usuario registrado correctamente !
-            </label>
-
-            <button *ngIf="dataSubmitted" (click)="prepareForNewUser()" class="submit-button-form col-4">
-              ¿ Volver a registrar un nuevo usuario ?
-            </button>
 
 
             <!--TODO hacer la validación en firebase-->
@@ -118,6 +106,11 @@
 
 
         </form>
+
+        <button *ngIf="dataSubmitted" (click)="prepareForNewUser()" class="submit-button-form col-4">
+          ¿ Volver a registrar un nuevo usuario ?
+        </button>
+
       </section>
 
       <section id="about-us">
@@ -137,7 +130,3 @@
 </div> <!--//container-->
 
 
-</body>
-
-
-</html>

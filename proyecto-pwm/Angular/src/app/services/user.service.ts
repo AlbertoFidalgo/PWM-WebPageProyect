@@ -7,30 +7,30 @@ import {User} from "../models/user.model";
 export class UserService {
 
   private dbPath = '/users';
-  UsersRef: AngularFireList<User>;
+  usersRef: AngularFireList<User>;
 
   constructor(private db: AngularFireDatabase) {
-    this.UsersRef = db.list(this.dbPath);
+    this.usersRef = db.list(this.dbPath);
   }
 
   getAll(): AngularFireList<User> {
-    return this.UsersRef;
+    return this.usersRef;
   }
 
-  create(tutorial: User): any {
-    return this.UsersRef.push(tutorial);
+  create(user: User): any {
+    return this.usersRef.push(user);
   }
 
   update(key: string, value: any): Promise<void> {
-    return this.UsersRef.update(key, value);
+    return this.usersRef.update(key, value);
   }
 
   delete(key: string): Promise<void> {
-    return this.UsersRef.remove(key);
+    return this.usersRef.remove(key);
   }
 
   deleteAll(): Promise<void> {
-    return this.UsersRef.remove();
+    return this.usersRef.remove();
   }
 
 }
