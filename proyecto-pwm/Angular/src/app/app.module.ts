@@ -20,6 +20,7 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import {RouterModule} from "@angular/router";
 import {HomeComponent} from "./components/home/home.component";
 import {MatCardModule} from "@angular/material/card";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 
 
@@ -36,17 +37,18 @@ import {MatCardModule} from "@angular/material/card";
     UserDetailsComponent,
     UsersListComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserModule /* or CommonModule */,
-    MatCardModule,
-    ReactiveFormsModule,
-    RouterModule,
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseDB),
-    AngularFireDatabaseModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserModule /* or CommonModule */,
+        MatCardModule,
+        ReactiveFormsModule,
+        RouterModule,
+        AppRoutingModule,
+        AngularFireModule.initializeApp(environment.firebaseDB),
+        AngularFireDatabaseModule,
+        MatFormFieldModule
+    ],
 
   bootstrap: [AppComponent]
 })

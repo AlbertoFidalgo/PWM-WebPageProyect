@@ -21,11 +21,15 @@
                 <div class="form-group">
                   <label class="form-field col-4 text-end" for="name"> Nombre</label>
                   <input
-                    class="form-field form-control col-5" type="text" id="name"
+                    class="form-field col-5" type="text" id="name"
                     placeholder="(Requerido) Introduzca nombre"
-                    maxlength="24"
                     formControlName="name"
                   />
+
+                  <label  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field col-6 text-danger text-end">
+                    Para su nombre tiene de mínimo 4 y máximo 16 caracteres
+                  </label>
+
                 </div>
               </div>
 
@@ -34,11 +38,10 @@
                 <div class="form-group">
                   <label class="form-field col-4 text-end" for="password"> Contraseña</label>
                   <input
-                    class="form-field col-5" type="password" id="password" required value=""
+                    class="form-field col-5" type="password" id="password"
                     placeholder="(Requerido) Introduzca contraseña"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$"
-                    [(ngModel)]="user.password"
-                    [ngModelOptions]="{standalone: true}" />
+                    formControlName="pswd"
+                  />
                 </div>
 
 
@@ -50,7 +53,11 @@
                   <input
                     placeholder="(Requerido) Confirme contraseña"
                     class="form-field col-5" type="password" id="confirm pswd"
+                    formControlName="confirm_pswd"
                   />
+                  <label  *ngIf="this.form.hasError('notSame')"  class="doesnt-match form-field col-6 text-danger text-end">
+                    Nota: Las contraseñas no coinciden
+                  </label>
                 </div>
               </div>
 
@@ -60,11 +67,16 @@
                   <label class="form-field col-4 text-end" for="email"> Correo</label>
                   <input
                     placeholder="(Requerido) Introduzca correo"
-                    class="form-field col-5" type="email" id="email" required value=""
-                    [(ngModel)]="user.email"
-                    [ngModelOptions]="{standalone: true}"
+                    class="form-field col-5" type="email" id="email"
+                    formControlName="email"
                   />
+                  <label  *ngIf="formField['email'].invalid"  class="doesnt-match form-field col-6 text-danger text-end">
+                    El email no sigue un patrón correcto
+                  </label>
                 </div>
+
+
+
               </div>
 
               <div class="row pt-3">
@@ -72,8 +84,7 @@
                   <label class="form-field col-4 text-end" for="birth"> * Nacimiento</label>
                   <input
                     class="form-field col-5" type="date" id="birth"
-                    [(ngModel)]="user.birth"
-                    [ngModelOptions]="{standalone: true}"
+                    formControlName="birth"
                   />
                 </div>
               </div>
@@ -84,8 +95,7 @@
                   <input
                     placeholder="Mi nacionalidad..."
                     class="form-field col-5" type="text" id="nationality"
-                    [(ngModel)]="user.nationality"
-                    [ngModelOptions]="{standalone: true}"
+                    formControlName="nationality"
                   />
                 </div>
               </div>
@@ -96,8 +106,7 @@
                   <input
                     placeholder="Sobre mí..."
                     class="form-field col-5" type="text" id="about me form"
-                    [(ngModel)]="user.description"
-                    [ngModelOptions]="{standalone: true}"
+                    formControlName="description"
                   />
                 </div>
               </div>
@@ -113,9 +122,6 @@
               />
             </div>
 
-
-
-            <!--TODO hacer la validación en firebase-->
           </div>
 
 

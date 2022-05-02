@@ -18,6 +18,9 @@ h1{
 }
 
 
+.doesnt-match{
+  font-size: 80%;
+}
 
 .submit-button{
   padding: 1em;
