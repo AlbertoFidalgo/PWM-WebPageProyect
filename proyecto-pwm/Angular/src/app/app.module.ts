@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CarousellComponent } from './components/carousell/carousell.component';
-import { SideBoxComponent } from './components/side-box/side-box.component';
+import { SideBoxComponent } from './components/home/side-box/side-box.component';
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {AdminComponent} from "./components/admin/admin.component";
@@ -21,6 +21,9 @@ import {RouterModule} from "@angular/router";
 import {HomeComponent} from "./components/home/home.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { MobileHomeBox1Component } from './components/home/mobile-home-box1/mobile-home-box1.component';
+import { MobileHomeBox2Component } from './components/home/mobile-home-box2/mobile-home-box2.component';
+import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.component';
 
 
 
@@ -35,7 +38,10 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     AdminComponent,
     SideBoxComponent,
     UserDetailsComponent,
-    UsersListComponent
+    UsersListComponent,
+    MobileHomeBox1Component,
+    MobileHomeBox2Component,
+    BottomBoxComponent
   ],
     imports: [
         BrowserModule,

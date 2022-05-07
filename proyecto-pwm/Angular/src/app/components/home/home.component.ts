@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'AngularWebProject';
+  sideBox1 = 'Series más criticadas';
+  sideBox2 = 'Próximos estrenos';
+  bottomBox1 = 'Películas de estreno';
+  bottomBox2 = 'Canciones destacadas';
 }

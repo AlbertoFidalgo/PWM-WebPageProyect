@@ -1,0 +1,13 @@
+<div>
+  <div class="row bg1 text-center">
+    <p class="pt-2">{{this.name}}</p>
+  </div>
+  <div class="row bg2 borderBlack pb-3" *ngFor="let item of items | async">
+    <div class="col-5 pt-3">
+      <img src={{item.Poster}} height="70px" width="50px">
+    </div>
+    <div class="col-5 pt-3">
+      <p>{{item.Title}} - {{item.Grade}}{{item.Date}}</p>
+    </div>
+  </div>
+</div>
