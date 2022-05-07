@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {ContentService} from "../../../services/content.service";
 
 @Component({
   selector: 'movies-root',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  name: String;
+  items: Observable<any[]>;
+  constructor(private contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.loadItems();
+  }
+
+  loadItems() {
+    this.items = this.contentService.getCatalogoMovies();
   }
 
 }

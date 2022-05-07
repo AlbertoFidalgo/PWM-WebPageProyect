@@ -47,7 +47,11 @@
           <div class="col-11 col-lg-12">
             <h2>Peliculas</h2>
           </div>
-          <div class="row" id="films"></div>
+          <div class="row" id="films" >
+              <div class="col-6 col-md-4 col-lg-3 ps-5" *ngFor="let item of items | async">
+              <img src={{item.Poster}} class="img-fluid" id="img-cat"><p class="bg1">{{item.Title}}</p>
+              </div>
+        </div>
         </div>
       </div>
     </div>

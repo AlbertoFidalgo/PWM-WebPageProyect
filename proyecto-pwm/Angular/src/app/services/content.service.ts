@@ -41,4 +41,25 @@ export class ContentService {
     return this.content;
   }
 
+  getCatalogoMusic(){
+    this.content = this.db.object('MusicList').valueChanges();
+    return this.content;
+  }
+
+  getCatalogoMovies(){
+    this.content = this.db.object('MovieList').valueChanges();
+    return this.content;
+  }
+
+  getCatalogoSeries(){
+    this.content = this.db.object('SeriesList').valueChanges();
+    return this.content;
+  }
+
+  getCatalogoPodcast(){
+    this.content = this.db.object('PodcastList').valueChanges();
+    return this.content;
+  }
+
+
 }
