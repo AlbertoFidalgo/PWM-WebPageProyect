@@ -28,43 +28,28 @@
         Música
       </button>
       <ul class="dropdown-menu " aria-labelledby="music-dropdown">
-        <li><a routerLink="music" class="dropdown-item">Todos</a></li>
-        <li><a routerLink="music" class="dropdown-item">Rock/Metal</a></li>
-        <li><a routerLink="music" class="dropdown-item">Reggaeton</a></li>
-        <li><a routerLink="music" class="dropdown-item">Rap</a></li>
-        <li><a routerLink="music" class="dropdown-item">Electrónica</a></li>
-        <li><a routerLink="music" class="dropdown-item">Pop</a></li>
-        <li><a routerLink="music" class="dropdown-item">Jazz</a></li>
-        <li><a routerLink="music" class="dropdown-item">Folk</a></li>
-        <li><a routerLink="music" class="dropdown-item">Música Clásica</a></li>
+        <div *ngFor="let music of musicGenres | async">
+          <li><a routerLink="catalogue/Música/{{music}}" class="dropdown-item">{{music}}</a></li>
+        </div>
+        <li><a routerLink="catalogue/Música/Todos" class="dropdown-item">Todos</a></li>
       </ul>
       <button class="btn btn-secondary dropdown-toggle col-3" type="button" id="film-dropdown" data-bs-toggle="dropdown">
         Películas
       </button>
       <ul class="dropdown-menu" aria-labelledby="film-dropdown">
-        <li><a routerLink="movies" class="dropdown-item">Todos</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Acción</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Aventura</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Ciencia Ficción</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Comedia</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Drama</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Fantasía</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Musical</a></li>
-        <li><a routerLink="movies" class="dropdown-item">Terror</a>
+        <div *ngFor="let movie of moviesGenres | async">
+          <li><a routerLink="catalogue/Películas/{{movie}}" class="dropdown-item">{{movie}}</a></li>
+        </div>
+        <li><a routerLink="catalogue/Películas/Todos" class="dropdown-item">Todos</a></li>
       </ul>
       <button class="btn btn-secondary dropdown-toggle col-3" type="button" id="series-dropdown" data-bs-toggle="dropdown">
         Series
       </button>
       <ul class="dropdown-menu" aria-labelledby="series-dropdown">
-        <li><a routerLink="series" class="dropdown-item">Todos</a></li>
-        <li><a routerLink="series" class="dropdown-item">Acción</a></li>
-        <li><a routerLink="series" class="dropdown-item">Aventura</a></li>
-        <li><a routerLink="series" class="dropdown-item">Ciencia Ficción</a></li>
-        <li><a routerLink="series" class="dropdown-item">Comedia</a></li>
-        <li><a routerLink="series" class="dropdown-item">Drama</a></li>
-        <li><a routerLink="series" class="dropdown-item">Fantasía</a></li>
-        <li><a routerLink="series" class="dropdown-item">Musical</a></li>
-        <li><a routerLink="series" class="dropdown-item">Terror</a></li>
+        <div *ngFor="let serie of seriesGenres | async">
+          <li><a routerLink="catalogue/Series/{{serie}}" class="dropdown-item">{{serie}}</a></li>
+        </div>
+        <li><a routerLink="catalogue/Series/Todos" class="dropdown-item">Todos</a></li>
       </ul>
       <button class="btn btn-secondary dropdown-toggle col-3" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
         Podcasts

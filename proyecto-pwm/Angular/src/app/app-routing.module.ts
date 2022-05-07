@@ -5,20 +5,14 @@ import {HomeComponent} from "./components/home/home.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {LoginComponent} from "./components/login/login.component";
 import {AdminComponent} from "./components/admin/admin.component";
-import {MoviesComponent} from "./components/catalog/movies/movies.component";
-import {MusicComponent} from "./components/catalog/music/music.component";
-import {SeriesComponent} from "./components/catalog/series/series.component";
-import {PodcastComponent} from "./components/catalog/podcast/podcast.component";
+import {CatalogueComponent} from "./components/catalogue/catalogue.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'catalogue/:type/:genre', component: CatalogueComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'movies', component: MoviesComponent },
-  { path: 'music', component: MusicComponent },
-  { path: 'series', component: SeriesComponent },
-  { path: 'podcast', component: PodcastComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
