@@ -10,8 +10,6 @@ import { SideBoxComponent } from './components/home/side-box/side-box.component'
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {AdminComponent} from "./components/admin/admin.component";
-import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { UsersListComponent } from './components/users-list/users-list.component';
 
 import {environment} from "../environments/environment";
 
@@ -41,8 +39,6 @@ import { PodcastComponent } from './components/catalog/podcast/podcast.component
     RegisterComponent,
     AdminComponent,
     SideBoxComponent,
-    UserDetailsComponent,
-    UsersListComponent,
     MobileHomeBox1Component,
     MobileHomeBox2Component,
     BottomBoxComponent,

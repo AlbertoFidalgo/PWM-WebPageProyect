@@ -2,7 +2,7 @@
   <main class="container-fluid col-lg-12 col-md-9 col-sm-6 pt-12">
     <article class="row" >
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <mat-card class="user-login" id="user-login-form">
+        <div class="user-login" id="user-login-form">
           <img class="user-img float-center" src="../../../assets/img/user.png" height="200px" width="200px" alt=" ">
 
           <form  [formGroup]="form" class="form-horizontal" (ngSubmit)="onSubmit()" *ngIf="!dataSubmitted" id="login" method="get" action="">
@@ -10,17 +10,14 @@
             <div class="container-fluid  pt-4">
               <div class="row">
                 <div class="form-field col-6">
-                  Nombre
+                  Email
                 </div>
                 <div class="col-6">
 
                   <input
-                    type="text" id="name-form" class="col-12" placeholder="Introduzca nombre"
-                    *ngIf="!dataSubmitted"
-                    [(ngModel)]="user.name"
-                    [formControl]="usernameControl"
+                    type="email" id="name-form" class="col-12" placeholder="Introduzca email"
+                    formControlName="email"
                   />
-
 
                 </div>
               </div>
@@ -36,8 +33,7 @@
                   <input
                     type="password" id="pswd-form"  class="col-12" required="required"
                     placeholder="Introduzca contraseña"
-                    [(ngModel)]="user.password"
-                    [ngModelOptions]="{standalone: true}"
+                    formControlName="pswd"
                   />
 
                 </div>
@@ -46,45 +42,59 @@
 
             <div class="submit-button">
               <input
+                [disabled]="form.invalid"
                 class="submit-button-form" id ="submit-login-form" type="submit" value="INICIAR SESIÓN"
               />
-              <!-- TODO implementar el login (ts, firebase...) -->
+              <label *ngIf="form.invalid" class="doesnt-match form-field col-12 text-danger text-center">
+                Todos los campos son requeridos, por favor, introduzca sus datos
+              </label>
             </div>
 
+
             <a class="pswd-forgotten" href="">
-              ¿Has olvidado tu contraseña?
-            </a>
+              <!-- TODO si hay tiempo, crear componente para ForgotPassword -->
+             ¿Has olvidado tu contraseña?
+           </a>
 
-          </form>
+         </form>
 
-        </mat-card>
+         <div *ngIf="userLogged && dataSubmitted">
+           <label class="form-field col-12 text-success text-center">
+             Bienvenido, {{ userInfo.name }}
+           </label>
+           <button (click)="prepareForNewLogin()" class="submit-button-form col-12">
+             ¿ Volver a iniciar sesión con otros datos ?
+           </button>
+         </div>
 
-      </div>
+       </div>
+
+     </div>
 
 
-      <div class="col-lg-6 col-md-12" >
+     <div class="col-lg-6 col-md-12" >
 
-        <div class="container-fluid">
+       <div class="container-fluid">
 
-          <div class="col-12 col-lg-9 mt-5 mb-4 bg1 text-center ms-4"  id="our-advantage">
-            <h1>Nuestras ventajas: </h1>
-            <ol id="#our-advantage-list">
-              <li>Actualizamos nuestro contenido</li>
-              <li>Recomendaciones personalizadas</li>
-              <li>Accede a la opinión de nuestros visistantes</li>
-              <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
-            </ol>
-            <a class="submit-button" id="goto-register" routerLink="/register">
-              <button class="submit-button btn-sm">IR A REGISTRARSE</button>
-            </a>
-          </div>
+         <div class="col-12 col-lg-9 mt-5 mb-4 bg1 text-center ms-4"  id="our-advantage">
+           <h1>Nuestras ventajas: </h1>
+           <ol id="#our-advantage-list">
+             <li>Actualizamos nuestro contenido</li>
+             <li>Recomendaciones personalizadas</li>
+             <li>Accede a la opinión de nuestros visistantes</li>
+             <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
+           </ol>
+           <a class="submit-button" id="goto-register" routerLink="/register">
+             <button class="submit-button btn-sm">IR A REGISTRARSE</button>
+           </a>
+         </div>
 
-        </div>
-      </div>
+       </div>
+     </div>
 
-    </article>
+   </article>
 
-  </main>
+ </main>
 
 
 </div>

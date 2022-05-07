@@ -1,6 +1,6 @@
 
 export class User {
-  key?: string | null;
+  uid?: string;
   name?: string;
   email?: string;
   password?: string;

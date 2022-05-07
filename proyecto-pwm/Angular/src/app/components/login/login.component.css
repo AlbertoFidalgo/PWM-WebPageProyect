@@ -8,6 +8,11 @@
   background: red;
 }
 
+.doesnt-match{
+  font-size: 100%;
+}
+
+
 
 .user-login{
   margin: 2em;
@@ -58,7 +63,6 @@
   margin: 1.5em;
 
   cursor: pointer;
-  height: 2em;
   width: 10em;
   border-radius: 0.5em;
 }

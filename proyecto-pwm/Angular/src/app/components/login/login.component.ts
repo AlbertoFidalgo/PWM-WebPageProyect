@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import { User } from 'src/app/models/user.model';
-import {UserService} from "../../services/user.service";
+import {AuthService} from "../../services/user.auth.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 
@@ -13,35 +13,38 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 export class LoginComponent implements OnInit {
 
-  user: User = new User();
   dataSubmitted = false;
-
   form: FormGroup;
 
-  get usernameControl() {
-    return this.form.get('username') as FormControl;
-  }
-  get passwordControl() {
-    return this.form.get('password') as FormControl;
+  constructor(private authService: AuthService, private fb: FormBuilder) {
   }
 
-
-  constructor(private userService: UserService, private fb: FormBuilder) {
-  }
+  get formField(){ return this.form.controls; }
 
   ngOnInit(): void {
-    this.generateForm();
-  }
-
-  generateForm():void{
     this.form = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(6)]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', Validators.required],
+      pswd: ['', Validators.required],
     });
   }
 
-
   onSubmit() {
+    // TODO Corregir error cuando no existe usuario con esos datos
 
+    if(this.form.valid) this.authService.signIn(this.formField['email'].value, this.formField['pswd'].value).then((user) => {
+      this.dataSubmitted = true;
+    });
+  }
+
+  get userInfo(){
+    return this.authService.userInfoLogged
+  }
+
+  get userLogged(){
+    return this.authService.isLogged
+  }
+
+  prepareForNewLogin(): void {
+    this.dataSubmitted = false;
   }
 }
