@@ -1,0 +1,55 @@
+<div id="container">
+  <div class="container-fluid mt-5 text-center ps-5 pe-5">
+    <div class="row">
+      <div class="col-lg-2 d-none d-sm-none d-lg-block pe-5">
+        <div class="row bg1 borderBlack">
+          <p>Filtrado</p>
+        </div>
+        <div id="genrefilter"></div>
+        <p></p>
+        <div class="row bg2 borderBlack">
+          <p><a href="#" class="text-decoration-none text-black">Mejor Votados</a></p>
+        </div>
+        <div class="row bg2 borderBlack">
+          <p><a href="#" class="text-decoration-none text-black">Estrenos</a></p>
+        </div>
+        <div class="row bg2 borderBlack">
+          <p><a href="#" class="text-decoration-none text-black">Por Salir</a></p>
+        </div>
+        <div class="row bg2 borderBlack">
+          <p><a href="#" class="text-decoration-none text-black">Más Anticipados</a></p>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasFilterLabel">Filtro</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div id="genrefilter1"></div>
+          <p></p>
+          <a href="#" class="bg2 borderBlack">Mejor Votados</a>
+          <a href="#" class="bg2 borderBlack">Estrenos</a>
+          <a href="#" class="bg2 borderBlack">Por Salir</a>
+          <a href="#" class="bg2 borderBlack">Más Anticipados</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-10 col-sm-12 bg2">
+        <div class="row bg1">
+          <div class="col-1 align-self-center d-sm-block d-lg-none pt-2">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
+                    aria-controls="offcanvasFilter">
+              <img src="images/filtroIcon.png" height="20px" width="20px">
+            </button>
+          </div>
+          <div class="col-11 col-lg-12">
+            <h2>Podcasts</h2>
+          </div>
+          <div class="row" id="podcast"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

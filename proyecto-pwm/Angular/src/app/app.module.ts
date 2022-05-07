@@ -24,6 +24,10 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import { MobileHomeBox1Component } from './components/home/mobile-home-box1/mobile-home-box1.component';
 import { MobileHomeBox2Component } from './components/home/mobile-home-box2/mobile-home-box2.component';
 import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.component';
+import { MoviesComponent } from './components/catalog/movies/movies.component';
+import { MusicComponent } from './components/catalog/music/music.component';
+import { SeriesComponent } from './components/catalog/series/series.component';
+import { PodcastComponent } from './components/catalog/podcast/podcast.component';
 
 
 
@@ -41,7 +45,11 @@ import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.comp
     UsersListComponent,
     MobileHomeBox1Component,
     MobileHomeBox2Component,
-    BottomBoxComponent
+    BottomBoxComponent,
+    MoviesComponent,
+    MusicComponent,
+    SeriesComponent,
+    PodcastComponent
   ],
     imports: [
         BrowserModule,
