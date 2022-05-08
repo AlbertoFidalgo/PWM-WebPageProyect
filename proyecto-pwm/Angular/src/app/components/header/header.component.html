@@ -9,9 +9,7 @@
       <a routerLink="register" class="nav-link"><input type="button" value="Registrarse"></a>
     </div>
     <div *ngIf="logged" class="col-3 text-center">
-      <ng-container>{{this}}</ng-container>
       <h4 class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h4>
-      <img src="{{this.imgProfile}}" id="user" alt="user" height="40px" width="40px">
       <a routerLink="user/{{userSigned.uid}}/{{userSigned.name}}" class="nav-link"><input type="button" value="Ir a Perfil"></a>
       <button class="btn text-danger col-3" type="button" (click)="signOutUser()">Cerrar Sessión</button>
     </div>
