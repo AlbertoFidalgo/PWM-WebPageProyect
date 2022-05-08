@@ -3,6 +3,7 @@ import {GenresService} from "../../services/genres.service";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/user.auth.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
   podcastsGenres: Observable<any>;
 
   constructor(private authService: AuthService,
+              private userService: UserService,
               private genresService: GenresService) { }
 
   ngOnInit(): void {
@@ -35,6 +37,10 @@ export class HeaderComponent implements OnInit {
 
   get logged(){
     return this.authService.isLogged;
+  }
+
+  get imgProfile(){
+    return this.userService.retrieveProfileImgUser;
   }
 
   signOutUser(){

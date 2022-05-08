@@ -24,6 +24,7 @@ import { MobileHomeBox2Component } from './components/home/mobile-home-box2/mobi
 import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { ElementComponent } from './components/element/element.component';
+import {StorageModule} from "@angular/fire/storage";
 
 
 
@@ -53,7 +54,8 @@ import { ElementComponent } from './components/element/element.component';
         AppRoutingModule,
         AngularFireModule.initializeApp(environment.firebaseDB),
         AngularFireDatabaseModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        StorageModule,
     ],
 
   bootstrap: [AppComponent]

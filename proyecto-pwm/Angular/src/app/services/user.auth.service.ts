@@ -13,7 +13,7 @@ import DataSnapshot = firebase.database.DataSnapshot;
 export class AuthService {
 
   userLogged: User = new User();
-  isLogged: boolean;
+  isLogged = false;
 
   constructor(
     private firebaseAuth: AngularFireAuth,
@@ -43,7 +43,7 @@ export class AuthService {
 
 
   signIn(email: string, password: string){
-    return this.firebaseAuth.signInWithEmailAndPassword(email, password);
+    return this.firebaseAuth.signInWithEmailAndPassword(email, password)
   }
 
   userSignOut(){

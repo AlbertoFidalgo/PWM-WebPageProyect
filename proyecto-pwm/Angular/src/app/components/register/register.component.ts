@@ -44,6 +44,7 @@ export class RegisterComponent implements OnInit {
       birth: [null],
       nationality: [null],
       description: [null],
+      fileImg: [null],
     },
       {validators: (sent: AbstractControl) => {
           const pswd = sent.get('pswd')?.value;

@@ -4,7 +4,7 @@
       <a routerLink=""><img src="../../../assets/img/logo.png" id="logo" alt="logo"></a>
     </div>
     <div class="col-3">
-      <h2 *ngIf="logged" class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h2>
+      <h2 *ngIf="logged && userSigned" class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h2>
     </div>
 
     <div *ngIf="!logged" class="col-6 text-end mt-2 pe-4">
@@ -14,8 +14,8 @@
 
     <div *ngIf="logged" class="col-6 text-end mt-2 pe-4">
       <!-- TODO hacer el componente del perfil -->
-      <a routerLink="goToProfile" class="nav-link"><input type="button" value="Ir a Perfil"></a>
-      <button class="btn text-danger col-3" type="button" (click)="signOutUser()">
+      <a routerLink="goToProfile" class="nav-link col-12"><input type="button" value="Ir a Perfil"></a>
+      <button class="btn text-danger text-end col-12" type="button" (click)="signOutUser()">
         Cerrar Sessión
       </button>
     </div>
