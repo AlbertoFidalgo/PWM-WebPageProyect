@@ -16,6 +16,7 @@ export class CatalogueComponent implements OnInit {
   public typeId: String;
   public content: Observable<any[]>;
   public genres: Observable<any[]>;
+  public element: Observable<any>;
 
   constructor(route: ActivatedRoute,
               private catalogueService: CatalogueService,
@@ -29,7 +30,6 @@ export class CatalogueComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadData();
   }
 
   loadData () {

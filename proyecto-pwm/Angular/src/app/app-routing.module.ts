@@ -13,11 +13,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'catalogue/:type/:genre', component: CatalogueComponent,
-  children: [{
-    path:':element', component: ElementComponent
-  }
-  ]},
+  { path: 'catalogue/:type/:genre', component: CatalogueComponent},
+  { path: 'catalogue/:type/:genre/:element', component: ElementComponent},
   { path: 'admin', component: AdminComponent },
 ];
 @NgModule({

@@ -59,14 +59,14 @@
         <ng-container *ngFor="let element of content | async">
           <ng-container *ngFor="let genre of element.Genre">
             <div *ngIf="genreId==genre" class="col-6 col-md-4 col-lg-3 ps-5">
-              <img  src={{element.Poster}} class="img-fluid img-cat">
+              <a routerLink="{{element.Title}}"><img  src={{element.Poster}} class="img-fluid img-cat"></a>
               <p class="bg1">{{element.Title}}</p>
             </div>
           </ng-container>
         </ng-container>
         <ng-container *ngIf="genreId=='Todos'">
           <div *ngFor="let element of content | async" class="col-6 col-md-4 col-lg-3 ps-5">
-            <img  src={{element.Poster}} class="img-fluid img-cat">
+            <a routerLink="{{element.Title}}"><img  src={{element.Poster}} class="img-fluid img-cat"></a>
             <p class="bg1">{{element.Title}}</p>
           </div>
         </ng-container>
