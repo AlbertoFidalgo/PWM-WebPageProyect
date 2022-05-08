@@ -14,4 +14,9 @@ export class ImagesService {
   getImage(path: string) {
     return this.db.ref(path).getDownloadURL();
   }
+
+  uploadUserImage(uid: string, fileName: string, file: any) {
+    return this.db.ref('user_images/' + uid + '/' + fileName).put(file);
+  }
+
 }

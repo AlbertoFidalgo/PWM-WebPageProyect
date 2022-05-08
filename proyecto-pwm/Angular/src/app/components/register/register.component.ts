@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {User} from "../../models/user.model";
 import {UserService} from "../../services/user.service";
 import {
@@ -8,6 +8,7 @@ import {
   Validators
 } from "@angular/forms";
 import {AuthService} from "../../services/user.auth.service";
+import {ImagesService} from "../../services/images.service";
 
 
 @Component({
@@ -20,9 +21,13 @@ export class RegisterComponent implements OnInit {
   dataSubmitted = false;
   form: FormGroup;
 
+  fileName: string;
+  fileUpload: any;
+
   constructor(
     private userService: UserService,
     private userAuth: AuthService,
+    private imgService: ImagesService,
     private formBuilder: FormBuilder
   ) {  }
 
@@ -45,7 +50,7 @@ export class RegisterComponent implements OnInit {
       nationality: [null],
       description: [null],
       fileImg: [null],
-    },
+      },
       {validators: (sent: AbstractControl) => {
           const pswd = sent.get('pswd')?.value;
           const confirm_pswd = sent.get('confirm_pswd')?.value;
@@ -57,6 +62,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    // TODO optimizar tiempo de respuesta
 
     if (this.form.invalid) {
       console.log("invalid form. Aborting...");
@@ -65,12 +71,16 @@ export class RegisterComponent implements OnInit {
 
     this.userAuth.signUp(this.formField['email'].value, this.formField['pswd'].value).then((userLogged) =>{
 
-        this.form.addControl('uid', new FormControl(userLogged.user?.uid));
-        this.clearFormField(['email', 'pswd', 'confirm_pswd']);
+      this.form.addControl('uid', new FormControl(userLogged.user?.uid));
+      this.form.addControl('imgFile', new FormControl(this.fileName));
 
-        this.userService.createUpdateUser(this.form.value).then(() => {
-          this.dataSubmitted = true;
-        });
+      this.clearFormField(['email', 'pswd', 'confirm_pswd']);
+
+      this.userService.createUpdateUser(this.form.value).then(() => {
+        this.dataSubmitted = true;
+      });
+
+      this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload)
 
       }
     )
@@ -90,5 +100,12 @@ export class RegisterComponent implements OnInit {
   }
 
 
-
+  fileNameSelected(event: Event): void{
+    const target = event.target as HTMLInputElement;
+    if (target.files && target.files.length > 0) {
+      // TODO refactorizar -> Puede haber errores. Ver consola
+      this.fileName = target.files[0].name;
+      this.fileUpload = target.files[0];
+    }
+  }
 }

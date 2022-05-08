@@ -7,5 +7,5 @@ export class User {
   birth?: string;
   nationality?: string;
   description?: string;
-  fileImg?:string;
+  fileImg?:any;
 }

@@ -17,10 +17,13 @@ export class HeaderComponent implements OnInit {
   seriesGenres: Observable<any>;
   podcastsGenres: Observable<any>;
   logo: Observable<any>;
+  imgProfile: Observable<any>
 
   constructor(private authService: AuthService,
               private genresService: GenresService,
-              private imagesService: ImagesService) { }
+              private imagesService: ImagesService) {
+
+  }
 
   ngOnInit(): void {
     this.getGenres();
@@ -29,6 +32,11 @@ export class HeaderComponent implements OnInit {
 
   getImage(path: string) {
     this.logo = this.imagesService.getImage(path);
+  }
+
+  getImgProfile(){
+    // TODO no implementado aún...
+    this.imgProfile = this.imagesService.getImage('user_images/' + this.userSigned.uid  +  '/' + this.userSigned.fileImg);
   }
 
   getGenres() {
