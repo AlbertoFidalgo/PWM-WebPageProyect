@@ -3,24 +3,15 @@
     <div class="col-3">
       <a routerLink=""><img src="{{logo | async}}" id="logo" alt="logo"></a>
     </div>
+    <div class="col-6"></div>
     <div class="col-3">
       <h2 *ngIf="logged" class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h2>
-
-      <!-- // TODO no implementado aún...   <img src="{{ imgProfile | async }}" class="img-fluid"> -->
-
     </div>
-
-    <div *ngIf="!logged" class="col-6 text-end mt-2 pe-4">
-      <a routerLink="login" class="nav-link"><input type="button" value="Iniciar Sesión"></a>
-      <a routerLink="register" class="nav-link"><input type="button" value="Registrarse"></a>
-    </div>
-
-    <div *ngIf="logged" class="col-6 text-end mt-2 pe-4">
-      <!-- TODO hacer el componente del perfil -->
-      <a routerLink="goToProfile" class="nav-link col-12"><input type="button" value="Ir a Perfil"></a>
-      <button class="btn text-danger col-12 text-end" type="button" (click)="signOutUser()">
-        Cerrar Sessión
-      </button>
+    <div *ngIf="logged" class="col-3 text-center">
+      <h4 class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h4>
+      <img src="" id="user" alt="user" height="40px" width="40px">
+      <a routerLink="user/{{userSigned.uid}}/{{userSigned.name}}" class="nav-link"><input type="button" value="Ir a Perfil"></a>
+      <button class="btn text-danger col-3" type="button" (click)="signOutUser()">Cerrar Sessión</button>
     </div>
 
   </div>

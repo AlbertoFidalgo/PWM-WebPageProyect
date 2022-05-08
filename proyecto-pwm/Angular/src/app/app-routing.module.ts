@@ -8,9 +8,11 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {CatalogueComponent} from "./components/catalogue/catalogue.component";
 import {AuthGuard} from "@angular/fire/auth-guard";
 import {ElementComponent} from "./components/element/element.component";
+import {UserComponent} from "./components/user/user.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'user/:uid/:user', component: UserComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'catalogue/:type/:genre', component: CatalogueComponent},

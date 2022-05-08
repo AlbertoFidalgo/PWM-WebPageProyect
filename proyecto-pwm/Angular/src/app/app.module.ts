@@ -25,6 +25,7 @@ import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.comp
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { ElementComponent } from './components/element/element.component';
 import {StorageModule} from "@angular/fire/storage";
+import { UserComponent } from './components/user/user.component';
 
 
 
@@ -42,7 +43,8 @@ import {StorageModule} from "@angular/fire/storage";
     MobileHomeBox2Component,
     BottomBoxComponent,
     CatalogueComponent,
-    ElementComponent
+    ElementComponent,
+    UserComponent
   ],
     imports: [
         BrowserModule,
