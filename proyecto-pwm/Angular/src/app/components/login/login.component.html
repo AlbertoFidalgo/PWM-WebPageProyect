@@ -50,6 +50,10 @@
               </label>
             </div>
 
+            <label *ngIf="this.failLogin" class="doesnt-match form-field col-12 text-danger text-center">
+              Usuario no registrado, vuelve a intentarlo.
+            </label>
+
 
             <a class="pswd-forgotten" href="">
               <!-- TODO si hay tiempo, crear componente para ForgotPassword -->

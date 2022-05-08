@@ -14,6 +14,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
 
   dataSubmitted = false;
+  failLogin = false;
   form: FormGroup;
 
   constructor(private authService: AuthService, private fb: FormBuilder) {
@@ -33,7 +34,9 @@ export class LoginComponent implements OnInit {
 
     if(this.form.valid) this.authService.signIn(this.formField['email'].value, this.formField['pswd'].value).then((user) => {
       this.dataSubmitted = true;
+      this.failLogin = false;
     });
+    this.failLogin = true;
   }
 
   get userInfo(){
