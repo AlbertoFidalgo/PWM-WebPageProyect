@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
 import {CatalogueService} from "../../services/catalogue.service";
 import {GenresService} from "../../services/genres.service";
+import {ImagesService} from "../../services/images.service";
 
 @Component({
   selector: 'app-element',
@@ -14,17 +15,24 @@ export class ElementComponent implements OnInit {
   public typeId: String;
   public titleId: String;
   public content: Observable<any[]>;
+  public user: Observable<any>;
   constructor(route: ActivatedRoute,
               private catalogueService: CatalogueService,
-              private genreService: GenresService) {
+              private genreService: GenresService,
+              private imageService: ImagesService) {
     route.params.subscribe((params) => {
       this.typeId = params["type"];
       this.titleId = params["element"];
       this.loadData();
     });
+    this.getImage();
   }
 
   ngOnInit(): void {
+  }
+
+  getImage () {
+    this.user = this.imageService.getImage('assets/user.png')
   }
 
   loadData () {

@@ -4,6 +4,7 @@ import {CatalogueService} from "../../services/catalogue.service";
 import {Observable} from "rxjs";
 import {GenresService} from "../../services/genres.service";
 import { CommonModule } from "@angular/common";
+import {ImagesService} from "../../services/images.service";
 
 @Component({
   selector: 'app-catalogue',
@@ -17,19 +18,26 @@ export class CatalogueComponent implements OnInit {
   public content: Observable<any[]>;
   public genres: Observable<any[]>;
   public element: Observable<any>;
+  public filtro: Observable<any>;
 
   constructor(route: ActivatedRoute,
               private catalogueService: CatalogueService,
-              private genreService: GenresService) {
+              private genreService: GenresService,
+              private imageService: ImagesService) {
     route.params.subscribe((params) => {
       this.typeId = params["type"];
       this.genreId = params["genre"];
       this.loadData();
       this.loadGenres();
     });
+    this.getImage();
   }
 
   ngOnInit(): void {
+  }
+
+  getImage() {
+    this.filtro = this.imageService.getImage('assets/filtroIcon.png');
   }
 
   loadData () {

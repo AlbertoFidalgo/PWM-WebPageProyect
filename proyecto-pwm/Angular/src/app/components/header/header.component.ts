@@ -3,7 +3,7 @@ import {GenresService} from "../../services/genres.service";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/user.auth.service";
-import {UserService} from "../../services/user.service";
+import {ImagesService} from "../../services/images.service";
 
 @Component({
   selector: 'app-header',
@@ -16,13 +16,19 @@ export class HeaderComponent implements OnInit {
   moviesGenres: Observable<any>;
   seriesGenres: Observable<any>;
   podcastsGenres: Observable<any>;
+  logo: Observable<any>;
 
   constructor(private authService: AuthService,
-              private userService: UserService,
-              private genresService: GenresService) { }
+              private genresService: GenresService,
+              private imagesService: ImagesService) { }
 
   ngOnInit(): void {
     this.getGenres();
+    this.getImage('assets/logo.png');
+  }
+
+  getImage(path: string) {
+    this.logo = this.imagesService.getImage(path);
   }
 
   getGenres() {
@@ -39,16 +45,8 @@ export class HeaderComponent implements OnInit {
     return this.authService.isLogged;
   }
 
-  get imgProfile(){
-    return this.userService.retrieveProfileImgUser;
-  }
-
   signOutUser(){
     this.authService.userSignOut()
-  }
-
-  reload (path: String) {
-    console.log(path);
   }
 
 }

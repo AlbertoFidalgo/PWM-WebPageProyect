@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ImagesService} from "../../services/images.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-carousell',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarousellComponent implements OnInit {
 
-  constructor() { }
+  carrousel1: Observable<any>;
+  carrousel2: Observable<any>;
+  carrousel3: Observable<any>;
+  carrousel4: Observable<any>;
+  constructor(private imagesService: ImagesService) { }
 
   ngOnInit(): void {
+    this.getImages();
+  }
+
+  getImages() {
+    this.carrousel1 = this.imagesService.getImage('assets/musicaBanner.png');
+    this.carrousel2 = this.imagesService.getImage('assets/peliculasBanner.png');
+    this.carrousel3 = this.imagesService.getImage('assets/seriesBanner.png');
+    this.carrousel4 = this.imagesService.getImage('assets/podcastsBanner.png');
   }
 
 }

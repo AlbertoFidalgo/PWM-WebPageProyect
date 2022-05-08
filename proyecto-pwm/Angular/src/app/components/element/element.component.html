@@ -39,7 +39,7 @@
   </div>
   <div class="row mt-3 bg1">
     <div class="col-1 pt-2 pb-2 text-center">
-      <img src="images/user.png" class="img-fluid">
+      <img src="{{this.user | async}}" class="img-fluid">
       <p>Nombre del perfil</p>
       <p>Fecha de la review </p>
       <a routerLink="user"><input type="button" value="Ver perfil"></a>
