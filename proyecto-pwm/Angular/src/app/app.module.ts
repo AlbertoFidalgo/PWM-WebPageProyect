@@ -23,6 +23,7 @@ import { MobileHomeBox1Component } from './components/home/mobile-home-box1/mobi
 import { MobileHomeBox2Component } from './components/home/mobile-home-box2/mobile-home-box2.component';
 import { BottomBoxComponent } from './components/home/bottom-box/bottom-box.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ElementComponent } from './components/element/element.component';
 
 
 
@@ -39,7 +40,8 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
     MobileHomeBox1Component,
     MobileHomeBox2Component,
     BottomBoxComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    ElementComponent
   ],
     imports: [
         BrowserModule,

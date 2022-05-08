@@ -33,11 +33,15 @@
   #container {
     width: 100%;
   }
-  #img-cat {
+  .img-cat {
     width: 175px;
   }
 }
 
+.img-cat {
+  height:200px;
+  width: 250px;
+}
 
 
 
@@ -82,10 +86,6 @@ body {
   min-height: 70px;
   max-height: 200px;
   min-width: 30px;
-}
-#img-cat {
-  height:200px;
-  width: 250px;
 }
 #offcanvasFilter {
   background-color: #591F1F;

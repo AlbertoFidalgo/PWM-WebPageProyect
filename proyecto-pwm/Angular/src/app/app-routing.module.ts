@@ -6,12 +6,18 @@ import {RegisterComponent} from "./components/register/register.component";
 import {LoginComponent} from "./components/login/login.component";
 import {AdminComponent} from "./components/admin/admin.component";
 import {CatalogueComponent} from "./components/catalogue/catalogue.component";
+import {AuthGuard} from "@angular/fire/auth-guard";
+import {ElementComponent} from "./components/element/element.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'catalogue/:type/:genre', component: CatalogueComponent },
+  { path: 'catalogue/:type/:genre', component: CatalogueComponent,
+  children: [{
+    path:':element', component: ElementComponent
+  }
+  ]},
   { path: 'admin', component: AdminComponent },
 ];
 @NgModule({

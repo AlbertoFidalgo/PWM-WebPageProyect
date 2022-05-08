@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   podcastsGenres: Observable<any>;
 
   constructor(private authService: AuthService,
-              private router: Router,
               private genresService: GenresService) { }
 
   ngOnInit(): void {
@@ -42,8 +41,8 @@ export class HeaderComponent implements OnInit {
     this.authService.userSignOut()
   }
 
-  refreshComponent() {
-    this.router.navigate([this.router.url]);
+  reload (path: String) {
+    console.log(path);
   }
 
 }
