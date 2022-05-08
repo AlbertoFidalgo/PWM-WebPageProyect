@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService,
               private genresService: GenresService,
               private imagesService: ImagesService) {
-
+    this.getImgProfile();
   }
 
   ngOnInit(): void {
@@ -36,7 +36,8 @@ export class HeaderComponent implements OnInit {
 
   getImgProfile(){
     // TODO no implementado aún...
-    this.imgProfile = this.imagesService.getImage('user_images/' + this.userSigned.uid  +  '/' + this.userSigned.fileImg);
+    console.log('user_images/' + this.userSigned.uid  +  '/' + this.userSigned.imgFile);
+    this.imgProfile = this.imagesService.getImage('user_images/' + this.userSigned.uid  +  '/' + this.userSigned.imgFile);
   }
 
   getGenres() {

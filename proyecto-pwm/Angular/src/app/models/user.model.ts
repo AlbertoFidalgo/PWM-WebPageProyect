@@ -7,5 +7,6 @@ export class User {
   birth?: string;
   nationality?: string;
   description?: string;
+  imgFile?:string;
   fileImg?:any;
 }

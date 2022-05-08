@@ -16,22 +16,24 @@ export class UserComponent implements OnInit {
 
   user: User = new User();
   configImg: Observable<any>;
+  userImg: Observable<any>;
   constructor(route: ActivatedRoute,
               private imagesService: ImagesService,
               private userService: UserService) {
     route.params.subscribe((params) => {
       this.userService.retrieveUser(params["uid"]).then((userRef: DataSnapshot) => {
         this.user = userRef.val();
+        this.getImages();
       })
     });
   }
 
 
   ngOnInit(): void {
-    this.getImage();
   }
 
-  getImage() {
+  getImages() {
+    this.userImg = this.imagesService.getImage('user_images/' + this.user.uid  +  '/' + this.user.imgFile);
     this.configImg = this.imagesService.getImage('assets/configIcon.png');
   }
 
