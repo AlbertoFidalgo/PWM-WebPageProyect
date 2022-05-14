@@ -25,5 +25,4 @@ export class UserService {
     return this.db.database.ref(this.dbUsersPath + "/" + uid).get();
   }
 
-
 }

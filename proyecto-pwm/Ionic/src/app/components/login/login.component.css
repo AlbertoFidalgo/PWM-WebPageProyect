@@ -1,0 +1,98 @@
+
+
+.container{
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  font-size: 1.4em;
+  background: red;
+
+}
+
+.user-login{
+  margin: 2em;
+  padding: 2em;
+  position: relative;
+  background: inherit;
+}
+
+
+#user-login-form{
+  background: #d9d9d9;
+  text-align: center;
+  margin-top: 1em;
+  padding-top: 4em;
+}
+
+#login{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+#our-advantage{
+  background: inherit;
+}
+
+
+
+ion-button submit-button{
+  padding: 1em;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.submit-button{
+  font-size: 1.2em;
+  margin: 1.5em;
+
+  border-radius: 0.5em;
+
+}
+
+.submit-register{
+  font-size: 1.8em;
+  text-align: center;
+}
+
+a{
+  color: #326E9C;
+}
+
+#our-advantage{
+  font-size: 1.5em;
+}
+
+#our-advantage li{
+  padding: 0.5em;
+}
+/*
+ion-img{
+  width: auto;
+  max-height: 100%;
+}
+
+ion-img user-img{
+  height: 10em;
+  margin-bottom: 1em;
+}
+*/
+#warning-msg{
+  color: red;
+}
+
+.row input {
+  height: 1.8em;
+}
+
+
+.doesnt-match{
+  font-size: 100%;
+}
+
+.row{
+  line-height: normal;
+}
+

@@ -62,7 +62,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    // TODO optimizar tiempo de respuesta
 
     if (this.form.invalid) {
       console.log("invalid form. Aborting...");
@@ -103,7 +102,6 @@ export class RegisterComponent implements OnInit {
   fileNameSelected(event: Event): void{
     const target = event.target as HTMLInputElement;
     if (target.files && target.files.length > 0) {
-      // TODO refactorizar -> Puede haber errores. Ver consola
       this.fileName = target.files[0].name;
       this.fileUpload = target.files[0];
     }
