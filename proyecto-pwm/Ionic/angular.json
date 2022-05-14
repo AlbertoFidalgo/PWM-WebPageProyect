@@ -36,6 +36,7 @@
               "src/global.scss",
               "src/styles.css"
             ],
+
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -170,6 +171,7 @@
               "browserTarget": "app:build:production"
             }
           }
+
         }
       }
     }

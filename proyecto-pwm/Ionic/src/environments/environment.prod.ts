@@ -1,4 +1,5 @@
 export const environment = {
+<<<<<<< HEAD
 
   firebase: {
     projectId: 'elementos-multimedia',
@@ -10,5 +11,7 @@ export const environment = {
     messagingSenderId: '416783493915',
   },
 
+=======
+>>>>>>> 907618418ec89897a0379993248b1aaa69764fbe
   production: true
 };

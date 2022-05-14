@@ -1,8 +1,14 @@
 {
+<<<<<<< HEAD
   "name": "Ionic",
   "integrations": {
     "capacitor": {},
     "cordova": {}
+=======
+  "name": "IonicProject",
+  "integrations": {
+    "capacitor": {}
+>>>>>>> 907618418ec89897a0379993248b1aaa69764fbe
   },
   "type": "angular"
 }

@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+
   production: false,
 
   firebaseDB: {
@@ -14,6 +15,7 @@ export const environment = {
     authDomain: 'elementos-multimedia.firebaseapp.com',
     messagingSenderId: '416783493915',
   }
+
 };
 
 /*
