@@ -1,0 +1,9 @@
+<div class="row bg1">
+  <p>{{name}}</p>
+</div>
+<div class="row bg2 pt-3">
+  <div class="col-6" *ngFor="let item of items | async">
+    <img src={{item.Poster}} height="110px" width="160px">
+    <p class="pt-3">{{item.Title}}</p>
+  </div>
+</div>

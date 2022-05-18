@@ -1,0 +1,11 @@
+<div class="row bg1">
+  <p class="pt-2">{{this.name}}</p>
+</div>
+<div class="row bg2 pt-3">
+  <div class="col-2" *ngFor="let item of items | async">
+    <p><img src={{item.Poster}} height="80px" width="50px"></p>
+    <p>{{item.Title}}</p>
+    <p *ngIf="item.Date">Fecha de estreno: {{item.Date}}</p>
+    <p *ngIf="item.Artist">de {{item.Artist}}</p>
+  </div>
+</div>

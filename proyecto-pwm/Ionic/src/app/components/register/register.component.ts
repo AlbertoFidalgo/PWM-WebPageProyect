@@ -78,9 +78,10 @@ export class RegisterComponent implements OnInit {
 
       this.userService.createUpdateUser(this.form.value).then(() => {
         this.dataSubmitted = true;
+        this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload);
       });
 
-      this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload)
+
 
       }
     )

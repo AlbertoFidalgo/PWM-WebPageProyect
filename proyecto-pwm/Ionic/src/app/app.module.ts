@@ -20,6 +20,8 @@ import { AppComponent } from './app.component';
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {HeaderComponent} from "./components/header/header.component";
+import {UserComponent} from './components/user/user.component';
+import {HomeComponent} from './components/home/home.component';
 
 
 
@@ -29,6 +31,9 @@ import {HeaderComponent} from "./components/header/header.component";
     RegisterComponent,
     LoginComponent,
     HeaderComponent,
+    UserComponent,
+    HomeComponent,
+
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),

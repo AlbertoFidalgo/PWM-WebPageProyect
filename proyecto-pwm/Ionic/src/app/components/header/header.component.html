@@ -5,13 +5,13 @@
     </div>
     <div class="col-6"></div>
     <div *ngIf="!logged" class="col-3 text-end mt-2 pe-4">
-      <a routerLink="login" class="nav-link"><input type="button" value="Iniciar Sesión"></a>
-      <a routerLink="register" class="nav-link"><input type="button" value="Registrarse"></a>
+      <ion-button class="submit-button btn-sm ion-padding" routerLink="login">Iniciar sesión</ion-button>
+      <ion-button class="submit-button btn-sm ion-padding" routerLink="register">Registrarse</ion-button>
     </div>
     <div *ngIf="logged" class="col-3 text-center">
       <h4 class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h4>
-      <a routerLink="user/{{userSigned.uid}}/{{userSigned.name}}" class="nav-link"><input type="button" value="Ir a Perfil"></a>
-      <ion-button class="btn text-danger col-3" type="button" (click)="signOutUser()">Cerrar Sessión</ion-button>
+      <ion-nav-link  class="btn ion-align-self-start" routerLink="user/{{userSigned.uid}}/{{userSigned.name}}"><input type="button" value="Ir a Perfil"></ion-nav-link>
+      <ion-button color="warning" class="ion-color-warning ion-align-self-end" (click)="signOutUser()">Cerrar Sessión</ion-button>
     </div>
   </div>
 
