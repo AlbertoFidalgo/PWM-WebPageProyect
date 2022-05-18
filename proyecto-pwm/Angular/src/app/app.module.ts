@@ -49,7 +49,7 @@ import { UserComponent } from './components/user/user.component';
     imports: [
         BrowserModule,
         FormsModule,
-        BrowserModule /* or CommonModule */,
+        BrowserModule ,
         MatCardModule,
         ReactiveFormsModule,
         RouterModule,

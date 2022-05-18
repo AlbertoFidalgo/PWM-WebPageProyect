@@ -34,8 +34,8 @@ export class UserComponent implements OnInit {
 
   getImages() {
     // TODO testear
-    if(this.user.imgFile === null){this.userImg = this.imagesService.getImage('user_images/generic/user.png');}
-    this.userImg = this.imagesService.getImage('user_images/' + this.user.uid  +  '/' + this.user.imgFile);
+    if(this.user.imgFile == null){this.userImg = this.imagesService.getImage('user_images/generic/user.png');}
+    else{this.userImg = this.imagesService.getImage('user_images/' + this.user.uid  +  '/' + this.user.imgFile);}
     this.configImg = this.imagesService.getImage('assets/configIcon.png');
   }
 

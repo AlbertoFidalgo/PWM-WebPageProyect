@@ -1,7 +1,7 @@
 <div class="container-fluid ps-5 pe-5">
   <div class="row pt-5">
     <div class="col-3 col-xxl-2">
-      <img src="{{this.userImg | async}}" id="usuarioImg" class="img-fluid rounded-circle">
+      <img src="{{this.userImg | async}}" id="usuarioImg" class="img-fluid rounded-circle" alt="">
     </div>
     <div class="col-9 col-xxl-10 bg1">
       <div class="row pt-2">
@@ -13,7 +13,7 @@
           <p><u>Sobre mí: {{this.user.description}}</u></p>
         </div>
         <div class="col-2 col-md-1">
-          <img src="{{ this.configImg | async }}" class="img-fluid">
+          <img src="{{ this.configImg | async }}" class="img-fluid" alt="">
         </div>
       </div>
     </div>
