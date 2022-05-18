@@ -143,12 +143,13 @@
 
               <div class="row pt-3 ">
                 <div class="form-group ">
-                  <ion-label class="form-field col-12 text-center ">Añadir imagen de perfil: </ion-label>
+
                   <div class="text-end col-12 ">
                     <ion-input class="text-center col-12" type="file"  id="get-file-input"
                            (change)="fileNameSelected($event)"
                            name="filename" formControlName="fileImg">
                     </ion-input>
+                    <ion-label> {{ formField['fileImg'].value }} </ion-label>
                   </div>
                 </div>
               </div>
@@ -159,16 +160,14 @@
           <div class="row justify-content-center pt-3">
 
             <ion-label  *ngIf="formField['pswd'].invalid || formField['pswd'].invalid"  class="text-danger ion-text-center col-10">
-              La contraseña debe contener al menos 1 mayúscula, 1 minúscula, 1 número y situarse entre 4 y 16 caracteres
+              La contraseña debe contener al menos 1 mayúscula, 1 minúscula, 1 número y situarse entre 6 y 16 caracteres
             </ion-label>
 
-            <div class="form-group">
-              <ion-button *ngIf="!dataSubmitted" class="submit-button col-3"
-                          type="submit"
-              >
-                DARSE DE ALTA
-              </ion-button>
-            </div>
+
+            <ion-button *ngIf="!dataSubmitted" (click)="onSubmit()" class="submit-button-form col-4">
+              Registrarse
+            </ion-button>
+
 
           </div>
         </form>

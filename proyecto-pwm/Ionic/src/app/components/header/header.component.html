@@ -10,7 +10,7 @@
     </div>
     <div *ngIf="logged" class="col-3 text-center">
       <h4 class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h4>
-      <ion-nav-link  class="btn ion-align-self-start" routerLink="user/{{userSigned.uid}}/{{userSigned.name}}"><input type="button" value="Ir a Perfil"></ion-nav-link>
+      <ion-button color="warning" class="ion-align-self-start" routerLink="user/{{userSigned.uid}}/{{userSigned.name}}">Ir a Perfil </ion-button>
       <ion-button color="warning" class="ion-color-warning ion-align-self-end" (click)="signOutUser()">Cerrar Sessión</ion-button>
     </div>
   </div>

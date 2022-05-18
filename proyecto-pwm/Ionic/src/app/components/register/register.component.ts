@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let PswdPattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,16}$";
+    let PswdPattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,16}$";
 
     this.form = this.formBuilder.group({
 
@@ -69,6 +69,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
+    console.log('formulario válido')
 
     this.userAuth.signUp(this.formField['email'].value, this.formField['pswd'].value).then((userLogged) =>{
 
@@ -78,13 +79,13 @@ export class RegisterComponent implements OnInit {
       this.clearFormField(['email', 'pswd', 'confirm_pswd', 'fileImg']);
 
       this.userService.createUpdateUser(this.form.value).then(() => {
-        this.dataSubmitted = true;
         console.log('usuario creado...')
 
       });
+      this.dataSubmitted = true;
 
       this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload);
-      console.log('formulario válido')
+
       }
     )
 
