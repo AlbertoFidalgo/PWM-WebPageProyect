@@ -5,6 +5,7 @@ import {UserService} from './user.service';
 import {User} from '../models/user.model';
 import firebase from 'firebase/compat';
 import DataSnapshot = firebase.database.DataSnapshot;
+import {getAuth, signOut} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -45,13 +46,15 @@ export class AuthService {
     return this.firebaseAuth.signInWithEmailAndPassword(email, password);
   }
 
-/*
-  TODO dependencia arreglar
+
   userSignOut(){
+
+
+
     signOut(getAuth()).then(() => {
       this.userLogged = new User();
     });
   }
-*/
+
 }
 

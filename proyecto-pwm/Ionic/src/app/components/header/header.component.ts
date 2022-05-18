@@ -57,7 +57,7 @@ export class HeaderComponent implements OnInit {
 
   signOutUser(){
 
-    // TODO Dependencia this.authService.userSignOut()
+    this.authService.userSignOut()
 
   }
 

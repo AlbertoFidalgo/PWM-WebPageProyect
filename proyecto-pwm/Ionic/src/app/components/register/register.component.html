@@ -12,7 +12,7 @@
           ¡ Felicidades ! ¡ Usuario registrado correctamente !
         </h1>
 
-        <form *ngIf="!dataSubmitted" id="register" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <form *ngIf="!dataSubmitted" id="register" method="get" action="" [formGroup]="form" (ngSubmit)="onSubmit()">
 
           <div class="container ion-align-items-center">
             <div class="row">
@@ -25,17 +25,11 @@
                     <ion-input class="form-field col-5 ion-text-left" type="text" id="name"
                                placeholder="(Requerido) Introduzca nombre"
                                formControlName="name">
-
                     </ion-input>
-
-
                     <ion-label  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field col-4 text-danger">
                       Mínimo 4 y máximo 16 caracteres
                     </ion-label>
-
                   </ion-item>
-
-
 
                 </div>
               </div>
@@ -50,27 +44,17 @@
                                placeholder="(Requerido) Introduzca contraseña"
                                formControlName="pswd">
                     </ion-input>
-
                     <ion-label  *ngIf="formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
                       Patrón incorrecto
                     </ion-label>
-
                     <ion-label  *ngIf="this.form.hasError('notSame') && !formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
                       Las contraseñas no coinciden
                     </ion-label>
-
-
-
                   </ion-item>
-
 
                 </div>
 
-
               </div>
-
-
-
 
               <div class="row pt-3">
                 <div class="form-group">
@@ -81,20 +65,16 @@
                                placeholder="(Requerido) Confirme contraseña"
                                formControlName="confirm_pswd">
                     </ion-input>
-
                     <ion-label  *ngIf="formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
                       Patrón incorrecto
                     </ion-label>
-
                     <ion-label  *ngIf="this.form.hasError('notSame') && !formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
                       Las contraseñas no coinciden
                     </ion-label>
-
                   </ion-item>
 
                 </div>
               </div>
-
 
               <div class="row pt-3">
                 <div class="form-group">
@@ -107,15 +87,12 @@
                                formControlName="email"
                     >
                     </ion-input>
-
                     <ion-label  *ngIf="formField['email'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
                       Patrón incorrecto
                     </ion-label>
-
                   </ion-item>
 
                 </div>
-
 
               </div>
 
@@ -128,7 +105,6 @@
                                formControlName="birth"
                     >
                     </ion-input>
-
                   </ion-item>
 
                 </div>
@@ -144,7 +120,6 @@
                                formControlName="nationality"
                     >
                     </ion-input>
-
                   </ion-item>
 
                 </div>
@@ -160,7 +135,6 @@
                                formControlName="description"
                     >
                     </ion-input>
-
                   </ion-item>
 
                 </div>
@@ -174,11 +148,9 @@
                            (change)="fileNameSelected($event)"
                            name="filename" formControlName="fileImg">
                     </ion-input>
-
                   </div>
                 </div>
               </div>
-
 
             </div>
           </div>
@@ -190,17 +162,14 @@
             </ion-label>
 
             <div class="form-group">
-              <ion-button *ngIf="!dataSubmitted" class="submit-button-form col-3"
-                     type="button"
-                     (click)="onSubmit()"
+              <ion-button *ngIf="!dataSubmitted" class="submit-button col-3"
+                          type="submit"
               >
                 DARSE DE ALTA
               </ion-button>
             </div>
 
           </div>
-
-
         </form>
 
         <ion-button *ngIf="dataSubmitted" (click)="prepareForNewUser()" class="submit-button-form col-4">

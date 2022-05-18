@@ -69,6 +69,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
+
     this.userAuth.signUp(this.formField['email'].value, this.formField['pswd'].value).then((userLogged) =>{
 
       this.form.addControl('uid', new FormControl(userLogged.user?.uid));
@@ -78,11 +79,12 @@ export class RegisterComponent implements OnInit {
 
       this.userService.createUpdateUser(this.form.value).then(() => {
         this.dataSubmitted = true;
-        this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload);
+        console.log('usuario creado...')
+
       });
 
-
-
+      this.imgService.uploadUserImage(userLogged.user?.uid!, this.fileName, this.fileUpload);
+      console.log('formulario válido')
       }
     )
 
