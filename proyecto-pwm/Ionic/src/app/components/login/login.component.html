@@ -1,98 +1,102 @@
-<div id="container">
 
-  <main class="container-fluid col-lg-12 col-md-9 col-sm-6 pt-12">
-    <article class="row" >
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="user-login" id="user-login-form">
+<ion-content>
 
-          <img alt=" "
-               class="user-img float-center"
-               height="200"
-               width="200"
-               src="../../../assets/img/user.png"/>
+  <div id="container">
 
-          <form  [formGroup]="form" class="form-horizontal" (ngSubmit)="onSubmit()" *ngIf="!dataSubmitted" id="login" method="get" action="">
+    <main class="container-fluid col-lg-12 col-md-9 col-sm-6 pt-12">
+      <article class="row" >
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="user-login" id="user-login-form">
 
-            <div class="container-fluid  pt-4">
-              <div class="row">
-                <ion-item class="col-12 ion-text-center">
-                  <ion-label class="form-field ion-text-left" >Email</ion-label>
-                  <ion-input id="email-form" type="email" placeholder="Introduzca email" required="required" formControlName="email"></ion-input>
-                </ion-item>
-              </div>
-            </div>
+            <img alt=" "
+                 class="user-img float-center"
+                 height="200"
+                 width="200"
+                 src="../../../assets/img/user.png"/>
 
-            <div class="container-fluid pt-4">
-              <div class="row">
+            <form  [formGroup]="form" class="form-horizontal" (ngSubmit)="onSubmit()" *ngIf="!dataSubmitted" id="login" method="get" action="">
 
-                <ion-item class="col-12 ion-text-center">
-                  <ion-label class="form-field ion-text-left" >Contraseña</ion-label>
-                  <ion-input id="pswd-form" type="password" placeholder="Introduzca contraseña" required="required" formControlName="pswd"></ion-input>
-                </ion-item>
-
+              <div class="container-fluid  pt-4">
+                <div class="row">
+                  <ion-item class="col-12 ion-text-center">
+                    <ion-label class="form-field ion-text-left" >Email</ion-label>
+                    <ion-input id="email-form" type="email" placeholder="Introduzca email" required="required" formControlName="email"></ion-input>
+                  </ion-item>
+                </div>
               </div>
 
-            </div>
+              <div class="container-fluid pt-4">
+                <div class="row">
 
-            <div class="submit-button ion-align-items-center">
-              <ion-button [disabled]="form.invalid"
-                          class="submit-button btn-success"
-                          type="submit" >
-                INICIAR SESIÓN
-              </ion-button>
-              <br>
-              <ion-label *ngIf="form.invalid" class="doesnt-match form-field text-danger text-center">
-                Todos los campos son requeridos, por favor, introduzca sus datos
+                  <ion-item class="col-12 ion-text-center">
+                    <ion-label class="form-field ion-text-left" >Contraseña</ion-label>
+                    <ion-input id="pswd-form" type="password" placeholder="Introduzca contraseña" required="required" formControlName="pswd"></ion-input>
+                  </ion-item>
+
+                </div>
+
+              </div>
+
+              <div class="submit-button ion-align-items-center">
+                <ion-button [disabled]="form.invalid"
+                            class="submit-button btn-success"
+                            type="submit" >
+                  INICIAR SESIÓN
+                </ion-button>
+                <br>
+                <ion-label *ngIf="form.invalid" class="doesnt-match form-field text-danger text-center">
+                  Todos los campos son requeridos, por favor, introduzca sus datos
+                </ion-label>
+              </div>
+
+              <ion-label *ngIf="this.failLogin" class="doesnt-match form-field col-12 text-danger text-center">
+                Usuario no registrado, vuelve a intentarlo.
               </ion-label>
+
+              <a class="pswd-forgotten" href="">
+                <!-- TODO si hay tiempo, crear componente para ForgotPassword -->
+                ¿Has olvidado tu contraseña?
+              </a>
+
+            </form>
+
+            <div *ngIf="userLogged && dataSubmitted">
+              <ion-label class="form-field col-12 text-success text-center">
+                Bienvenido, {{ userInfo.name }}
+              </ion-label>
+              <br>
+              <ion-button (click)="prepareForNewLogin()" class="submit-button-form col-12">
+                ¿ Volver a iniciar sesión con otros datos ?
+              </ion-button>
             </div>
 
-            <ion-label *ngIf="this.failLogin" class="doesnt-match form-field col-12 text-danger text-center">
-              Usuario no registrado, vuelve a intentarlo.
-            </ion-label>
-
-            <a class="pswd-forgotten" href="">
-              <!-- TODO si hay tiempo, crear componente para ForgotPassword -->
-              ¿Has olvidado tu contraseña?
-            </a>
-
-          </form>
-
-          <div *ngIf="userLogged && dataSubmitted">
-            <ion-label class="form-field col-12 text-success text-center">
-              Bienvenido, {{ userInfo.name }}
-            </ion-label>
-            <br>
-            <ion-button (click)="prepareForNewLogin()" class="submit-button-form col-12">
-              ¿ Volver a iniciar sesión con otros datos ?
-            </ion-button>
           </div>
 
         </div>
 
-      </div>
 
+        <div class="col-lg-6 col-md-12" >
 
-      <div class="col-lg-6 col-md-12" >
+          <div class="container-fluid">
 
-        <div class="container-fluid">
+            <div class="col-12 col-lg-9  mb-4 bg1 text-center "  id="our-advantage">
+              <h1>Nuestras ventajas: </h1>
+              <ol id="#our-advantage-list">
+                <li>Actualizamos nuestro contenido</li>
+                <li>Recomendaciones personalizadas</li>
+                <li>Accede a la opinión de nuestros visistantes</li>
+                <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
+              </ol>
+              <ion-button class="submit-button btn-sm ion-padding" routerLink="/register">IR A REGISTRARSE</ion-button>
+            </div>
 
-          <div class="col-12 col-lg-9  mb-4 bg1 text-center "  id="our-advantage">
-            <h1>Nuestras ventajas: </h1>
-            <ol id="#our-advantage-list">
-              <li>Actualizamos nuestro contenido</li>
-              <li>Recomendaciones personalizadas</li>
-              <li>Accede a la opinión de nuestros visistantes</li>
-              <li>Crea y personaliza tu propia lista de elementos multimedias favoritos</li>
-            </ol>
-            <ion-button class="submit-button btn-sm ion-padding" routerLink="/register">IR A REGISTRARSE</ion-button>
           </div>
-
         </div>
-      </div>
 
-    </article>
+      </article>
 
-  </main>
+    </main>
 
 
-</div>
+  </div>
+</ion-content>

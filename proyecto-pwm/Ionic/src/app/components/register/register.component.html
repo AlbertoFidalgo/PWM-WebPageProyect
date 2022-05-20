@@ -1,194 +1,197 @@
 
-<div id="container">
+<ion-content>
+  <div id="container">
 
-  <main class="container-fluid">
-    <article>
-      <section id="user-register" class="text-center">
-        <h1 class="register-title" *ngIf="!dataSubmitted">
-          ¡Bienvenido!<br>¿Deseas Darte de Alta?
-        </h1>
+    <main class="container-fluid">
+      <article>
+        <section id="user-register" class="text-center">
+          <h1 class="register-title" *ngIf="!dataSubmitted">
+            ¡Bienvenido!<br>¿Deseas Darte de Alta?
+          </h1>
 
-        <h1 class="register-title" *ngIf="dataSubmitted">
-          ¡ Felicidades ! ¡ Usuario registrado correctamente !
-        </h1>
+          <h1 class="register-title" *ngIf="dataSubmitted">
+            ¡ Felicidades ! ¡ Usuario registrado correctamente !
+          </h1>
 
-        <form *ngIf="!dataSubmitted" id="register" method="get" action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <form *ngIf="!dataSubmitted" id="register" method="get" action="" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-          <div class="container ion-align-items-center">
-            <div class="row">
+            <div class="container ion-align-items-center">
+              <div class="row">
 
-              <div class="row pt-3">
-                <div class="form-group">
+                <div class="row pt-3">
+                  <div class="form-group">
 
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="name" >Nombre</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="text" id="name"
-                               placeholder="(Requerido) Introduzca nombre"
-                               formControlName="name">
-                    </ion-input>
-                    <ion-label  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field col-4 text-danger">
-                      Mínimo 4 y máximo 16 caracteres
-                    </ion-label>
-                  </ion-item>
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="name" >Nombre</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="text" id="name"
+                                 placeholder="(Requerido) Introduzca nombre"
+                                 formControlName="name">
+                      </ion-input>
+                      <ion-label  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field col-4 text-danger">
+                        Mínimo 4 y máximo 16 caracteres
+                      </ion-label>
+                    </ion-item>
 
-                </div>
-              </div>
-
-              <div class="row pt-3">
-
-                <div class="form-group">
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="password" >Contraseña</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="password" id="password"
-                               placeholder="(Requerido) Introduzca contraseña"
-                               formControlName="pswd">
-                    </ion-input>
-                    <ion-label  *ngIf="formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                      Patrón incorrecto
-                    </ion-label>
-                    <ion-label  *ngIf="this.form.hasError('notSame') && !formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                      Las contraseñas no coinciden
-                    </ion-label>
-                  </ion-item>
-
-                </div>
-
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-group">
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="password pswd" >Confirmar contraseña</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="password"
-                               placeholder="(Requerido) Confirme contraseña"
-                               formControlName="confirm_pswd">
-                    </ion-input>
-                    <ion-label  *ngIf="formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                      Patrón incorrecto
-                    </ion-label>
-                    <ion-label  *ngIf="this.form.hasError('notSame') && !formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                      Las contraseñas no coinciden
-                    </ion-label>
-                  </ion-item>
-
-                </div>
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-group">
-
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="email" >Email</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="email"
-                               placeholder="(Requerido) Introduzca correo"
-                               formControlName="email"
-                    >
-                    </ion-input>
-                    <ion-label  *ngIf="formField['email'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                      Patrón incorrecto
-                    </ion-label>
-                  </ion-item>
-
-                </div>
-
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-group">
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="birth" >* Nacimiento</ion-label>
-                    <ion-input class="form-field col-5 ion-text-center" type="date"
-                               formControlName="birth"
-                    >
-                    </ion-input>
-                  </ion-item>
-
-                </div>
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-group">
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="nationality" >* Nacionalidad</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="text"
-                               placeholder="Mi principal nacionalidad..."
-                               formControlName="nationality"
-                    >
-                    </ion-input>
-                  </ion-item>
-
-                </div>
-              </div>
-
-              <div class="row pt-3">
-                <div class="form-group">
-
-                  <ion-item class="ion-text-center col-10">
-                    <ion-label class="form-field col-5 ion-text-center" for="about me form" >* Sobre mí</ion-label>
-                    <ion-input class="form-field col-5 ion-text-left" type="text"
-                               placeholder="Sobre mí..."
-                               formControlName="description"
-                    >
-                    </ion-input>
-                  </ion-item>
-
-                </div>
-              </div>
-
-              <div class="row pt-3 ">
-                <div class="form-group ">
-
-                  <div class="text-end col-12 ">
-                    <ion-input class="text-center col-12" type="file"  id="get-file-input"
-                           (change)="fileNameSelected($event)"
-                           name="filename" formControlName="fileImg">
-                    </ion-input>
                   </div>
                 </div>
+
+                <div class="row pt-3">
+
+                  <div class="form-group">
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="password" >Contraseña</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="password" id="password"
+                                 placeholder="(Requerido) Introduzca contraseña"
+                                 formControlName="pswd">
+                      </ion-input>
+                      <ion-label  *ngIf="formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
+                        Patrón incorrecto
+                      </ion-label>
+                      <ion-label  *ngIf="this.form.hasError('notSame') && !formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
+                        Las contraseñas no coinciden
+                      </ion-label>
+                    </ion-item>
+
+                  </div>
+
+                </div>
+
+                <div class="row pt-3">
+                  <div class="form-group">
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="password pswd" >Confirmar contraseña</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="password"
+                                 placeholder="(Requerido) Confirme contraseña"
+                                 formControlName="confirm_pswd">
+                      </ion-input>
+                      <ion-label  *ngIf="formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
+                        Patrón incorrecto
+                      </ion-label>
+                      <ion-label  *ngIf="this.form.hasError('notSame') && !formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
+                        Las contraseñas no coinciden
+                      </ion-label>
+                    </ion-item>
+
+                  </div>
+                </div>
+
+                <div class="row pt-3">
+                  <div class="form-group">
+
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="email" >Email</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="email"
+                                 placeholder="(Requerido) Introduzca correo"
+                                 formControlName="email"
+                      >
+                      </ion-input>
+                      <ion-label  *ngIf="formField['email'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
+                        Patrón incorrecto
+                      </ion-label>
+                    </ion-item>
+
+                  </div>
+
+                </div>
+
+                <div class="row pt-3">
+                  <div class="form-group">
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="birth" >* Nacimiento</ion-label>
+                      <ion-input class="form-field col-5 ion-text-center" type="date"
+                                 formControlName="birth"
+                      >
+                      </ion-input>
+                    </ion-item>
+
+                  </div>
+                </div>
+
+                <div class="row pt-3">
+                  <div class="form-group">
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="nationality" >* Nacionalidad</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="text"
+                                 placeholder="Mi principal nacionalidad..."
+                                 formControlName="nationality"
+                      >
+                      </ion-input>
+                    </ion-item>
+
+                  </div>
+                </div>
+
+                <div class="row pt-3">
+                  <div class="form-group">
+
+                    <ion-item class="ion-text-center col-10">
+                      <ion-label class="form-field col-5 ion-text-center" for="about me form" >* Sobre mí</ion-label>
+                      <ion-input class="form-field col-5 ion-text-left" type="text"
+                                 placeholder="Sobre mí..."
+                                 formControlName="description"
+                      >
+                      </ion-input>
+                    </ion-item>
+
+                  </div>
+                </div>
+
+                <div class="row pt-3 ">
+                  <div class="form-group ">
+
+                    <div class="text-end col-12 ">
+                      <ion-input class="text-center col-12" type="file"  id="get-file-input"
+                                 (change)="fileNameSelected($event)"
+                                 name="filename" formControlName="fileImg">
+                      </ion-input>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+            </div>
+
+            <div class="row justify-content-center pt-3">
+
+              <ion-label  *ngIf="formField['pswd'].invalid || formField['pswd'].invalid"  class="text-danger ion-text-center col-10">
+                La contraseña debe contener al menos 1 mayúscula, 1 minúscula, 1 número y situarse entre 6 y 16 caracteres
+              </ion-label>
+
+
+              <ion-button *ngIf="!dataSubmitted" (click)="onSubmit()" class="submit-button-form col-4">
+                Registrarse
+              </ion-button>
+
 
             </div>
-          </div>
+          </form>
 
-          <div class="row justify-content-center pt-3">
+          <ion-button *ngIf="dataSubmitted" (click)="prepareForNewUser()" class="submit-button-form col-4">
+            ¿ Volver a registrar un nuevo usuario ?
+          </ion-button>
 
-            <ion-label  *ngIf="formField['pswd'].invalid || formField['pswd'].invalid"  class="text-danger ion-text-center col-10">
-              La contraseña debe contener al menos 1 mayúscula, 1 minúscula, 1 número y situarse entre 6 y 16 caracteres
-            </ion-label>
+        </section>
 
+        <section id="about-us">
+          <h1 id="about-us-title" class="display-3">¿Qué te podemos ofrecer?</h1>
+          <ol class="offering-list">
+            <li>Puntúa tus elementos multimedias favoritos</li>
+            <li>Déjanos tu opinión</li>
+            <li>Accede a la información más relevantes de tus pelis favoritas</li>
+            <li>Accede a una comunidad que comparte tus gustos</li>
+            <li>Crea tu propia lista de elementos multimedia</li>
+          </ol>
+        </section>
 
-            <ion-button *ngIf="!dataSubmitted" (click)="onSubmit()" class="submit-button-form col-4">
-              Registrarse
-            </ion-button>
+      </article> <!--//header-->
+    </main> <!--//header-->
 
+  </div> <!--//container-->
 
-          </div>
-        </form>
-
-        <ion-button *ngIf="dataSubmitted" (click)="prepareForNewUser()" class="submit-button-form col-4">
-          ¿ Volver a registrar un nuevo usuario ?
-        </ion-button>
-
-      </section>
-
-      <section id="about-us">
-        <h1 id="about-us-title" class="display-3">¿Qué te podemos ofrecer?</h1>
-        <ol class="offering-list">
-          <li>Puntúa tus elementos multimedias favoritos</li>
-          <li>Déjanos tu opinión</li>
-          <li>Accede a la información más relevantes de tus pelis favoritas</li>
-          <li>Accede a una comunidad que comparte tus gustos</li>
-          <li>Crea tu propia lista de elementos multimedia</li>
-        </ol>
-      </section>
-
-    </article> <!--//header-->
-  </main> <!--//header-->
-
-</div> <!--//container-->
+</ion-content>
 
