@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {GenresService} from "../../services/genres.service";
-import {Observable} from "rxjs";
-import {Router} from "@angular/router";
-import {AuthService} from "../../services/user.auth.service";
-import {ImagesService} from "../../services/images.service";
+import {GenresService} from '../../services/genres.service';
+import {Observable} from 'rxjs';
+import {AuthService} from '../../services/user.auth.service';
+import {ImagesService} from '../../services/images.service';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +16,7 @@ export class HeaderComponent implements OnInit {
   seriesGenres: Observable<any>;
   podcastsGenres: Observable<any>;
   logo: Observable<any>;
-  imgProfile: Observable<any>
+  imgProfile: Observable<any>;
 
   constructor(private authService: AuthService,
               private genresService: GenresService,
@@ -46,19 +45,19 @@ export class HeaderComponent implements OnInit {
     this.moviesGenres = this.genresService.getMoviesGenres();
   }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   get userSigned(){
     return this.authService.userInfoLogged;
   }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   get logged(){
     return this.authService.isLogged;
   }
 
 
   signOutUser(){
-
-    this.authService.userSignOut()
-
+    this.authService.userSignOut();
   }
 
 

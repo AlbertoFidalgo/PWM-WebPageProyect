@@ -23,9 +23,9 @@
       </ion-button>
       <ul class="dropdown-menu " aria-labelledby="music-dropdown">
         <div *ngFor="let music of musicGenres | async">
-          <li><a routerLink="catalogue/Música/{{music}}" class="dropdown-item">{{music}}</a></li>
+          <ion-button class="ion-align-self-start dropdown-item" routerLink="catalogue/Música/{{music}}">{{music}}</ion-button>
         </div>
-        <li><a routerLink="catalogue/Música/Todos" class="dropdown-item">Todos</a></li>
+          <ion-button routerLink="catalogue/Música/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
       <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="film-dropdown" data-bs-toggle="dropdown">
@@ -33,9 +33,9 @@
       </ion-button>
       <ul class="dropdown-menu" aria-labelledby="film-dropdown">
         <div *ngFor="let movie of moviesGenres | async">
-          <li><a routerLink="catalogue/Películas/{{movie}}" class="dropdown-item">{{movie}}</a></li>
+          <ion-button routerLink="catalogue/Películas/{{movie}}" class="ion-align-self-start dropdown-item">{{movie}}</ion-button>
         </div>
-        <li><a routerLink="catalogue/Películas/Todos" class="dropdown-item">Todos</a></li>
+        <ion-button routerLink="catalogue/Películas/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
       <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="series-dropdown" data-bs-toggle="dropdown">
@@ -43,9 +43,9 @@
       </ion-button>
       <ul class="dropdown-menu" aria-labelledby="series-dropdown">
         <div *ngFor="let serie of seriesGenres | async">
-          <li><a routerLink="catalogue/Series/{{serie}}" class="dropdown-item">{{serie}}</a></li>
+          <ion-button routerLink="catalogue/Series/{{serie}}" class="ion-align-self-start dropdown-item">{{serie}}</ion-button>
         </div>
-        <li><a routerLink="catalogue/Series/Todos" class="dropdown-item">Todos</a></li>
+        <ion-button routerLink="catalogue/Series/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
       <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">

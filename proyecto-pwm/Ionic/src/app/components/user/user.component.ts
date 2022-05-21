@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {ImagesService} from "../../services/images.service";
-import {UserService} from "../../services/user.service";
-import {ActivatedRoute} from "@angular/router";
-import firebase from "firebase/compat";
+import {Observable} from 'rxjs';
+import {ImagesService} from '../../services/images.service';
+import {UserService} from '../../services/user.service';
+import {ActivatedRoute} from '@angular/router';
+import firebase from 'firebase/compat';
 import DataSnapshot = firebase.database.DataSnapshot;
-import {User} from "../../models/user.model";
+import {User} from '../../models/user.model';
 
 @Component({
   selector: 'app-user',
@@ -21,10 +21,10 @@ export class UserComponent implements OnInit {
               private imagesService: ImagesService,
               private userService: UserService) {
     route.params.subscribe((params) => {
-      this.userService.retrieveUser(params["uid"]).then((userRef: DataSnapshot) => {
+      this.userService.retrieveUser(params.uid).then((userRef: DataSnapshot) => {
         this.user = userRef.val();
         this.getImages();
-      })
+      });
     });
   }
 

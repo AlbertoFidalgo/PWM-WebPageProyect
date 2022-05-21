@@ -10,18 +10,21 @@ import {environment} from '../environments/environment';
 
 
 
-import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireModule} from '@angular/fire/compat';
 
 
 // Import our components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {LoginComponent} from "./components/login/login.component";
-import {RegisterComponent} from "./components/register/register.component";
-import {HeaderComponent} from "./components/header/header.component";
+import {LoginComponent} from './components/login/login.component';
+import {RegisterComponent} from './components/register/register.component';
+import {HeaderComponent} from './components/header/header.component';
 import {UserComponent} from './components/user/user.component';
 import {HomeComponent} from './components/home/home.component';
+import {CatalogueComponent} from './components/catalogue/catalogue.component';
+import {CarousellComponent} from './components/home/carousell/carousell.component';
+import {ElementComponent} from './components/element/element.component';
 
 
 
@@ -33,7 +36,9 @@ import {HomeComponent} from './components/home/home.component';
     HeaderComponent,
     UserComponent,
     HomeComponent,
-
+    CarousellComponent,
+    CatalogueComponent,
+    ElementComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),

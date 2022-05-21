@@ -2,16 +2,19 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 
-import {AppComponent} from "./app.component";
-import {RegisterComponent} from "./components/register/register.component";
-import {LoginComponent} from "./components/login/login.component";
+import {AppComponent} from './app.component';
+import {RegisterComponent} from './components/register/register.component';
+import {LoginComponent} from './components/login/login.component';
 import {UserComponent} from './components/user/user.component';
 import {HomeComponent} from './components/home/home.component';
 
-import { SideBoxComponent } from "./components/home/side-box/side-box.component";
-import { MobileHomeBox1Component } from "./components/home/mobile-home-box1/mobile-home-box1.component";
-import { MobileHomeBox2Component } from "./components/home/mobile-home-box2/mobile-home-box2.component";
+import { SideBoxComponent } from './components/home/side-box/side-box.component';
+import { MobileHomeBox1Component } from './components/home/mobile-home-box1/mobile-home-box1.component';
+import { MobileHomeBox2Component } from './components/home/mobile-home-box2/mobile-home-box2.component';
 import {BottomBoxComponent} from './components/home/bottom-box/bottom-box.component';
+import {CommonModule} from '@angular/common';
+import {CatalogueComponent} from './components/catalogue/catalogue.component';
+import {ElementComponent} from './components/element/element.component';
 
 const routes: Routes = [
 
@@ -25,17 +28,19 @@ const routes: Routes = [
 
   },
 
-
+  { path: '', component: HomeComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'user/:uid/:user', component: UserComponent},
   { path: 'home', component: HomeComponent },
-
+  { path: 'catalogue/:type/:genre', component: CatalogueComponent},
+  { path: 'catalogue/:type/:genre/:element', component: ElementComponent},
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
+    CommonModule
   ],
   declarations: [
     SideBoxComponent,
