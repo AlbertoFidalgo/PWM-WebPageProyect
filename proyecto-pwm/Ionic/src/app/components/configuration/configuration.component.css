@@ -1,0 +1,84 @@
+
+
+h1{
+  margin-top: 1em;
+}
+
+.container{
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+
+ion-item{
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+#register-title{
+  padding-top: 2em;
+  padding-bottom: 0.7em;
+}
+
+
+.doesnt-match{
+  font-size: 80%;
+}
+
+.submit-button{
+  padding: 0.7em;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.5em;
+  cursor: pointer;
+
+}
+
+.submit-button-form{
+
+  margin: 1.5em;
+
+  cursor: pointer;
+  height: 1.7em;
+  border-radius: 0.5em;
+
+  font-size: 1.8em;
+  text-align: center;
+
+}
+
+
+.row ion-input {
+  height: 1.8em;
+  line-height: normal;
+  align-content: center;
+}
+
+
+#get-file-input{
+
+  margin-left: 40%;
+  margin-right: 20%;
+}
+
+#about-us{
+  text-align: center;
+  font-size: 1.8em;
+  line-height: normal;
+  padding: 0.2em;
+}
+
+#about-us-title{
+  padding: 0.5em;
+}
+
+#about-us li{
+  padding: 0.2em;
+}
+
+
+div, ion-label{
+  padding: 0.5em;
+}

@@ -25,6 +25,7 @@ import {HomeComponent} from './components/home/home.component';
 import {CatalogueComponent} from './components/catalogue/catalogue.component';
 import {CarousellComponent} from './components/home/carousell/carousell.component';
 import {ElementComponent} from './components/element/element.component';
+import {ConfigurationComponent} from './components/configuration/configuration.component';
 
 
 
@@ -38,7 +39,8 @@ import {ElementComponent} from './components/element/element.component';
     HomeComponent,
     CarousellComponent,
     CatalogueComponent,
-    ElementComponent
+    ElementComponent,
+    ConfigurationComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),
