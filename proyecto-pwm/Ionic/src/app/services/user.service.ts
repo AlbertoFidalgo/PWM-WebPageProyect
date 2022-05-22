@@ -3,6 +3,7 @@ import {AngularFireDatabase, AngularFireList} from '@angular/fire/compat/databas
 import {User} from '../models/user.model';
 import {AngularFireStorage, AngularFireStorageModule} from '@angular/fire/compat/storage';
 import {user} from "@angular/fire/auth";
+import {isEmpty} from "rxjs/operators";
 
 
 @Injectable({ providedIn: 'root' })
@@ -27,8 +28,18 @@ export class UserService {
   }
 
   updateUser(uid: string, data: any){
-    return this.db.database.ref(this.dbUsersPath + '/' + uid).update(
-      {name: data.name, birth: data.birth, nationality: data.nationality, description: data.description});
+    if(data.name) {
+      this.db.database.ref(this.dbUsersPath + '/' + uid).update({name: data.name});
+    }
+    if(data.nationality) {
+      this.db.database.ref(this.dbUsersPath + '/' + uid).update({nationality: data.nationality});
+    }
+    if(data.birth) {
+      this.db.database.ref(this.dbUsersPath + '/' + uid).update({birth: data.birth});
+    }
+    if(data.description) {
+      this.db.database.ref(this.dbUsersPath + '/' + uid).update({description: data.description});
+    }
+    return;
   }
-
 }
