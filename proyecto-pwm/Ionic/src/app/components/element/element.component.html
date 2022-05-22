@@ -14,7 +14,7 @@
             <p>Valoración de la comunidad: ...</p>
             <p class="d-none d-lg-block">Contenido/Descripción/Argumento/Sinopsis del elemento:</p>
             <p>{{element.Plot}}</p>
-            <p><ion-button>Añadir a favoritos</ion-button></p>
+            <p><ion-button (click)="addFav(element.Title, element.Poster)">Añadir a favoritos</ion-button></p>
           </div>
         </ng-container>
       </ng-container>

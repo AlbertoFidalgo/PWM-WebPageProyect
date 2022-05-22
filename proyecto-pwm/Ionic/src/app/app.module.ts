@@ -25,6 +25,7 @@ import {HomeComponent} from './components/home/home.component';
 import {CatalogueComponent} from './components/catalogue/catalogue.component';
 import {CarousellComponent} from './components/home/carousell/carousell.component';
 import {ElementComponent} from './components/element/element.component';
+import {FavoriteComponent} from './components/favorite/favorite.component';
 import {ConfigurationComponent} from './components/configuration/configuration.component';
 
 
@@ -40,6 +41,7 @@ import {ConfigurationComponent} from './components/configuration/configuration.c
     CarousellComponent,
     CatalogueComponent,
     ElementComponent,
+    FavoriteComponent,
     ConfigurationComponent
   ],
   entryComponents: [],
