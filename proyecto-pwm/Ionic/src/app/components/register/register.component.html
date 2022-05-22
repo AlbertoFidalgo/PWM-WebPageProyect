@@ -21,15 +21,16 @@
                 <div class="row pt-3">
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="name" >Nombre</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="text" id="name"
-                                 placeholder="(Requerido) Introduzca nombre"
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="name" >Nombre</ion-label>
+                      <ion-input class="form-field col-6 ion-text-left" type="text" id="name"
+                                 placeholder="(Requerido)"
                                  formControlName="name">
                       </ion-input>
-                      <ion-label  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field col-4 text-danger">
-                        Mínimo 4 y máximo 16 caracteres
-                      </ion-label>
+                    </ion-item>
+
+                    <ion-item  *ngIf="formField['name'].hasError('minlength') || formField['name'].hasError('maxlength')"  class="doesnt-match form-field text-danger">
+                      Mínimo 4 y máximo 16 caracteres
                     </ion-item>
 
                   </div>
@@ -39,20 +40,20 @@
 
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="password" >Contraseña</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="password" id="password"
-                                 placeholder="(Requerido) Introduzca contraseña"
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="password" >Contraseña</ion-label>
+                      <ion-input class="form-field col-6 ion-text-left" type="password" id="password"
+                                 placeholder="(Requerido)"
                                  formControlName="pswd">
                       </ion-input>
-                      <ion-label  *ngIf="formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                        Patrón incorrecto
-                      </ion-label>
-                      <ion-label  *ngIf="this.form.hasError('notSame') && !formField['pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                        Las contraseñas no coinciden
-                      </ion-label>
-                    </ion-item>
 
+                    </ion-item>
+                    <ion-item  *ngIf="formField['pswd'].invalid"  class="doesnt-match form-field text-danger text-end">
+                      Patrón incorrecto
+                    </ion-item>
+                    <ion-item  *ngIf="this.form.hasError('notSame') && !formField['pswd'].invalid"  class="doesnt-match form-field text-danger text-end">
+                      Las contraseñas no coinciden
+                    </ion-item>
                   </div>
 
                 </div>
@@ -60,20 +61,19 @@
                 <div class="row pt-3">
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="password pswd" >Confirmar contraseña</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="password"
-                                 placeholder="(Requerido) Confirme contraseña"
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-9 ion-text-left" for="password pswd" >Confirmar contraseña</ion-label>
+                      <ion-input class="form-field col-3 ion-text-left" type="password"
                                  formControlName="confirm_pswd">
                       </ion-input>
-                      <ion-label  *ngIf="formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                        Patrón incorrecto
-                      </ion-label>
-                      <ion-label  *ngIf="this.form.hasError('notSame') && !formField['confirm_pswd'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                        Las contraseñas no coinciden
-                      </ion-label>
-                    </ion-item>
 
+                    </ion-item>
+                    <ion-item  *ngIf="formField['confirm_pswd'].invalid"  class="doesnt-match form-field text-danger text-end">
+                      Patrón incorrecto
+                    </ion-item>
+                    <ion-item  *ngIf="this.form.hasError('notSame') && !formField['confirm_pswd'].invalid"  class="doesnt-match form-field text-danger text-end">
+                      Las contraseñas no coinciden
+                    </ion-item>
                   </div>
                 </div>
 
@@ -81,18 +81,17 @@
                   <div class="form-group">
 
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="email" >Email</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="email"
-                                 placeholder="(Requerido) Introduzca correo"
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="email" >Email</ion-label>
+                      <ion-input class="form-field col-6 ion-text-left" type="email"
+                                 placeholder="(Requerido)"
                                  formControlName="email"
                       >
                       </ion-input>
-                      <ion-label  *ngIf="formField['email'].invalid"  class="doesnt-match form-field col-4 text-danger text-end">
-                        Patrón incorrecto
-                      </ion-label>
                     </ion-item>
-
+                    <ion-item  *ngIf="formField['email'].invalid"  class="doesnt-match form-field text-danger text-end">
+                      Patrón incorrecto
+                    </ion-item>
                   </div>
 
                 </div>
@@ -100,10 +99,11 @@
                 <div class="row pt-3">
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="birth" >* Nacimiento</ion-label>
-                      <ion-input class="form-field col-5 ion-text-center" type="date"
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="birth" >Nacimiento</ion-label>
+                      <ion-input class="form-field col-6 ion-text-center" type="date"
                                  formControlName="birth"
+                                 placeholder="(Opcional)"
                       >
                       </ion-input>
                     </ion-item>
@@ -114,10 +114,10 @@
                 <div class="row pt-3">
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="nationality" >* Nacionalidad</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="text"
-                                 placeholder="Mi principal nacionalidad..."
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="nationality" >Nacionalidad</ion-label>
+                      <ion-input class="form-field col-6 ion-text-left" type="text"
+                                 placeholder="(Opcional)"
                                  formControlName="nationality"
                       >
                       </ion-input>
@@ -129,10 +129,10 @@
                 <div class="row pt-3">
                   <div class="form-group">
 
-                    <ion-item class="ion-text-center col-10">
-                      <ion-label class="form-field col-5 ion-text-center" for="about me form" >* Sobre mí</ion-label>
-                      <ion-input class="form-field col-5 ion-text-left" type="text"
-                                 placeholder="Sobre mí..."
+                    <ion-item class="ion-text-center">
+                      <ion-label class="form-field col-6 ion-text-center" for="about me form" >Sobre mí</ion-label>
+                      <ion-input class="form-field col-6 ion-text-left" type="text"
+                                 placeholder="(Opcional)"
                                  formControlName="description"
                       >
                       </ion-input>
@@ -145,7 +145,7 @@
                   <div class="form-group ">
 
                     <div class="text-end col-12 ">
-                      <ion-input class="text-center col-12" type="file"  id="get-file-input"
+                      <ion-input class="text-center col-9" type="file"  id="get-file-input"
                                  (change)="fileNameSelected($event)"
                                  name="filename" formControlName="fileImg">
                       </ion-input>
@@ -163,7 +163,7 @@
               </ion-label>
 
 
-              <ion-button *ngIf="!dataSubmitted" (click)="onSubmit()" class="submit-button-form col-4">
+              <ion-button *ngIf="!dataSubmitted" (click)="onSubmit()" class="submit-button-form col-9">
                 Registrarse
               </ion-button>
 

@@ -10,8 +10,8 @@
 }
 
 .user-login{
-  margin: 2em;
-  padding: 2em;
+  margin: 0.5em;
+  padding: 0.5em;
   position: relative;
   background: inherit;
 }
@@ -46,10 +46,9 @@ ion-button submit-button{
 
 .submit-button{
   font-size: 1.2em;
-  margin: 1.5em;
-
+  margin-top: 5%;
+  margin-bottom: 10%;
   border-radius: 0.5em;
-
 }
 
 .submit-register{

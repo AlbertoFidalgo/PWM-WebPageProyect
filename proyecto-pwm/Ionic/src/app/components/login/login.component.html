@@ -10,8 +10,8 @@
 
             <img alt=" "
                  class="user-img float-center"
-                 height="200"
-                 width="200"
+                 height="100"
+                 width="100"
                  src="../../../assets/img/user.png"/>
 
             <form  [formGroup]="form" class="form-horizontal" (ngSubmit)="onSubmit()" *ngIf="!dataSubmitted" id="login" method="get" action="">
@@ -19,8 +19,8 @@
               <div class="container-fluid  pt-4">
                 <div class="row">
                   <ion-item class="col-12 ion-text-center">
-                    <ion-label class="form-field ion-text-left" >Email</ion-label>
-                    <ion-input id="email-form" type="email" placeholder="Introduzca email" required="required" formControlName="email"></ion-input>
+                    <ion-label class="form-field col-6 ion-text-left" >Email</ion-label>
+                    <ion-input class="col-6 ion-text-left" id="email-form" type="email" placeholder="Requerido" required="required" formControlName="email"></ion-input>
                   </ion-item>
                 </div>
               </div>
@@ -29,8 +29,8 @@
                 <div class="row">
 
                   <ion-item class="col-12 ion-text-center">
-                    <ion-label class="form-field ion-text-left" >Contraseña</ion-label>
-                    <ion-input id="pswd-form" type="password" placeholder="Introduzca contraseña" required="required" formControlName="pswd"></ion-input>
+                    <ion-label class="form-field col-6 ion-text-left" >Contraseña</ion-label>
+                    <ion-input class="col-6 ion-text-left" id="pswd-form" type="password" placeholder="Requerido" required="required" formControlName="pswd"></ion-input>
                   </ion-item>
 
                 </div>
