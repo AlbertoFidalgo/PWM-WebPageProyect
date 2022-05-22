@@ -40,6 +40,9 @@ export class UserService {
     if(data.description) {
       this.db.database.ref(this.dbUsersPath + '/' + uid).update({description: data.description});
     }
+    if(data.imgFile) {
+      this.db.database.ref(this.dbUsersPath + '/' + uid).update({imgFile: data.imgFile});
+    }
     return;
   }
 }

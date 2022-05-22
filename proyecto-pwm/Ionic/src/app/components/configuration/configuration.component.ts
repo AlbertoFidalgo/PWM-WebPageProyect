@@ -63,7 +63,8 @@ export class ConfigurationComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this.form.addControl('imgFile', new FormControl(this.fileName));
+    this.imgService.uploadUserImage(this.uid, this.fileName, this.fileUpload);
     this.userService.updateUser(this.uid, this.form.value);
     this.dataSubmitted = true;
 
