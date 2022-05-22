@@ -15,6 +15,8 @@ import {BottomBoxComponent} from './components/home/bottom-box/bottom-box.compon
 import {CommonModule} from '@angular/common';
 import {CatalogueComponent} from './components/catalogue/catalogue.component';
 import {ElementComponent} from './components/element/element.component';
+import {ConfigurationComponent} from './components/configuration/configuration.component';
+import {FavoriteComponent} from "./components/favorite/favorite.component";
 
 const routes: Routes = [
 
@@ -32,9 +34,11 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'user/:uid/:user', component: UserComponent},
+  { path: 'user/:uid/:user/configuration', component: ConfigurationComponent},
+  { path: 'user/:uid/:user/favorite', component: FavoriteComponent},
   { path: 'home', component: HomeComponent },
   { path: 'catalogue/:type/:genre', component: CatalogueComponent},
-  { path: 'catalogue/:type/:genre/:element', component: ElementComponent},
+  { path: 'catalogue/:type/:genre/:element', component: ElementComponent}
 ];
 
 @NgModule({

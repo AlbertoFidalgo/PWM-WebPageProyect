@@ -15,7 +15,7 @@ export class CatalogueComponent implements OnInit {
   public genreId: string;
   public typeId: string;
   public content: Observable<any[]>;
-  public genres: Observable<any[]>;
+  public genres: Observable<any>;
   public element: Observable<any>;
   public filtro: Observable<any>;
 
@@ -72,5 +72,4 @@ export class CatalogueComponent implements OnInit {
       }
     }
   }
-
 }

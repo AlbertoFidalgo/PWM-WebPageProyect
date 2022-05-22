@@ -15,6 +15,7 @@ import {User} from '../../models/user.model';
 export class UserComponent implements OnInit {
 
   user: User = new User();
+  uid: any;
   configImg: Observable<any>;
   userImg: Observable<any>;
   constructor(route: ActivatedRoute,

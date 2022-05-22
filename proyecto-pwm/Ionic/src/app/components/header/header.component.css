@@ -2,11 +2,22 @@
   background-image: url("../../../assets/img/landingPageBanner.png");
   background-size: 100%;
 }
+#headerMobile {
+  background-image: url("../../../assets/img/landingPageBanner.png");
+  background-size: 100% 150px;
+  height: 130px;
+}
 #logo{
   margin-left: 20px;
   margin-top: 20px;
   width: 180px;
   height: 120px;
+}
+#logoMovil{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 80px;
+  height: 60px;
 }
 @media screen and (min-width: 2048px) {
   #header {

@@ -1,34 +1,32 @@
-<div id="header">
+<div class="d-block d-md-none" id="headerMobile">
   <div class="row">
-    <div class="col-3">
-      <a routerLink=""><img src="{{logo | async}}" id="logo" alt="logo"></a>
+    <div class="d-md-none col-3">
+      <a routerLink=""><img src="{{logo | async}}" id="logoMovil" alt="logo"></a>
     </div>
-    <div class="col-6"></div>
-    <div *ngIf="!logged" class="col-3 text-end mt-2 pe-4">
+    <div *ngIf="!logged" class="col-9 text-end mt-2 pe-4">
       <ion-button class="submit-button btn-sm ion-padding" routerLink="login">Iniciar sesión</ion-button>
       <ion-button class="submit-button btn-sm ion-padding" routerLink="register">Registrarse</ion-button>
     </div>
-    <div *ngIf="logged" class="col-3 text-center">
-      <h4 class="welcome pt-3 text-danger"> Bienvenido, {{ userSigned.name }} </h4>
+    <div *ngIf="logged" class="col-9 text-center">
+      <h4 class="welcome pt-3 text-danger d-none d-md-block"> Bienvenido, {{ userSigned.name }} </h4>
       <ion-button color="warning" class="ion-align-self-start" routerLink="user/{{userSigned.uid}}/{{userSigned.name}}">Ir a Perfil </ion-button>
       <ion-button color="warning" class="ion-color-warning ion-align-self-end" (click)="signOutUser()">Cerrar Sessión</ion-button>
     </div>
   </div>
 
-  <div class="row mt-5">
+  <div class="row mt-2 mt-md-5 pe-3 pe-md-0">
     <div class="btn-group mt-1" role="group">
-
-      <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="music-dropdown" data-bs-toggle="dropdown">
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" id="music-dropdown" data-bs-toggle="dropdown">
         Música
       </ion-button>
-      <ul class="dropdown-menu " aria-labelledby="music-dropdown">
+      <ul class="dropdown-menu" aria-labelledby="music-dropdown">
         <div *ngFor="let music of musicGenres | async">
           <ion-button class="ion-align-self-start dropdown-item" routerLink="catalogue/Música/{{music}}">{{music}}</ion-button>
         </div>
           <ion-button routerLink="catalogue/Música/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
-      <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="film-dropdown" data-bs-toggle="dropdown">
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" id="film-dropdown" data-bs-toggle="dropdown">
         Películas
       </ion-button>
       <ul class="dropdown-menu" aria-labelledby="film-dropdown">
@@ -38,7 +36,7 @@
         <ion-button routerLink="catalogue/Películas/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
-      <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="series-dropdown" data-bs-toggle="dropdown">
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" id="series-dropdown" data-bs-toggle="dropdown">
         Series
       </ion-button>
       <ul class="dropdown-menu" aria-labelledby="series-dropdown">
@@ -48,7 +46,75 @@
         <ion-button routerLink="catalogue/Series/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
       </ul>
 
-      <ion-button class="btn btn-secondary dropdown-toggle col-3" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" id="podcast-dropdown" data-bs-toggle="dropdown">
+        Podcasts
+      </ion-button>
+      <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
+        <li><a routerLink="podcast" class="dropdown-item">Todos</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Noticias/Política</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Deporte/Ocio</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Educativo</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Salud/Estilo de vida</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Tecnología</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Arte</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Juegos/Entretenimiento</a></li>
+        <li><a routerLink="podcast" class="dropdown-item">Niños/Familia</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div id="header" class="d-none d-md-block">
+  <div class="row">
+    <div class="col-4">
+      <a routerLink=""><img src="{{logo | async}}" id="logo" alt="logo"></a>
+    </div>
+    <div class="col-5"></div>
+    <div *ngIf="!logged" class="col-3 text-end mt-2 pe-4">
+      <ion-button class="submit-button btn-sm ion-padding" routerLink="login">Iniciar sesión</ion-button>
+      <ion-button class="submit-button btn-sm ion-padding" routerLink="register">Registrarse</ion-button>
+    </div>
+    <div *ngIf="logged" class="col-3 text-center">
+      <h4 class="welcome pt-3 text-danger d-none d-md-block"> Bienvenido, {{ userSigned.name }} </h4>
+      <ion-button color="warning" class="ion-align-self-start" routerLink="user/{{userSigned.uid}}/{{userSigned.name}}">Ir a Perfil </ion-button>
+      <ion-button color="warning" class="ion-color-warning ion-align-self-end" (click)="signOutUser()">Cerrar Sessión</ion-button>
+    </div>
+  </div>
+
+  <div class="row mt-2 mt-md-5 pe-3 pe-md-0">
+    <div class="btn-group mt-1" role="group">
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" data-bs-toggle="dropdown">
+        Música
+      </ion-button>
+      <ul class="dropdown-menu" aria-labelledby="music-dropdown">
+        <div *ngFor="let music of musicGenres | async">
+          <ion-button class="ion-align-self-start dropdown-item" routerLink="catalogue/Música/{{music}}">{{music}}</ion-button>
+        </div>
+        <ion-button routerLink="catalogue/Música/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
+      </ul>
+
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" data-bs-toggle="dropdown">
+        Películas
+      </ion-button>
+      <ul class="dropdown-menu" aria-labelledby="film-dropdown">
+        <div *ngFor="let movie of moviesGenres | async">
+          <ion-button routerLink="catalogue/Películas/{{movie}}" class="ion-align-self-start dropdown-item">{{movie}}</ion-button>
+        </div>
+        <ion-button routerLink="catalogue/Películas/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
+      </ul>
+
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" data-bs-toggle="dropdown">
+        Series
+      </ion-button>
+      <ul class="dropdown-menu" aria-labelledby="series-dropdown">
+        <div *ngFor="let serie of seriesGenres | async">
+          <ion-button routerLink="catalogue/Series/{{serie}}" class="ion-align-self-start dropdown-item">{{serie}}</ion-button>
+        </div>
+        <ion-button routerLink="catalogue/Series/Todos" class="ion-align-self-start dropdown-item">Todos</ion-button>
+      </ul>
+
+      <ion-button class="btn-secondary dropdown-toggle col-3" type="button" data-bs-toggle="dropdown">
         Podcasts
       </ion-button>
       <ul class="dropdown-menu" aria-labelledby="podcast-dropdown">
